@@ -1,0 +1,399 @@
+[
+  {
+    "name": "Agatha King",
+    "ownerNavy": ["United Nations Navy"],
+    "class": "Truman Class",
+    "type": "Dreadnought",
+    "registration": "T-DRN-32",
+    "appeared": [
+      "Season 3",
+      "Assured Destruction",
+      "Reload",
+      "Triple Point",
+      "Immolation"
+    ],
+    "crew": [
+      "Admiral Michael Souther",
+      "Admiral Augusto Nguyễn",
+      "Lieutenant Shaffer",
+      "Lieutenant Mancuso",
+      "Lieutenant Boyer",
+      "Lieutenant Gascon",
+      "Ensign Fainga",
+      "Ensign Larson"
+    ]
+  },
+  {
+    "name": "Ambedkar",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Morrigan Class",
+    "type": "Patrol Destroyer",
+    "appeared": ["Season 1", "Windmills"]
+  },
+  {
+    "name": "Amunet",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Anubis 1A",
+    "ownerNavy": ["Protogen"],
+    "seasons": ["Season 1"],
+    "referenced": ["Windmills"]
+  },
+  {
+    "name": "Apophis",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Aryabhata",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Scirocco Class",
+    "type": "Assault cruiser",
+    "registration": "EML-34",
+    "seasons": ["Season 4"]
+  },
+  {
+    "name": "Barbapiccola",
+    "ownerNavy": [
+      "Mao-Kwikowski Mercantile (former)",
+      "Belter refugees/original Ilus IV colonists"
+    ],
+    "type": "Freighter",
+    "seasons": ["Season 4"]
+  },
+  {
+    "name": "Cú Chulainn",
+    "ownerNavy": ["Martian Congressional Republic Navy", ""],
+    "class": "Morrigan Class",
+    "type": "Patrol Destroyer",
+    "hullNumber": "512",
+    "seasons": ["Season 2", "Season 4"]
+  },
+  {
+    "name": "Donnager",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Donnager Class",
+    "type": "Battleship",
+    "hullNumber": "84",
+    "appeared": ["Season 1"],
+    "crew": [
+      "Captain Theresa Yao",
+      "Lieutenant Lopez",
+      "Sargeant Grimes",
+      "Corporal Mole",
+      "Corporal Dookie"
+    ]
+  },
+  {
+    "name": "Edward Israel",
+    "ownerNavy": ["Royal Charter Energy"],
+    "type": "Colony ship",
+    "seasons": ["Season 4"],
+    "crew": ["Adolphus Murtry", "Chandra Wei"]
+  },
+  {
+    "name": "Epstein's Yacht",
+    "ownerNavy": ["Solomon Epstein"],
+    "type": "Private yacht",
+    "seasons": ["Season 2"],
+    "crew": ["Solomon Epstein"]
+  },
+  {
+    "name": "Guanshiyin",
+    "ownerNavy": ["Jules-Pierre Mao"],
+    "seasons": ["Season 2"],
+    "referenced": ["The Monster and the Rocket"]
+  },
+  {
+    "name": "Guy Molinari",
+    "ownerNavy": ["Outer Planets Alliance (Fred Johnson OPA)"],
+    "type": "Freighter",
+    "seasons": ["Season 2", "Doors & Corners", "Godspeed"]
+  },
+  {
+    "name": "Hammurabi",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Scirocco Class",
+    "type": "Assault cruiser",
+    "registration": "EML-05",
+    "hullNumber": "23",
+    "seasons": ["Season 3"],
+    "crew": [
+      "Captain Sandrine Kirino",
+      "Lieutenant Durant",
+      "Chief Joslin",
+      "Ensign Sinopoli",
+      "Ensign Loftis",
+      "Ensign Ranhofer"
+    ]
+  },
+  {
+    "name": "Hathor",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Horus",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Hotspur",
+    "label": "(In orbit over Ganymede)",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Donnager Class",
+    "type": "Battleship",
+    "seasons": ["Season 2"]
+  },
+  {
+    "name": "Karakum",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Corvette Class",
+    "type": "Light frigate",
+    "appeared": [
+      "Season 2",
+      "Here There Be Dragons",
+      "The Monster and the Rocket"
+    ]
+  },
+  {
+    "name": "Kittur Chennamma",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Morrigan Class",
+    "type": "Patrol Destroyer",
+    "registration": "ECS - 211",
+    "hullNumber": "514",
+    "appeared": ["Season 3", "Reload", "Triple Point"],
+    "crew": [
+      "Ensign Sinopoli",
+      "Ensign Loftis",
+      "Ensign Ranhofer",
+      "McLeod K.I.A."
+    ]
+  },
+  {
+    "name": "Knight",
+    "ownerNavy": ["Pur'n'Kleen Water Company"],
+    "type": "Shuttle",
+    "seasons": ["Season 1", "Dulcinea"],
+    "crew": [
+      "James Holden",
+      "Alex Kamal",
+      "Naomi Nagata",
+      "Amos Burton",
+      "Shed Garvey"
+    ]
+  },
+  {
+    "name": "Nathan Hale",
+    "ownerNavy": ["United Nations Navy"],
+    "class": "Leonidas Class",
+    "type": "Battleship",
+    "appeared": ["Season 1", "Season 2", "Season 3"],
+    "crew": ["Captain Yvgeny"]
+  },
+  {
+    "name": "Nephthys",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Osiris",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 2"]
+  },
+  {
+    "name": "Pizzouza",
+    "ownerNavy": ["Belters"],
+    "type": "Civilian ship",
+    "appeared": ["Season 4"]
+  },
+  {
+    "name": "R R Martin",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "type": "Unknown",
+    "appeared": ["Season 3"]
+  },
+  {
+    "name": "Rocinante",
+    "ownerNavy": ["Martian Congressional Republic Navy (former)", "Rocicorp"],
+    "class": "Corvette Class",
+    "type": "light frigate",
+    "registration": "ECF - 270",
+    "hullNumber": "158",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "crew": [
+      "Lieutenant Lopez",
+      "James Holden",
+      "Naomi Nagata",
+      "Alex Kamal",
+      "Amos Burton",
+      "Josephus Miller",
+      "Praxideke Meng",
+      "Chrisjen Avasarala",
+      "Bobbie Draper",
+      "Anna Volovodov"
+    ]
+  },
+  {
+    "name": "Scipio Africanus",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Morrigan Class",
+    "type": "Patrol Destroyer",
+    "seasons": ["Season 1", "Rock Bottom"]
+  },
+  {
+    "name": "Scopuli",
+    "ownerNavy": ["Outer Planets Alliance"],
+    "seasons": ["Season 1"],
+    "crew": ["Darren", "Julie Mao", "Wan"]
+  },
+  {
+    "name": "LDSS Nauvoo",
+    "alias": "Behemoth, Medina Station",
+    "ownerNavy": ["LDS Church (former)", "Outer Planets Alliance"],
+    "type": "Generational Colony Ship",
+    "width": "960 meters",
+    "length": "2460 meters",
+    "propulsion": ["8x G-4000 Series Epstein Drives"],
+    "appears": ["Season 1", "Season 2"]
+  },
+  {
+    "name": "OPAS Behemoth",
+    "ownerNavy": ["Outer Planets Alliance"],
+    "type": "Dreadnought",
+    "width": "960 meters",
+    "length": "2460 meters",
+    "propulsion": ["8x G-4000 Series Epstein Drives"],
+    "armament": [
+      "6✕ bow mounted Zakosetara-series Heavy railguns",
+      "6✕ External torpedo bays (7 Single fire tubes each)",
+      "170✕ Kess-Hashari Point Defence Cannons"
+    ],
+    "crew": [
+      "Camina Drummer",
+      "Klaes Ashford",
+      "Naomi Nagata",
+      "Grigori",
+      "Diogo Harari"
+    ],
+    "appears": ["Season 3"]
+  },
+  {
+    "name": "Medina Station",
+    "ownerNavy": ["Outer Planets Alliance"],
+    "type": "Spinstation",
+    "width": "960 meters",
+    "length": "2460 meters",
+    "appears": ["Season 4"]
+  },
+  {
+    "name": "Seung Un",
+    "ownerNavy": ["United Nations Navy"],
+    "type": "Fleet Support Ship",
+    "seasons": ["Season 3"]
+  },
+  {
+    "name": "Shandian",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Morrigan Class",
+    "type": "Patrol Destroyer Modified for stealth",
+    "hullNumber": "137",
+    "appeared": [
+      "Season 2",
+      "The Weeping Somnambulist",
+      "Here There Be Dragons",
+      "Caliban's War"
+    ]
+  },
+  {
+    "name": "Sobek",
+    "ownerNavy": ["Protogen"],
+    "class": "Amun-Ra Class",
+    "type": "Stealth frigate",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Thomas Prince",
+    "ownerNavy": ["United Nations Navy"],
+    "class": "Truman Class",
+    "type": "Dreadnought",
+    "registration": "T-DRN-47",
+    "appeared": [
+      "Season 3",
+      "Delta-V",
+      "It Reaches Out",
+      "Intransigence",
+      "Dandelion Sky",
+      "Fallen World",
+      "Congregation",
+      "Abaddon's Gate"
+    ],
+    "crew": [
+      "Commander Kunis",
+      "Dr. Gaskin",
+      "Dr. Kolvoord, Ph.D.",
+      "Lieutenant Jordaan Nemeroff",
+      "Lieutenant Howard",
+      "Butler",
+      "Sison",
+      "Anna Volovodov",
+      "Melba Alzbeta Koh",
+      "Tilly Fagan",
+      "Ren Hazuki",
+      "Stannislaw Kulp",
+      "Soledad",
+      "Hector Cortez"
+    ]
+  },
+  {
+    "name": "Valkyrie",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Scirocco Class",
+    "type": "Assault cruiser",
+    "appeared": ["Season 2", "The Monster and the Rocket"]
+  },
+  {
+    "name": "Y Que",
+    "ownerNavy": ["Manéo Jung-Espinoza"],
+    "type": "Slingshot racing ship",
+    "seasons": ["Season 3"],
+    "crew": ["Manéo Jung-Espinoza"]
+  },
+  {
+    "name": "Xuesen",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "class": "Scirocco Class",
+    "type": "Assault cruiser",
+    "registration": "EML-12",
+    "appeared": ["Season 3"],
+    "crew": ["Bobbie Draper", "Paolo Mayer", "Jed Trepp", "Riko Oshi"]
+  },
+  {
+    "name": "Yangtse",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "type": "Unknown Likely large capital ship",
+    "appeared": ["Season 1", "Windmills"]
+  },
+  {
+    "name": "Yasijuro",
+    "ownerNavy": ["United Nations Navy"],
+    "type": "destroyer",
+    "appeared": ["Season 3", "Triple Point"],
+    "crew": ["Augusto Nguyễn"]
+  }
+]

@@ -1,0 +1,1895 @@
+[
+  {
+    "name": "McDowell",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Captain of the Canterbury",
+    "affiliation": ["Pur'n'Kleen Water Company"],
+    "portrayedBy": "Joe Pingue",
+    "seasons": ["Season 1"],
+    "episode": "Dulcinea"
+  },
+  {
+    "name": "Canterbury XO",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Jonathan Banks",
+    "affiliation": ["Pur'n'Kleen Water Company"],
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Dulcinea"
+  },
+  {
+    "name": "Cameron Paj",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Ronnie Rowe Jr.",
+    "affiliation": ["Pur'n'Kleen Water"],
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Dulcinea"
+  },
+  {
+    "name": "Rebecca Byers",
+    "status": "Deceased",
+    "gender": "Female",
+    "affiliation": ["Pur'n'Kleen Water"],
+    "home": ["Asteroid Belt", "SOL"],
+    "occupation": "Communications officer of the Canterbury",
+    "portrayedBy": "Krista Morin",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Dulcinea"
+  },
+  {
+    "name": "Ade Nygaard",
+    "status": "Deceased killed by the destruction of the Canterbury",
+    "gender": "Female",
+    "occupation": "Navigator on the Canterbury",
+    "affiliation": ["Pur'n'Kleen Water"],
+    "portrayedBy": "Kristen Hager",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Dulcinea"
+  },
+  {
+    "name": "Chrisjen Avasarala",
+    "aliases":
+      "Your/Her Excellency (formal), Madam Secretary (informal), Bubbles (by DeGraaf), Archangel (security radio callsign), Chrissy (by Amos)",
+    "status": "Alive",
+    "age": "~ 70",
+    "gender": "Female",
+    "home": ["New York", "Earth", "SOL"],
+    "family": ["Arjun", "Charanpal", "Unnamed grandson"],
+    "occupation":
+      "Secretary-General of the United Nations, Deputy Undersecretary of the United Nations (former)",
+    "affiliation": ["United Nations Government"],
+    "portrayedBy": "Shohreh Aghdashloo",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Riker",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Ice hauler, P&K Canterbury",
+    "portrayedBy": "Adrian Nguyen",
+    "episode": "Dulcinea"
+  },
+  {
+    "name": "Paolo Cortázar",
+    "status": "Alive",
+    "gender": "Male",
+    "home": [
+      "Earth",
+      "SOL",
+      "Thoth Station",
+      "Tycho Station",
+      "Anderson Dawes"
+    ],
+    "occupation": "Protogen Researcher, captured by OPA Belters",
+    "affiliation": ["Protogen"],
+    "portrayedBy": "Carlos Gonzalez-Vio",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Doors & Corners",
+    "lastAppearance": "The Seventh Man"
+  },
+  {
+    "name": "Antony Dresden",
+    "status": "Deceased killed by Miller",
+    "gender": "Male",
+    "portrayedBy": "Daniel Kash",
+    "seasons": ["Season 1", "Season 2"],
+    "firstAppearance": "Rock Bottom",
+    "lastAppearance": "Doors & Corners"
+  },
+  {
+    "name": "Malik",
+    "status": "Deceased",
+    "age": "50-60",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "affiliation": ["Jules-Pierre Mao", "Guanshiyin"],
+    "portrayedBy": "Curtis Caravaggio",
+    "seasons": ["Season 2"],
+    "episode": "The Monster and the Rocket"
+  },
+  {
+    "name": "Craig",
+    "status": "Widowed",
+    "gender": "Male",
+    "home": [],
+    "family": ["Franklin DeGraaf"],
+    "portrayedBy": "Philip Akin",
+    "seasons": ["Season 1"],
+    "episode": "Remember the Cant"
+  },
+  {
+    "name": "Franklin DeGraaf",
+    "status": "Deceased",
+    "gender": "Male",
+    "family": ["Craig"],
+    "occupation": "Diplomat retired",
+    "portrayedBy": "Kenneth Welsh",
+    "seasons": ["Season 1"],
+    "lastAppearance": "Remember the Cant"
+  },
+  {
+    "name": "Sadavir Errinwright",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "family": ["Jefferson Errinwright"],
+    "occupation": "Undersecretary of the United Nations (former)",
+    "portrayedBy": "Shawn Doyle",
+    "seasons": ["Season 1", "Season 2", "Season 3"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "Jules-Pierre Mao",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL", "Mao Station"],
+    "family": ["Julie Mao", "Clarissa Mao"],
+    "occupation": "Manager, Mogul, Tycoon",
+    "affiliation": ["Mao-Kwikowski Mercantile", "Protogen"],
+    "portrayedBy": "François Chau",
+    "seasons": ["Season 1", "Season 2", "Season 3"],
+    "firstAppearance": "The Big Empty",
+    "lastAppearance": "Intransigence"
+  },
+  {
+    "name": "Tom",
+    "aliases": "\"Father Tom\"",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Montana", "North American Trade Zone", "Earth", "Sol system"],
+    "family": [
+      "James Holden",
+      "Caesar",
+      "Joseph",
+      "Anton",
+      "Dimitri",
+      "Tamara",
+      "Sophie",
+      "Elise"
+    ],
+    "occupation": "Farmer",
+    "portrayedBy": "Jeffrey Snape",
+    "seasons": ["Season 1"],
+    "episode": "Windmills"
+  },
+  {
+    "name": "Carlos Davila",
+    "status": "Alive",
+    "gender": "Male",
+    "family": [],
+    "occupation": "Corporate Businessman, Davila Aerospatiale",
+    "portrayedBy": "Bruno Verdoni",
+    "seasons": ["Season 1", "Season 2"],
+    "firstAppearance": "Rock Bottom"
+  },
+  {
+    "name": "Nico",
+    "status": "Alive",
+    "age": "52",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "occupation": "Drug dealer",
+    "portrayedBy": "Milton Barnes",
+    "seasons": ["Season 2"],
+    "episode": "Cascade"
+  },
+  {
+    "name": "Elise Holden",
+    "status": "Alive",
+    "age": "50-60",
+    "gender": "Female",
+    "home": ["Montana", "North American Trade Zone", "Earth", "Sol system"],
+    "family": [
+      "James Holden",
+      "Tom",
+      "Caesar",
+      "Joseph",
+      "Anton",
+      "Dimitri",
+      "Tamara",
+      "Sophie"
+    ],
+    "occupation": "Homemaker",
+    "portrayedBy": "Frances Fisher",
+    "seasons": ["Season 1"],
+    "episode": "Windmills"
+  },
+  {
+    "name": "Esteban Sorrento-Gillis",
+    "aliases": "\"Bobblehead\"",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "Secretary-General of the  United Nations (former)",
+    "portrayedBy": "Jonathan Whittaker",
+    "seasons": ["Season 2", "Season 3"],
+    "firstAppearance": "Safe",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "M. Cruz",
+    "aliases": "MCRN Deputy Minister, Special Envoy",
+    "status": "Alive [citation needed]",
+    "gender": "Female",
+    "portrayedBy": "Alison J. Palmer",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Weeping Somnambulist",
+    "lastAppearance": "Cascade"
+  },
+  {
+    "name": "Pyotr Korshunov",
+    "status": "Deceased fatally poisoned by Sadavir Errinwright",
+    "age": "50-60",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "occupation": "Minister of Defense, Martian Congressional Republic",
+    "portrayedBy": "Jeff Seymour",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Weeping Somnambulist",
+    "lastAppearance": "The Monster and the Rocket"
+  },
+  {
+    "name": "J. Peñano",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Mars", "Sol system"],
+    "occupation":
+      "Martian Congressional Republic Navy - Admiral Martian Marine Corps",
+    "portrayedBy": "Rachael Crawford",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Weeping Somnambulist"
+  },
+  {
+    "name": "Jefferson Errinwright",
+    "status": "Alive",
+    "age": "15-20",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "family": ["Sadavir Errinwright"],
+    "occupation": "Student",
+    "portrayedBy": "Gage Munroe",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Monster and the Rocket"
+  },
+  {
+    "name": "William Yong",
+    "character": "\"Shirtless Man\" Peter",
+    "firstAppearance": "Cascade"
+  },
+  {
+    "name": "Anna Volovodov",
+    "status": "Alive",
+    "age": "ca. 40",
+    "gender": "Female",
+    "home": ["Earth", "Sol system"],
+    "family": ["Nono", "Nami"],
+    "portrayedBy": "Elizabeth Mitchell",
+    "seasons": ["Season 3"],
+    "firstAppearance": "IFF",
+    "lastAppearance": "Abaddon's Gate"
+  },
+  {
+    "name": "Kosove",
+    "gender": "Female",
+    "portrayedBy": "Samora Smallwood",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Fight or Flight"
+  },
+  {
+    "name": "Murrin",
+    "gender": "Male",
+    "portrayedBy": "David  Patrick  Green"
+  },
+  {
+    "name": "Captain Espinoza",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Sol", "Earth"],
+    "occupation": "Captain, United Nations Navy",
+    "portrayedBy": "Alex Castillo",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Assured Destruction"
+  },
+  {
+    "name": "Lipson",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "portrayedBy": "Michael Brown",
+    "seasons": ["Season 3", "Season 4"],
+    "episode": "Immolation"
+  },
+  {
+    "name": "Nancy Gao",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Earth", "SOL"],
+    "occupation": "UN Home Secretary (former), Secretary-General of the UN",
+    "affiliation": ["United Nations"],
+    "portrayedBy": "Lily Gao",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra"
+  },
+  {
+    "name": "McCourt",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "General in UNMC",
+    "affiliation": ["United Nations"],
+    "portrayedBy": "Benz Antoine",
+    "seasons": ["Season 4"],
+    "firstAppearance": "A Shot in The Dark",
+    "lastAppearance": "The Season 1-Eyed Man"
+  },
+  {
+    "name": "Arjun",
+    "aliases":
+      "Arjun Rao, Arjun Avasarala (name in S4) (production inconsistency)",
+    "status": "Alive",
+    "gender": "Male",
+    "family": ["Chrisjen Avasarala", "Charanpal"],
+    "occupation": "Retired Greek professor",
+    "portrayedBy": "Brian George Season 1 + 2, Michael Benyaer Season 4[1]",
+    "seasons": ["Season 1", "Season 2", "Season 4"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Heikki Sabong",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Joe Delfin",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "The Big Empty"
+  },
+  {
+    "name": "Captain Yvgeny",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "occupation": "Comanding Officer, UNN Nathan Hale",
+    "portrayedBy": "Colin MacPherson",
+    "seasons": ["Season 2"],
+    "episode": "Safe"
+  },
+  {
+    "name": "Abraham Arboghast Pilot",
+    "portrayedBy": "Kunal Jaggi",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Weeping Somnambulist",
+    "lastAppearance": "Caliban's War"
+  },
+  {
+    "name": "Janus",
+    "status": "Deceased killed by the Arboghast's disaggregation",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "UNMC Colonel",
+    "portrayedBy": "Conrad Pla",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Home",
+    "lastAppearance": "Caliban's War"
+  },
+  {
+    "name": "Michael Iturbi",
+    "status": "Deceased killed by the Arboghast's disaggregation[1]",
+    "age": "50-60s",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "occupation": "Ranking Member UN Special Sciences Committee - Scientist",
+    "affiliation": ["Chrisjen Avasarala"],
+    "portrayedBy": "Ted Whittall",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Paradigm Shift",
+    "lastAppearance": "Caliban's War"
+  },
+  {
+    "name": "Admiral Michael Souther",
+    "aliases": "Admiral Souther",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "UNN Fleet Admiral (former), Commanding Officer Agatha King (former)",
+    "portrayedBy": "Martin Roach",
+    "seasons": ["Season 1", "Season 2", "Season 3"],
+    "firstAppearance": "Remember the Cant",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Cotyar Ghazi",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "Bodyguard of Avasarala, UN Intelligence Agent (former)",
+    "portrayedBy": "Nick E. Tarabay",
+    "seasons": ["Season 2", "Season 3"],
+    "firstAppearance": "Doors & Corners",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "Lieutenant Shaffer",
+    "status": "Deceased",
+    "age": "30s",
+    "gender": "Female",
+    "home": ["Earth", "SOL"],
+    "occupation": "UNN Lieutenant, Executive Officer, Agatha King",
+    "portrayedBy": "Natalie Lisinska",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Assured Destruction",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Lieutenant Boyer",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Shawn Ahmed",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Assured Destruction",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Lieutenant Mancuso",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "UNN Lieutenant",
+    "portrayedBy": "Morgan Kelly",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Assured Destruction",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Admiral Augusto Nguyễn",
+    "aliases": "Fleet Admiral Nguyễn, Gus (courtesy Souther)",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "occupation": "UNN Admiral (former), UNN Fleet Admiral",
+    "portrayedBy": "Byron Mann",
+    "seasons": ["Season 2", "Season 3"],
+    "firstAppearance": "Safe",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "Lieutenant Gascon",
+    "aliases": "Crazed Lieutenant",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["UN", "Agatha King"],
+    "occupation": "UNN",
+    "portrayedBy": "James Binkley",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Immolation",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "Ensign Fainga",
+    "status": "Deceased",
+    "age": "30s",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "UNN Communications Officer",
+    "portrayedBy": "Khalid Klein",
+    "seasons": ["Season 3"],
+    "episode": "Triple Point\">Triple Point"
+  },
+  {
+    "name": "Ensign Larson",
+    "status": "Deceased",
+    "gender": "Female",
+    "occupation": "Ensign UNN Agatha King",
+    "portrayedBy": "Sydney Meyer",
+    "episode": "Immolation"
+  },
+  {
+    "name": "Iafrate",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "UN MP, Agatha King",
+    "portrayedBy": "Hamza Fouad",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Triple Point",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Hansen",
+    "status": "Deceased",
+    "gender": "",
+    "occupation": "U.N. Fleet Military Police",
+    "portrayedBy": "Joel DeLong",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Triple Point",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Melba Koh",
+    "gender": "Female",
+    "occupation": "Electrical Technician",
+    "portrayedBy": "Nadine Nicole",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V"
+  },
+  {
+    "name": "Stannislaw Kulp",
+    "aliases": "Stanni",
+    "status": "Alive",
+    "gender": "Male",
+    "occupation": "Electrician",
+    "portrayedBy": "Ari Millen",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V"
+  },
+  {
+    "name": "Tilly Fagan",
+    "status": "Deceased",
+    "gender": "Female",
+    "occupation": "Socialite",
+    "portrayedBy": "Genelle Williams",
+    "seasons": ["Season 3"],
+    "firstAppearance": "It Reaches Out",
+    "lastAppearance": "Fallen World"
+  },
+  {
+    "name": "Dr. Kolvoord",
+    "status": "Alive",
+    "gender": "Male",
+    "occupation": "IASG",
+    "portrayedBy": "Chris Owens",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V"
+  },
+  {
+    "name": "Hector Cortez",
+    "aliases": "Hank",
+    "status": "Alive",
+    "gender": "Male",
+    "family": [],
+    "occupation": "Priest",
+    "portrayedBy": "Paulino Nunes",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V (credit only), It Reaches Out",
+    "lastAppearance": "Intransigence"
+  },
+  {
+    "name": "Dr. Gaskin",
+    "aliases": "T.P. Med Bay Doctor",
+    "gender": "Female",
+    "occupation": "UNN Doctor",
+    "portrayedBy": "Rebecca Applebaum",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Fallen World"
+  },
+  {
+    "name": "Butler",
+    "aliases": "T.P. Mess Hall Medic",
+    "status": "Alive",
+    "gender": "Male",
+    "occupation": "UNN Medic",
+    "portrayedBy": "Dwight Ireland",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Fallen World"
+  },
+  {
+    "name": "Soledad",
+    "status": "Alive",
+    "gender": "Female",
+    "occupation": "Electrical Technician",
+    "portrayedBy": "Marci T. House",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Intransigence"
+  },
+  {
+    "name": "Howard",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "occupation": "UNN Lieutenant",
+    "portrayedBy": "Ngabo Nabea",
+    "seasons": ["Season 3"],
+    "firstAppearance": "It Reaches Out"
+  },
+  {
+    "name": "Jordaan Nemeroff",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["North American Trade Zone", "Earth", "SOL"],
+    "occupation": "UNN Lieutenant",
+    "portrayedBy": "Matt Bois",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Intransigence",
+    "lastAppearance": "Dandelion Sky"
+  },
+  {
+    "name": "Ren Hazuki",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Electrician, Civilian Contractor",
+    "affiliation": ["Savage Industries"],
+    "portrayedBy": "John Kapelos",
+    "seasons": ["Season 3"],
+    "episode": "Delta-V"
+  },
+  {
+    "name": "Melas Kamal",
+    "status": "Alive",
+    "gender": "Male",
+    "home": [],
+    "family": ["Alex Kamal", "Talissa Kamal"],
+    "portrayedBy": "Chris River",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Triple Point"
+  },
+  {
+    "name": "Sison",
+    "portrayedBy": "Billy Parrott",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Dandelion Sky",
+    "lastAppearance": "Congregation"
+  },
+  {
+    "name": "Commander Kunis",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "Sol system"],
+    "occupation": "UNN Commander",
+    "portrayedBy": "Sean Baek",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Congregation",
+    "lastAppearance": "Abaddon's Gate"
+  },
+  {
+    "name": "Talissa Kamal",
+    "gender": "Female",
+    "family": ["Melas Kamal", "Alex Kamal"],
+    "portrayedBy": "Supinder Wraich"
+  },
+  {
+    "name": "Thomas",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "occupation": "MCRN soldier former, Ice miner on Europa",
+    "affiliation": ["Bobbie Draper"],
+    "portrayedBy": "Michael Xavier",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "The One-Eyed Man"
+  },
+  {
+    "name": "David Draper",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "family": ["Benji Draper", "Bobbie Draper"],
+    "occupation": "Student",
+    "affiliation": ["Leelee"],
+    "portrayedBy": "Kolton Stewart",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "The One-Eyed Man"
+  },
+  {
+    "name": "Fermín Beltran",
+    "status": "Deceased",
+    "age": "40s",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "occupation": "Clerk MCRN, Intelligence officer Belters",
+    "affiliation": ["MCRN"],
+    "portrayedBy": "Tim Campbell",
+    "seasons": ["Season 4"],
+    "firstAppearance": "Displacement",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Leelee",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Mars", "SOL"],
+    "occupation": "Criminal henchmen",
+    "affiliation": ["David Draper", "Esai's"],
+    "portrayedBy": "Dayle McLeod",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Esai Martin",
+    "status": "Deceased",
+    "age": "ca. 40s - 50s",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "occupation": "Detective, Smuggler",
+    "portrayedBy": "Paul Schulze",
+    "seasons": ["Season 4"],
+    "firstAppearance": "Jetsam",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Shed Garvey",
+    "status": "Deceased",
+    "age": "20's-30's",
+    "gender": "Male",
+    "home": [],
+    "occupation": "Med-Tech aboard the Canterbury",
+    "portrayedBy": "Paulo Costanzo",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "CQB"
+  },
+  {
+    "name": "Theresa Yao",
+    "status": "Deceased",
+    "gender": "Female",
+    "home": ["Mars", "Sol system", "Donnager"],
+    "occupation": "Captain, MCRN Donnager",
+    "portrayedBy": "Jean Yoon",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Sargeant Grimes",
+    "status": "Deceased",
+    "gender": "Female",
+    "home": ["Mars", "Sol system"],
+    "occupation": "Sergeant, Martian Marine Corps, MCRN Donnager",
+    "portrayedBy": "Diana Bentley",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Corporal Dookie",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Mars", "Sol system", "Donnager"],
+    "occupation": "Corporal, Martian Marine Corps, MCRN Donnager",
+    "portrayedBy": "Jordan Van Dyck",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Corporal Mole",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Mars", "Sol system", "Donnager"],
+    "occupation": "Martian Marine Corps",
+    "portrayedBy": "Brett Ryan",
+    "firstAppearance": "Remember the Cant",
+    "lastAppearance": "CQB"
+  },
+  {
+    "name": "Bobbie Draper",
+    "aliases": "Bobbie, Gunny",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Mars", "SOL"],
+    "family": ["Benji Draper", "David Draper"],
+    "occupation":
+      "Unemployed, Dock worker at Mariner Valley shipyard (former), Gunnery Sergeant in the Martian Marine Corps former, Avasarala's assistant (former)",
+    "affiliation": ["Martian Congressional Republic", "United Nations"],
+    "portrayedBy": "Frankie Adams",
+    "seasons": ["Season 2", "Season 3", "Season 4"],
+    "firstAppearance": "Safe"
+  },
+  {
+    "name": "Thorsen",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Mars", "Sol system"],
+    "occupation": "MCRN Naval Intelligence officer",
+    "portrayedBy": "Clé Bennett",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Seventh Man"
+  },
+  {
+    "name": "Martens",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Mars", "Sol system"],
+    "occupation": "MCRN officer",
+    "portrayedBy": "Peter Outerbridge",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Seventh Man"
+  },
+  {
+    "name": "Lieutenant Sutton",
+    "status": "Deceased KIA",
+    "gender": "Male",
+    "home": ["Mars", "Sol system"],
+    "occupation": "Executive Officer, MCRN Scirocco",
+    "portrayedBy": "Hugh Dillon",
+    "seasons": ["Season 2"]
+  },
+  {
+    "name": "Lieutenant Lopez",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Mars"],
+    "occupation": "Martian Marine Corps, MCRN Donnager, Commanding Officer, MCRN Tachi",
+    "portrayedBy": "Greg Bryk",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Remember the Cant",
+    "lastAppearance": "CQB"
+  },
+  {
+    "name": "Sa'id",
+    "status": "Deceased Presumed killed on Ganymede",
+    "gender": "Male",
+    "occupation": "Corporal, Martian Marine Corps",
+    "portrayedBy": "Dewshane Williams",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Safe",
+    "lastAppearance": "Paradigm Shift"
+  },
+  {
+    "name": "Hillman",
+    "aliases": "Hilly",
+    "status": "Deceased killed by a human-protomolecule hybrid",
+    "gender": "Female",
+    "home": ["Mars", "Sol system"],
+    "family": [],
+    "occupation": "Private in MMC",
+    "portrayedBy": "Sarah Allen",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Safe",
+    "lastAppearance": "Paradigm Shift"
+  },
+  {
+    "name": "Ensign Sinopoli",
+    "aliases": "Sino",
+    "status": "Alive",
+    "age": "20s",
+    "gender": "Male",
+    "home": ["Sol", "Mars", "Kittur Chennamma", "Hammurabi"],
+    "occupation": "Ensign, MCRN Kittur Chennamma",
+    "portrayedBy": "Atticus Mitchell",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Reload",
+    "lastAppearance": "Triple Point"
+  },
+  {
+    "name": "Ensign Loftis",
+    "aliases": "Lofty",
+    "status": "Alive",
+    "age": "20s",
+    "gender": "Female",
+    "home": ["Mars", "Sol system", "Kittur Chennamma", "Hammurabi"],
+    "occupation": "Ensign, MCRN Kittur Chennamma",
+    "portrayedBy": "Kelly McCormack",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Reload"
+  },
+  {
+    "name": "Richard Travis",
+    "status": "Deceased killed by a human-protomolecule hybrid",
+    "gender": "Male",
+    "home": ["Earth", "Sol system", "Mars", "Sol system"],
+    "family": [],
+    "occupation": "Private in MMC",
+    "portrayedBy": "Mpho Koaho",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Safe",
+    "lastAppearance": "Paradigm Shift"
+  },
+  {
+    "name": "Captain Sandrine Kirino",
+    "status": "Alive",
+    "age": "40s",
+    "gender": "Female",
+    "home": ["Mars", "SOL"],
+    "family": [],
+    "occupation": "Captain, MCRN Hammurabi",
+    "portrayedBy": "Krista Bridges",
+    "episode": "Triple Point"
+  },
+  {
+    "name": "Lieutenant Durant",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "occupation": "Executive Officer, MCRN Hammurabi",
+    "portrayedBy": "Matthew Bennett",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Triple Point"
+  },
+  {
+    "name": "Ensign Ranhofer",
+    "aliases": "Hof",
+    "status": "Alive",
+    "age": "20s-30s",
+    "gender": "Male",
+    "home": ["Mars", "Sol system", "Kittur Chennamma", "Hammurabi"],
+    "occupation": "Ensign, MCRN Hammurabi",
+    "portrayedBy": "Alain Chanoine",
+    "seasons": ["Season 3"],
+    "episode": "Reload"
+  },
+  {
+    "name": "Chief Joslin",
+    "status": "Alive",
+    "gender": "Male",
+    "home": [],
+    "occupation": "Duty Officer, MCRN Hammurabi",
+    "portrayedBy": "Darryl Hinds",
+    "seasons": ["Season 3"],
+    "episode": "Triple Point"
+  },
+  {
+    "name": "Chandra Lucas",
+    "status": "Alive",
+    "age": "50s",
+    "gender": "Female",
+    "home": ["Mars", "Sol system"],
+    "occupation": "MCRN Captain",
+    "portrayedBy": "Yanna McIntosh",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Congregation"
+  },
+  {
+    "name": "Elio Casti",
+    "aliases": "Cohen",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Film Crew",
+    "portrayedBy": "Brandon McGibbon",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V"
+  },
+  {
+    "name": "Octavia Muss",
+    "aliases": "\"Tavi\"",
+    "status": "Alive",
+    "gender": "Female",
+    "portrayedBy": "Athena Karkanis",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "McLeod",
+    "status": "Deceased",
+    "age": "20s-30s",
+    "gender": "Male",
+    "home": ["Mars", "Sol system", "Kittur Chennamma"],
+    "occupation": "MCRN",
+    "portrayedBy": "Uncredited",
+    "seasons": ["Season 3"],
+    "episode": "Reload"
+  },
+  {
+    "name": "Dimitri Havelock",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL", "Belt", "SOL"],
+    "occupation": "Detective on Ceres StationStar Helix Security",
+    "portrayedBy": "Jay Hernandez",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Shaddid",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Ceres", "SOL"],
+    "occupation": "Captain at Star Helix Security on Ceres Station",
+    "portrayedBy": "Lola Glaudini",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Rock Bottom"
+  },
+  {
+    "name": "Cobb",
+    "gender": "Male",
+    "occupation": "Detective Homicide  Ceres Station Star Helix Security",
+    "portrayedBy": "Michael Murray",
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Back to the Butcher"
+  },
+  {
+    "name": "Anderson Dawes",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ceres", "Sol system"],
+    "occupation": "Ceres Liaison to the OPA",
+    "portrayedBy": "Jared Harris",
+    "seasons": ["Season 1", "Season 2"],
+    "firstAppearance": "Remember the Cant"
+  },
+  {
+    "name": "Gia",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Belt", "Sol system"],
+    "occupation": "Prostitute on Ceres",
+    "portrayedBy": "Sara Mitich",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Neville Bosch",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ceres", "Belt", "Sol system"],
+    "occupation": "Contract Maritime Transport Operator",
+    "portrayedBy": "Rossif Sutherland",
+    "episode": "Back to the Butcher"
+  },
+  {
+    "name": "Tech Noir Clerk",
+    "gender": "Male",
+    "home": ["Ceres"],
+    "occupation": "Clerk Tech Noir",
+    "portrayedBy": "Nile Seguin",
+    "episode": "Back to the Butcher"
+  },
+  {
+    "name": "Javi",
+    "aliases": "Bouillotte Dealer",
+    "status": "Alive",
+    "gender": "Male",
+    "home": [],
+    "occupation": "Bouillotte",
+    "portrayedBy": "Craig Henry",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Remember the Cant",
+    "lastAppearance": "Windmills"
+  },
+  {
+    "name": "Vargas",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Belt", "Sol system"],
+    "occupation": "Owner of a sweatshop on Ceres",
+    "portrayedBy": "Julian Richings",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Thierry",
+    "status": "Alive",
+    "gender": "Male",
+    "home": [],
+    "portrayedBy": "Markus Parillo",
+    "firstAppearance": "Remember the Cant"
+  },
+  {
+    "name": "Joon",
+    "gender": "Male",
+    "portrayedBy": "Michael Blake",
+    "episode": "The Big Empty"
+  },
+  {
+    "name": "Elder Murray",
+    "gender": "Male",
+    "occupation": "Missionary",
+    "affiliation": ["[1]"],
+    "portrayedBy": "Daniel Krantz",
+    "episode": "Remember the Cant"
+  },
+  {
+    "name": "Gaunt Belter",
+    "gender": "Male",
+    "home": [],
+    "portrayedBy": "Kyle Gatehouse",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Lida and Kaipo",
+    "status": "Deceased",
+    "portrayedBy": "Felicia Simone — Lida, Tig Fong — Kaipo",
+    "firstAppearance": "Back to the Butcher",
+    "lastAppearance": "Rock Bottom"
+  },
+  {
+    "name": "Angry Dockworker",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ceres"],
+    "occupation": "Dockworker",
+    "portrayedBy": "Brian Graham",
+    "firstAppearance": "Remember the Cant"
+  },
+  {
+    "name": "Young Dockworker #1",
+    "age": "14",
+    "gender": "Male",
+    "portrayedBy": "Christopher Weedon",
+    "firstAppearance": "Remember the Cant"
+  },
+  {
+    "name": "Muscle Dockworker",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ceres"],
+    "occupation": "Dockworker",
+    "portrayedBy": "Moses Nyarko",
+    "firstAppearance": "Remember the Cant"
+  },
+  {
+    "name": "Evita Jung",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Ceres", "SOL"],
+    "affiliation": ["Manéo Jung-Espinoza"],
+    "portrayedBy": "Bo Martyn",
+    "seasons": ["Season 3"],
+    "episode": "Delta-V"
+  },
+  {
+    "name": "Wasted Girl",
+    "gender": "Female",
+    "home": [],
+    "portrayedBy": "Tina Jung",
+    "firstAppearance": "CQB"
+  },
+  {
+    "name": "Longbone Extreme Belter, uncredited",
+    "aliases": "Extreme Belter",
+    "gender": "Male",
+    "portrayedBy": "Unknown",
+    "seasons": ["Season 1"],
+    "episode": "Dulcinea"
+  },
+  {
+    "name": "Brothel Madam Ceres",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Rosse Buurt", "Ceres"],
+    "portrayedBy": "Jane Moffat",
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "CQB"
+  },
+  {
+    "name": "Fred Johnson",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL", "Tycho Station", "Belt", "SOL"],
+    "occupation":
+      "OPA Spokesman  de factoChief of OperationsTycho StationUNMC Colonel former",
+    "portrayedBy": "Chad L. Coleman",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "firstAppearance": "CQB"
+  },
+  {
+    "name": "Daniel",
+    "aliases": "Hustler",
+    "gender": "Male",
+    "portrayedBy": "Caleb Olivieri",
+    "firstAppearance": "Rock Bottom"
+  },
+  {
+    "name": "K. Nikil",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Tycho Station"],
+    "occupation": "Faction Leader, Black Sky",
+    "portrayedBy": "Adrian G. Griffiths",
+    "firstAppearance": "SafecreditedUN dossierDoors & Cornersin person",
+    "lastAppearance": "Doors & Corners"
+  },
+  {
+    "name": "Samantha Rosenberg",
+    "status": "Alive",
+    "gender": "Female",
+    "home": [],
+    "occupation": "Chief Engineer",
+    "portrayedBy": "Alli Chung",
+    "seasons": ["Season 1"],
+    "episode": "Salvage"
+  },
+  {
+    "name": "Camina Drummer",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Tycho Station", "Belt", "Sol system"],
+    "occupation":
+      "Captain of the Medina Station Assistant Director at Tycho Stationformer",
+    "affiliation": ["Fred Johnson", "Outer Planets Alliance"],
+    "portrayedBy": "Cara Gee",
+    "seasons": ["Season 2", "Season 3", "Season 4"]
+  },
+  {
+    "name": "Staz",
+    "status": "DeceasedShot to death by Drummer",
+    "gender": "Male",
+    "home": ["Tycho Station", "SOL"],
+    "occupation": "Tycho Station Dock WorkerOPA Faction Leader",
+    "portrayedBy": "Alden Adair",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Doors & Corners",
+    "lastAppearance": "Pyre"
+  },
+  {
+    "name": "Elder McCann",
+    "gender": "Male",
+    "home": [],
+    "occupation": "Elder, LDS Church",
+    "portrayedBy": "Jeff Clarke",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Static",
+    "lastAppearance": "Godspeed"
+  },
+  {
+    "name": "Edin",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Tycho Station"],
+    "occupation": "Station Operator, Command Center, Tycho Station",
+    "portrayedBy": "Kevin Claydon",
+    "firstAppearance": "The Seventh Man",
+    "lastAppearance": "Pyre"
+  },
+  {
+    "name": "Darren",
+    "status": "Deceased infected and assimilated by the protomolecule",
+    "age": "40 - 50",
+    "gender": "Male",
+    "home": ["Belt", "SOL"],
+    "occupation": "Captain of the Scopuli",
+    "affiliation": ["Outer Planets Alliance"],
+    "portrayedBy": "Paul Popowich",
+    "seasons": ["Season 1"],
+    "episode": "Critical Mass"
+  },
+  {
+    "name": "Mateo",
+    "status": "Deceased",
+    "gender": "Male",
+    "family": ["Diogo Harari"],
+    "occupation": "Prospector, Xinglong OwnerOperator",
+    "affiliation": [],
+    "portrayedBy": "Alex Karzis",
+    "seasons": ["Season 1"],
+    "episode": "Rock Bottom"
+  },
+  {
+    "name": "Onudo",
+    "aliases": "⸱ Anudo<br><p>⸱ CPM #15<br>⸱ CPM Goon</p>",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Eli Martyr",
+    "seasons": ["Season 1", "Season 2"],
+    "firstAppearance": "Leviathan Wakes",
+    "lastAppearance": "Home body"
+  },
+  {
+    "name": "Mikey Ko",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Dax Ravina",
+    "episode": "Critical Mass"
+  },
+  {
+    "name": "Wan Li",
+    "status": "Deceased killed by unprotected exposure to the vacuum of space",
+    "age": "35 - 45",
+    "gender": "Male",
+    "home": ["Belt", "SOL"],
+    "occupation": "Crew member on the Scopuli",
+    "affiliation": ["Outer Planets Alliance"],
+    "portrayedBy": "Anthony Grant",
+    "seasons": ["Season 1"],
+    "episode": "Critical Mass"
+  },
+  {
+    "name": "Julie Mao",
+    "aliases":
+      "Juliette Andromeda Mao (full name), Delightingale, Low gravity, no pressure (LGNP dating profile)",
+    "status":
+      "Deceased, infected by the protomolecule, killed by Eros' impact into Venus",
+    "age": "22",
+    "gender": "Female",
+    "home": ["Earth", "SOL", "Ceres", "Eros"],
+    "family": ["Jules-Pierre Mao", "Clarissa Mao"],
+    "occupation": "Crew member of the Scopuli",
+    "affiliation": ["Outer Planets Alliance"],
+    "portrayedBy": "Florence Faivre",
+    "seasons": ["Season 1", "Season 2"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Intransigence"
+  },
+  {
+    "name": "Rutger",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Mercenary Protogen",
+    "portrayedBy": "Brian Hamman",
+    "firstAppearance": "Critical Mass",
+    "lastAppearance": "Leviathan Wakes"
+  },
+  {
+    "name": "Nalida",
+    "status": "Deceased insistent to stay on Eros",
+    "gender": "Female",
+    "home": ["Eros"],
+    "family": ["Shukri"],
+    "portrayedBy": "Ayesha Mansur",
+    "episode": "Leviathan Wakes"
+  },
+  {
+    "name": "Kenzo Gabriel",
+    "status": "Deceased killed by the protomolecule",
+    "gender": "Male",
+    "occupation": "Industrial espionage",
+    "affiliation": ["Davila Aerospatiale"],
+    "portrayedBy": "Elias Toufexis",
+    "seasons": ["Season 1"]
+  },
+  {
+    "name": "Filat Kothari",
+    "aliases": "Pock Mark",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Ceres"],
+    "portrayedBy": "Ted Ludzik",
+    "firstAppearance": "Remember the Cant",
+    "lastAppearance": "Leviathan Wakes"
+  },
+  {
+    "name": "Shukri",
+    "aliases": "Little Girl ⸱ Setara mali",
+    "status": "Deceased remained on Eros",
+    "gender": "Female",
+    "home": ["Eros"],
+    "family": ["Nalida"],
+    "portrayedBy": "Madison Oldroyd",
+    "seasons": ["Season 1"],
+    "episode": "Leviathan Wakes"
+  },
+  {
+    "name": "Josephus Miller",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Ceres", "Belt", "SOL"],
+    "family": [],
+    "occupation": "Detective formerat Star Helix Security",
+    "portrayedBy": "Thomas Jane",
+    "seasons": ["Season 1", "Season 2"],
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Home"
+  },
+  {
+    "name": "Menacing Belter #1",
+    "aliases": "⸱Mnacing Belter #1, ⸱CPM #>",
+    "status": "Deceased",
+    "gender": "Male",
+    "portrayedBy": "Jung-Yul Kim",
+    "firstAppearance": "Remember the Cant",
+    "lastAppearance": "Leviathan Wakes"
+  },
+  {
+    "name": "Basia Merton",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ganymede", "SOL"],
+    "family": ["Lucia Merton", "Felcia Merton", "Jacek Merton", "Katoa"],
+    "occupation": "Welder",
+    "portrayedBy": "Ryan Blakely",
+    "seasons": ["Season 2"],
+    "episode": "Cascade"
+  },
+  {
+    "name": "Praxideke Meng",
+    "aliases": "Prax",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ganymede", "Sol system"],
+    "family": ["Mei Meng"],
+    "occupation": "Chief Botanist for Soy Farm Project on  Ganymede Station[1]",
+    "portrayedBy": "Terry Chen",
+    "seasons": ["Season 2", "Season 3"],
+    "firstAppearance": "Pyre"
+  },
+  {
+    "name": "Scruffy Guy Eros",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Eros"],
+    "portrayedBy": "Marqus Bobesich",
+    "episode": "Leviathan Wakes"
+  },
+  {
+    "name": "Roma",
+    "gender": "Male",
+    "home": ["Ganymede"],
+    "occupation": "Hacker",
+    "portrayedBy": "Steven Yaffee",
+    "seasons": ["Season 2"],
+    "episode": "Cascade"
+  },
+  {
+    "name": "Silje",
+    "status": "Alive",
+    "gender": "Female",
+    "portrayedBy": "Ana-Maria Alvarado",
+    "episode": "The Monster and the Rocket"
+  },
+  {
+    "name": "Champa",
+    "status": "Unknown",
+    "gender": "Male",
+    "home": ["Ganymede", "Sol system"],
+    "portrayedBy": "Gugun Deep Singh",
+    "episode": "The Monster and the Rocket"
+  },
+  {
+    "name": "Geir",
+    "status": "deceased",
+    "gender": "Male",
+    "portrayedBy": "Cyrus Aazam",
+    "seasons": ["Season 2"],
+    "episode": "The Monster and the Rocket"
+  },
+  {
+    "name": "Umea",
+    "status": "Deceased killed by a human-protomolecule hybrid",
+    "gender": "Female",
+    "home": ["Ganymede", "Sol system"],
+    "occupation": "Genetic Research Assistant  Member of Project Caliban",
+    "portrayedBy": "Allison Hossack",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Cascade",
+    "lastAppearance": "Here There Be Dragons"
+  },
+  {
+    "name": "Lawrence Strickland",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Geneticist",
+    "portrayedBy": "Ted Atherton",
+    "firstAppearance": "Pyre",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "Mei Meng",
+    "status": "Alive",
+    "age": "4",
+    "gender": "Female",
+    "home": ["Ganymede", "Sol system"],
+    "family": ["Praxideke Meng", "Nicola Mulko"],
+    "occupation": "Student",
+    "portrayedBy": "Leah Jung",
+    "seasons": ["Season 2", "Season 3"],
+    "firstAppearance": "Pyre",
+    "lastAppearance": "Immolation"
+  },
+  {
+    "name": "Katoa Merton",
+    "status": "Deceased",
+    "age": "5 (?)",
+    "gender": "Male",
+    "home": ["Ganymede", "SOL"],
+    "family": ["Basia Merton"],
+    "portrayedBy": "Jaeden NoelJordan Dacol Katoa Hybrid",
+    "seasons": ["Season 3"],
+    "firstAppearance": "IFF"
+  },
+  {
+    "name": "Tim Post AKA Surly Belter Crewman",
+    "character": "Surly Belter Crewman",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Pyre",
+    "lastAppearance": "Pyre"
+  },
+  {
+    "name": "Melissa Suputayaporn",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Belt", "SOL"],
+    "family": ["Santichai Suputayaporn"],
+    "portrayedBy": "Valerie Buhagiar",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Weeping Somnambulist"
+  },
+  {
+    "name": "Doris Bourne",
+    "status": "Deceased killed by prolonged vacuum exposure",
+    "gender": "Female",
+    "home": ["Ganymede", "Sol system", "Mars", "Sol system"],
+    "occupation": "Botanist on Ganymede",
+    "portrayedBy": "Grace Lynn Kung",
+    "seasons": ["Season 2"],
+    "firstAppearance": "Pyre"
+  },
+  {
+    "name": "Santichai Suputayaporn",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Belt", "Sol system"],
+    "family": ["Melissa Suputayaporn"],
+    "portrayedBy": "Peter Williams",
+    "seasons": ["Season 2"],
+    "firstAppearance": "The Weeping Somnambulist"
+  },
+  {
+    "name": "Arum Lee",
+    "status": "deceased",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "affiliation": ["MCRN", "Inaros OPA"],
+    "portrayedBy": "Joe Roncetti",
+    "seasons": ["Season 4"],
+    "episode": "New Terra"
+  },
+  {
+    "name": "Filip Inaros",
+    "status": "Alive",
+    "gender": "Male",
+    "family": ["Marco Inaros", "Naomi Nagata"],
+    "affiliation": ["Outer Planets Alliance"],
+    "portrayedBy": "Jasai Chase Owens",
+    "seasons": ["Season 4"],
+    "firstAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Marco Inaros",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Belt", "SOL"],
+    "family": ["Filip Inaros", "Naomi Nagata"],
+    "occupation": "OPA operativeBelter leader",
+    "affiliation": ["Outer Planets Alliance", "Captain Rokku", "Cyn", "Karat"],
+    "portrayedBy": "Keon Alexander",
+    "seasons": ["Season 4"],
+    "firstAppearance": "Retrograde"
+  },
+  {
+    "name": "Klaes Ashford",
+    "status": "Deceased",
+    "age": "60s",
+    "gender": "Male",
+    "home": ["Ceres", "SOL"],
+    "occupation": "First Officer, OPAS Behemoth, Pirate (former)",
+    "portrayedBy": "David Strathairn",
+    "seasons": ["Season 3", "Season 4"],
+    "firstAppearance": "Delta-V",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Victor Sohiro",
+    "status": "deceased",
+    "gender": "Male",
+    "home": ["Belt"],
+    "family": ["Jorge Sohiro"],
+    "affiliation": ["Outer Planets Alliance"],
+    "seasons": ["Season 4"],
+    "episode": "Cibola Burn"
+  },
+  {
+    "name": "Naomi Nagata",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Ceres", "SOL", "Canterbury", "Rocinante"],
+    "family": ["Filip Inaros"],
+    "occupation":
+      "Chief Engineer of the Canterbury (former), XO of the Rocinante (former), Chief Engineer of the Behemoth",
+    "affiliation": [
+      "James Holden",
+      "Amos Burton",
+      "Alex Kamal",
+      "Marco Inaros"
+    ],
+    "portrayedBy": "Dominique Tipper",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "James Holden",
+    "aliases": "Jim, Hoss",
+    "status": "Alive",
+    "age": "ca. 30",
+    "gender": "Male",
+    "home": ["Montana", "Earth", "SOL", "Canterbury", "Rocinante"],
+    "family": [
+      "Elise",
+      "Tamara",
+      "Caesar",
+      "Tom",
+      "Dimitri",
+      "Joseph",
+      "Sophie"
+    ],
+    "occupation":
+      "Captain of the Rocinante, Subordinate of Fred Johnson (former)",
+    "affiliation": [
+      "Naomi Nagata",
+      "Alex Kamal",
+      "Amos Burton",
+      "Fred Johnson",
+      "Ade Nygaard"
+    ],
+    "portrayedBy": "Steven Strait",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Amos Burton",
+    "status": "Alive",
+    "age": "30s - 40s",
+    "gender": "Male",
+    "home": ["Baltimore", "Earth", "SOL", "Canterbury", "Rocinante"],
+    "family": ["Lydia Allen"],
+    "occupation":
+      "Mechanic on the Canterbury (former), Mechanic on the Rocinante",
+    "affiliation": ["Naomi Nagata", "Jim Holden", "Alex Kamal"],
+    "portrayedBy": "Wes Chatham",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Sematimba",
+    "aliases": "\"Semi\"",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Carne Por la Machina Inspector on Eros Station",
+    "portrayedBy": "Kevin Hanchard",
+    "seasons": ["Season 1"],
+    "firstAppearance": "Windmills",
+    "lastAppearance": "Leviathan Wakes"
+  },
+  {
+    "name": "Alex Kamal",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Mars", "SOL", "Canterbury", "Rocinante"],
+    "family": ["Talissa Kamal", "Melas Kamal"],
+    "occupation":
+      "Transport pilot in MCRN (former), Pilot aboard the Cantebury (former), Pilot aboard the Rocinante",
+    "affiliation": ["James Holden", "Naomi Nagata", "Amos Burton"],
+    "portrayedBy": "Cas Anvar",
+    "seasons": ["Season 1", "Season 2", "Season 3", "Season 4", "Five"],
+    "firstAppearance": "Dulcinea"
+  },
+  {
+    "name": "Monica Stuart",
+    "status": "Alive",
+    "gender": "Female",
+    "occupation": "Journalist, Documentary Filmmaker, Psychologist",
+    "affiliation": ["Elio Cohen Casti"],
+    "portrayedBy": "Anna Hopkins",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V"
+  },
+  {
+    "name": "Mesplede",
+    "aliases": "Victor Mesplede",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "Doctor, Activist, Humanitarian",
+    "portrayedBy": "Alex Woods",
+    "firstAppearance": "Safe",
+    "lastAppearance": "Godspeed"
+  },
+  {
+    "name": "Manéo Jung-Espinoza",
+    "aliases": "Néo",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Ceres", "SOL"],
+    "family": [],
+    "occupation": "Slingshot racer",
+    "affiliation": ["Evita Jung"],
+    "portrayedBy": "Zach Villa",
+    "seasons": ["Season 3"],
+    "episode": "Delta-V"
+  },
+  {
+    "name": "Egan",
+    "status": "Deceased",
+    "gender": "Male",
+    "occupation": "OPA Behemoth Security",
+    "portrayedBy": "Obssa Ahmed",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Congregation",
+    "lastAppearance": "Abaddon's Gate"
+  },
+  {
+    "name": "Riko Oshi",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Mars", "Sol system"],
+    "occupation": "Private Pilot, Martian Marine Corps",
+    "affiliation": ["Martian Congressional Republic"],
+    "portrayedBy": "Sabryn Rock",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Dandelion Sky",
+    "lastAppearance": "Abaddon's Gate"
+  },
+  {
+    "name": "Grigori",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Belt", "Sol system"],
+    "portrayedBy": "Brock Johnson",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Delta-V",
+    "lastAppearance": "Abaddon's Gate"
+  },
+  {
+    "name": "Jed Trepp",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Mars", "Sol system"],
+    "occupation": "Private, Martian Marine Corps",
+    "affiliation": ["Martian Congressional Republic"],
+    "portrayedBy": "Hamed Dar",
+    "seasons": ["Season 3"],
+    "firstAppearance": "Dandelion Sky"
+  },
+  {
+    "name": "Paolo Mayer",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Mars", "Sol system"],
+    "occupation": "Lieutenant, Martian Marine Corps",
+    "affiliation": ["Martian Congressional Republic"],
+    "portrayedBy": "Simu Liu",
+    "episode": "Dandelion Sky"
+  },
+  {
+    "name": "Adolphus Murtry",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Earth", "SOL"],
+    "occupation": "Head of Security, Edward Israel, Royal Charter Energy",
+    "affiliation": ["Royal Charter Energy"],
+    "portrayedBy": "Burn Gorman",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Elvi Okoye",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["New Terra", "ILU", "Earth", "SOL"],
+    "occupation": "Biologist",
+    "affiliation": ["Royal Charter Energy"],
+    "portrayedBy": "Lyndie Greenwood",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra"
+  },
+  {
+    "name": "Lucia Mazur",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Ilus", "ILU", "Ganymede", "SOL"],
+    "family": ["Jakob Mazur", "Felcia Mazur"],
+    "occupation": "Physician",
+    "portrayedBy": "Rosa Gilmore",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Diogo Harari",
+    "status": "Deceased",
+    "age": "19",
+    "gender": "Male",
+    "home": ["Ceres", "Belt", "Sol system", "Tycho Station"],
+    "family": ["Mateo"],
+    "occupation": "Lieutenant, OPA Navy",
+    "affiliation": ["Tycho Station OPA", "Anderson Dawes' OPA", "OPA Navy"],
+    "portrayedBy": "Andrew Rotilio",
+    "seasons": ["Season 1", "Season 2", "Season 3"],
+    "firstAppearance": "The Big Empty",
+    "lastAppearance": "Abaddon's Gate"
+  },
+  {
+    "name": "Carol Chiwewe",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Ilus", "ILU", "Ganymede", "SOL", "Mars", "SOL"],
+    "portrayedBy": "Patti Kim",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Coop",
+    "status": "Deceased shot to death by Murtry",
+    "gender": "Male",
+    "home": ["Ilus", "ILU", "Ganymede", "SOL"],
+    "portrayedBy": "Kris Holden-Ried",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Oppressor"
+  },
+  {
+    "name": "Chandra Wei",
+    "status": "Deceased",
+    "age": "30s",
+    "gender": "Female",
+    "home": ["Earth", "SOL", "New Terra", "ILU"],
+    "occupation": "Security Officer, Royal Charter Energy",
+    "affiliation": ["Royal Charter Energy"],
+    "portrayedBy": "Jess Salgueiro",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Felcia Mazur",
+    "aliases": "Felcia Merton (Books)",
+    "status": "Alive",
+    "gender": "Female",
+    "home": ["Ganymede", "SOL", "Ilus", "ILU", "Ceres", "SOL"],
+    "family": ["Dr. Lucia Mazur", "Jakob Mazur", "Chike"],
+    "portrayedBy": "Kyla Madeira",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Jakob Mazur",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ilus", "ILU", "Ganymede", "SOL"],
+    "family": ["Lucia Mazur", "Felcia Mazur"],
+    "portrayedBy": "Steven McCarthy",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Scotty",
+    "status": "Deceased",
+    "gender": "Male",
+    "home": ["Ganymede", "SOL", "Ilus", "ILU"],
+    "occupation": "Settler",
+    "portrayedBy": "Nabeel El Khafif",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Oppressor"
+  },
+  {
+    "name": "Fayez Sarkis",
+    "status": "Alive",
+    "age": "30s",
+    "gender": "Male",
+    "home": ["Mars", "SOL"],
+    "occupation": "Scientist",
+    "affiliation": ["Royal Charter Energy", "Edward Israel"],
+    "portrayedBy": "Zach Smadu",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  },
+  {
+    "name": "Chike",
+    "status": "Alive",
+    "gender": "Male",
+    "home": ["Ganymede", "SOL", "Ilus", "ILU"],
+    "family": ["Lucia Mazur", "Jakob Mazur", "Felcia Mazur"],
+    "portrayedBy": "Nathaniel McParland",
+    "seasons": ["Season 4"],
+    "firstAppearance": "New Terra",
+    "lastAppearance": "Cibola Burn"
+  }
+]

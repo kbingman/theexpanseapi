@@ -1,0 +1,108 @@
+[
+  {
+    "name": "Donnager Class",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "type": "Battleship",
+    "length": "475.5 meters",
+    "weight": "250,000 tons (Dry)",
+    "propulsion": ["4✕ RT-10 Kaminari Epstein Drives"],
+    "armament": [
+      "2x VX-12 Foehammer Turreted Ultra-Heavy Railguns standard",
+      "6x Forward Torpedo Launchers variable loadout",
+      "8✕ Aft Torpedo Launchers variable loadout",
+      "59✕ Nariman Dynamics 40mm Point Defense Cannons",
+      "2✕ Vacant hardpoints Designed to house additional VX-12 Foehammer Railguns on future models or naval experiments"
+    ],
+    "complement": [
+      "Corvette Class frigates",
+      "Morrigan Class destroyers",
+      "Chariot-Type dropships",
+      "Repair Skiffs"
+    ],
+    "crew": [
+      "2086 Personnel",
+      "Martian Marine Corps Force Recon Marine Squads"
+    ],
+    "appears": ["Season 1", "Season 2", "Season 3", "Season 4"]
+  },
+  {
+    "name": "Truman Class",
+    "ownerNavy": ["United Nations Navy"],
+    "type": "Dreadnought Battleship",
+    "width": "110 meters",
+    "length": "376 meters",
+    "propulsion": ["6✕ S-400 Series Epstein Drives"],
+    "armament": [
+      "2✕ Farren-Pattern Heavy Railguns",
+      "9✕ Autoloading Torpedo Bays Conventional, Plasma, and Nuclear Warheads",
+      "42✕ Redfield Ballistics 40mm Point Defense Cannons"
+    ],
+    "complement": ["Dropship", "Repair Skiffs"],
+    "crew": ["1400 Personnel", "UN Marines"]
+  },
+  {
+    "name": "Amun-Ra Class",
+    "ownerNavy": ["Protogen"],
+    "type": "Stealth ship, Frigate",
+    "width": "24.2 meters",
+    "length": "61.5 meters",
+    "propulsion": [
+      "1x Silversmith Supercooled Epstein Drive"
+    ],
+    "armament": [
+      "1✕ prototype internally-mounted S-24 Khopesh light Railgun",
+      "4✕ Bush shipyards hypercooled PDCs",
+      "2✕ rapid-reload Torpedo bays"
+    ],
+    "complement": [
+      "Khonsu Class long range steath shuttlecraft",
+      "breaching pods"
+    ]
+  },
+  {
+    "name": "Corvette Class",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "type": "Light frigate",
+    "length": "46 meters",
+    "propulsion": ["1✕ Epstein Drive"],
+    "armament": [
+      "6✕ Nariman Dynamics 40mm Point Defense Cannons",
+      "2✕ Torpedo launchers carrying 20 torpedoes"
+    ],
+    "crew": ["30 Personnel"]
+  },
+  {
+    "name": "Leonidas Class",
+    "ownerNavy": ["United Nations Navy"],
+    "type": "Battleship",
+    "length": "270 meters",
+    "propulsion": ["5✕ S-250 Series Epstein Drives"],
+    "armament": [
+      "2✕ Dawson-Pattern Medium Railguns",
+      "32✕ Single-Fire Torpedo Tubes Conventional, Plasma, and Nuclear Warheads",
+      "25✕ Mikazuki Munitions Point Defense Cannons"
+    ],
+    "complement": ["Dropship"],
+    "crew": ["920 Personnel", "UN Marines"]
+  },
+  {
+    "name": "Scirocco Class",
+    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "type": "Assault cruiser",
+    "width": "72 meters",
+    "length": "200 meters",
+    "propulsion": ["4✕ RTF-B Series Epstein Drives"],
+    "armament": [
+      "1✕ Turreted Dorsal-starboard V-14 Stiletto Light Railgun",
+      "5✕ configurable medium-grade torpedo/missile tubes",
+      "5✕ configurable light-grade torpedo/missile tubes",
+      "12x Nariman Dynamics rapid targeting Point Defense Cannons",
+      "Probes"
+    ],
+    "complement": [
+      "3✕ Chariot-Type attack Dropships",
+      "12✕ Mosquito type Breaching pods"
+    ],
+    "crew": ["430 Personnel", "120 MMC Force Recon Marine squad"]
+  }
+]
