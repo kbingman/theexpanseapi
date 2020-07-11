@@ -6,10 +6,6 @@ use std::env;
 use dotenv::dotenv;
 use state::State;
 
-// async fn index() -> tide::Result<()> {
-// 
-// }
-
 #[async_std::main]
 async fn main() -> tide::Result<()> {
     femme::start(log::LevelFilter::Debug)?;

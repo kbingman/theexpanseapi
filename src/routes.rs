@@ -15,13 +15,16 @@ pub(crate) async fn list_dbs(req: Request<State>) -> tide::Result<impl Into<Resp
     Ok(names.join("\n"))
 }
 
-/// List spacecraft classes
-pub(crate) async fn list_people(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = req
+fn get_database(req: &Request<State>) -> mongodb::Database {
+    req
         .state()
         .mongo()
         .database("theexpanseapi-prod")
-        .collection("people");
+}
+
+/// List spacecraft classes
+pub(crate) async fn list_people(req: Request<State>) -> tide::Result<impl Into<Response>> {
+    let collection = get_database(&req).collection("people");
 
     let mut cursor = collection.find(None, None).await?;
     let mut people = Vec::<Person>::new();
@@ -36,11 +39,7 @@ pub(crate) async fn list_people(req: Request<State>) -> tide::Result<impl Into<R
 
 /// Find person
 pub(crate) async fn find_people(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = req
-        .state()
-        .mongo()
-        .database("theexpanseapi-prod")
-        .collection("people");
+    let collection = get_database(&req).collection("people");
 
     let uuid: String = req.param("uuid")?;
     let filter = doc! { "uuid": &uuid };
@@ -52,11 +51,7 @@ pub(crate) async fn find_people(req: Request<State>) -> tide::Result<impl Into<R
 
 /// Find spacecraft
 pub(crate) async fn find_spacecraft(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = req
-        .state()
-        .mongo()
-        .database("theexpanseapi-prod")
-        .collection("spacecraft");
+    let collection = get_database(&req).collection("spacecraft");
 
     let uuid: String = req.param("uuid")?;
     let filter = doc! { "uuid": &uuid };
@@ -68,11 +63,7 @@ pub(crate) async fn find_spacecraft(req: Request<State>) -> tide::Result<impl In
 
 /// List spacecraft
 pub(crate) async fn list_spacecraft(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = req
-        .state()
-        .mongo()
-        .database("theexpanseapi-prod")
-        .collection("spacecraft");
+    let collection = get_database(&req).collection("spacecraft");
 
     let mut cursor = collection.find(None, None).await?;
     let mut spacecraft = Vec::<Spacecraft>::new();
