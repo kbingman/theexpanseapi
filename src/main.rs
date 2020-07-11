@@ -1,6 +1,5 @@
 mod routes;
 mod state;
-mod models;
 
 use std::env;
 use dotenv::dotenv;
