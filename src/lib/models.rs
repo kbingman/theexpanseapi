@@ -42,3 +42,4 @@ pub struct Person {
     pub gender: Option<String>,
     pub occupation: Option<String>,
 }
+
