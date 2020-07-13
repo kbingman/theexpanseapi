@@ -5,7 +5,7 @@ use mongodb::bson::{doc, from_bson, Bson};
 
 use tide::{Request, Response, http::StatusCode};
 
-use super::state::State;
+use lib::state::State;
 use lib::models::{Person, Spacecraft};
 
 fn get_database(req: &Request<State>) -> mongodb::Database {

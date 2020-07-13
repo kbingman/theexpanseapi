@@ -1,9 +1,8 @@
 mod routes;
-mod state;
 
 use std::env;
 use dotenv::dotenv;
-use state::State;
+use lib::state::State;
 
 #[async_std::main]
 async fn main() -> tide::Result<()> {
