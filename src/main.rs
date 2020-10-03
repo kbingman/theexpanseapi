@@ -17,13 +17,13 @@ async fn main() -> tide::Result<()> {
 
     app.at("/people").get(routes::list_people);
     app.at("/people/:uuid").get(routes::find_people);
+
     app.at("/spacecraft").get(routes::list_spacecraft);
     app.at("/spacecraft/:uuid").get(routes::find_spacecraft);
-    // app.at("/:db/list").get(routes::list_colls);
-    // app.at("/:db/:collection").post(routes::insert_doc);
-    // app.at("/:db/:collection").get(routes::find_doc);
-    // app.at("/:db/:collection/update").get(routes::update_doc);
-    app.listen("localhost:8080").await?;
+
+    app.at("/animals").post(routes::create_person);
+
+    app.listen("127.0.0.1:8080").await?;
 
     Ok(())
 }

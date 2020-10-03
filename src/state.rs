@@ -1,6 +1,6 @@
 //! Shared application state.
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub(crate) struct State {
     pub db: mongodb::Client,
 }
