@@ -12,10 +12,10 @@ impl State {
         Ok(Self { client: mongo })
     }
 
-    /// Access the mongodb client.
-    pub(crate) fn mongo(&self) -> &mongodb::Client {
-        &self.client
-    }
+    // /// Access the mongodb client.
+    // pub(crate) fn mongo(&self) -> &mongodb::Client {
+    //     &self.client
+    // }
 
     /// Access the DB
     pub(crate) fn database(&self, name: &str) -> mongodb::Database {
