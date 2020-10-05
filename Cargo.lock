@@ -2264,6 +2264,7 @@ name = "theexpanse"
 version = "0.1.0"
 dependencies = [
  "async-std",
+ "bson",
  "clap",
  "dotenv",
  "env_logger",

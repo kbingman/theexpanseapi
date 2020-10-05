@@ -5,11 +5,12 @@ use serde::{Deserialize, Serialize};
 use tide::{Body, Request, Response};
 
 use crate::state::State;
+use crate::util::get_database;
 use super::models::Spacecraft;
 
 /// List spacecraft
 pub(crate) async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = &req.state().database("theexpanseapi-prod").collection("spacecraft");
+    let collection = get_database(&req).collection("spacecraft");
 
     let find_options = FindOptions::builder().limit(50).build();
     let mut cursor = collection.find(None, find_options).await?;
@@ -30,7 +31,7 @@ struct Message {
 
 /// Find spacecraft
 pub(crate) async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = &req.state().database("theexpanseapi-prod").collection("spacecraft");
+    let collection = get_database(&req).collection("spacecraft");
 
     let uuid: String = req.param("uuid")?;
     let filter = doc! { "uuid": &uuid };

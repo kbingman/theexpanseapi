@@ -1,27 +1,44 @@
-mod state;
 mod people;
 mod spacecraft;
+mod state;
+mod util;
 
 use std::env;
-use std::io::ErrorKind;
+// use std::io::ErrorKind;
 use dotenv::dotenv;
 use state::State;
 use tide::utils::After;
-use tide::{StatusCode, Response};
+use tide::http::mime;
+use tide::{Response, StatusCode};
 
 /// Error handling for all routes
-async fn error_handler (mut res: Response) -> tide::Result<>{
-    if let Some(err) = res.downcast_error::<async_std::io::Error>() {
-        if let ErrorKind::NotFound = err.kind() {
-            let msg = err.to_string();
-            // TODO get this to return the correct error code
-            res.set_status(StatusCode::InternalServerError);
+async fn error_handler (res: Response) -> tide::Result<>{
+    // let response: tide::Response;
+    let response = match res.error() {
+        // Handles errors
+        Some(err) => Response::builder(res.status())
+              .content_type(mime::JSON)
+              .body(format!("{{ \"message\": \"{}\" }}", err.to_string()))
+              .build(),
+        None => {
+            // If no error is reported but something went wrong, this is handled here
+            match res.status() {
+               StatusCode::NotFound => Response::builder(404)
+                    .content_type(mime::JSON)
+                    .body("{ \"message\": \"NOT_FOUND_HTML_PAGE\" }")
+                    .build(),
 
-            // NOTE: You may want to avoid sending error messages in a production server.
-            res.set_body(format!("Error: {}", msg));
-        }
-    }
-    Ok(res)
+                StatusCode::InternalServerError => Response::builder(500)
+                    .content_type(mime::JSON)
+                    .body("{ \"message\": \"INTERNAL_SERVER_ERROR_HTML_PAGE\" }")
+                    .build(),
+
+                _ => res,
+            }
+        },
+    };
+
+    Ok(response)
 }
 
 #[async_std::main]
