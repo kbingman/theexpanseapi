@@ -1,5 +1,5 @@
-use std::fs;
 use clap::Clap;
+use std::fs;
 
 #[derive(Clap)]
 #[clap(version = "1.0", author = "Keith Bingman. <kbingman@gmail.com>")]

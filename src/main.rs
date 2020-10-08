@@ -8,23 +8,27 @@ use std::env;
 // use std::io::ErrorKind;
 use dotenv::dotenv;
 use state::State;
-use tide::utils::After;
 use tide::http::mime;
+use tide::utils::After;
 use tide::{Response, StatusCode};
 
 /// Error handling for all routes
-async fn error_handler (res: Response) -> tide::Result<>{
+async fn error_handler(res: Response) -> tide::Result {
     // let response: tide::Response;
     let response = match res.error() {
         // Handles errors
         Some(err) => Response::builder(res.status())
-              .content_type(mime::JSON)
-              .body(format!("{{ \"message\": \"{}\", \"code\": {} }}", err.to_string(), res.status()))
-              .build(),
+            .content_type(mime::JSON)
+            .body(format!(
+                "{{ \"message\": \"{}\", \"code\": {} }}",
+                err.to_string(),
+                res.status()
+            ))
+            .build(),
         None => {
             // If no error is reported but something went wrong, this is handled here
             match res.status() {
-               StatusCode::NotFound => Response::builder(404)
+                StatusCode::NotFound => Response::builder(404)
                     .content_type(mime::JSON)
                     .body("{ \"message\": \"Not Found\", \"code\": 404 }")
                     .build(),
@@ -36,7 +40,7 @@ async fn error_handler (res: Response) -> tide::Result<>{
 
                 _ => res,
             }
-        },
+        }
     };
 
     Ok(response)

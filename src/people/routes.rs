@@ -2,13 +2,13 @@ use async_std::prelude::*;
 use mongodb::bson::{doc, from_bson, to_bson, Bson};
 use uuid::Uuid;
 
-use tide::prelude::*; // Pulls in the json! macro. 
+use tide::prelude::*; // Pulls in the json! macro.
 use tide::{Body, Request, Response};
 
+use super::models::Person;
 use crate::messages;
 use crate::state::State;
 use crate::util::get_database;
-use super::models::Person;
 
 /// List people
 pub(crate) async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
@@ -37,8 +37,8 @@ pub(crate) async fn show(req: Request<State>) -> tide::Result<impl Into<Response
         Some(document) => {
             let person: Person = from_bson(Bson::Document(document))?;
             Ok(Body::from_json(&person)?)
-        },
-        // TODO Add the correct 404 status code 
+        }
+        // TODO Add the correct 404 status code
         None => Ok(Body::from_json(&messages::not_found())?),
     }
 }
@@ -51,10 +51,12 @@ pub(crate) async fn create(mut req: Request<State>) -> tide::Result<impl Into<Re
     // Adds a `uuid` if none is found.
     person.uuid = match person.uuid {
         Some(_uuid) => person.uuid,
-        None => Some(Uuid::new_v4())
+        None => Some(Uuid::new_v4()),
     };
 
-    let _result = collection.insert_one(from_bson(to_bson(&person)?)?, None).await?;
+    let _result = collection
+        .insert_one(from_bson(to_bson(&person)?)?, None)
+        .await?;
     Ok(Body::from_json(&person)?)
 }
 

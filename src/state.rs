@@ -22,4 +22,3 @@ impl State {
         self.client.database(name)
     }
 }
-
