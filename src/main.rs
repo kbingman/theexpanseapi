@@ -1,50 +1,10 @@
-mod messages;
-mod people;
-mod spacecraft;
-mod state;
-mod util;
-
-use std::env;
-// use std::io::ErrorKind;
 use dotenv::dotenv;
-use state::State;
-use tide::http::mime;
+use std::env;
 use tide::utils::After;
-use tide::{Response, StatusCode};
 
-/// Error handling for all routes
-async fn error_handler(res: Response) -> tide::Result {
-    // let response: tide::Response;
-    let response = match res.error() {
-        // Handles errors
-        Some(err) => Response::builder(res.status())
-            .content_type(mime::JSON)
-            .body(format!(
-                "{{ \"message\": \"{}\", \"code\": {} }}",
-                err.to_string(),
-                res.status()
-            ))
-            .build(),
-        None => {
-            // If no error is reported but something went wrong, this is handled here
-            match res.status() {
-                StatusCode::NotFound => Response::builder(404)
-                    .content_type(mime::JSON)
-                    .body("{ \"message\": \"Not Found\", \"code\": 404 }")
-                    .build(),
-
-                StatusCode::InternalServerError => Response::builder(500)
-                    .content_type(mime::JSON)
-                    .body("{ \"message\": \"Internal Server Error\", \"code\": 500 }")
-                    .build(),
-
-                _ => res,
-            }
-        }
-    };
-
-    Ok(response)
-}
+use lib::state::State;
+use lib::util::error_handler;
+use lib::{people, spacecraft};
 
 #[async_std::main]
 async fn main() -> tide::Result<()> {

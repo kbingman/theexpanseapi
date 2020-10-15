@@ -1,8 +1,12 @@
 [package]
-name = "theexpanse"
+name = "expanse"
 version = "0.1.0"
 authors = ["Keith Bingman <kbingman@gmail.com>"]
 edition = "2018"
+
+[lib]
+name = "lib"
+path = "src/lib/mod.rs"
 
 [[bin]]
 name = "import"
@@ -24,3 +28,5 @@ tide = "0.13.0"
 uuid = { version = "0.8.1", features = ["serde", "v4"] }
 clap = "3.0.0-beta.1"
 bson="*"
+serde_json = "1.0.58"
+anyhow = "1.0.33"

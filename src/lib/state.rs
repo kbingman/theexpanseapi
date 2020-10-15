@@ -1,15 +1,15 @@
 //! Shared application state.
 
 #[derive(Clone, Debug)]
-pub(crate) struct State {
+pub struct State {
     pub client: mongodb::Client,
 }
 
 impl State {
     /// Create a new instance of `State`.
-    pub(crate) async fn new(uri: &str) -> tide::Result<Self> {
-        let mongo = mongodb::Client::with_uri_str(uri).await?;
-        Ok(Self { client: mongo })
+    pub async fn new(uri: &str) -> tide::Result<Self> {
+        let client = mongodb::Client::with_uri_str(uri).await?;
+        Ok(Self { client })
     }
 
     // /// Access the mongodb client.
@@ -18,7 +18,7 @@ impl State {
     // }
 
     /// Access the DB
-    pub(crate) fn database(&self, name: &str) -> mongodb::Database {
+    pub fn database(&self, name: &str) -> mongodb::Database {
         self.client.database(name)
     }
 }

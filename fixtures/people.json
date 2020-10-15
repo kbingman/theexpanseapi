@@ -43,7 +43,7 @@
   },
   {
     "name": "Ade Nygaard",
-    "status": "Deceased killed by the destruction of the Canterbury",
+    "status": "Deceased",
     "gender": "Female",
     "occupation": "Navigator on the Canterbury",
     "affiliation": ["Pur'n'Kleen Water"],
@@ -96,7 +96,7 @@
   },
   {
     "name": "Antony Dresden",
-    "status": "Deceased killed by Miller",
+    "status": "Deceased",
     "gender": "Male",
     "portrayedBy": "Daniel Kash",
     "seasons": ["Season 1", "Season 2"],
@@ -116,7 +116,7 @@
   },
   {
     "name": "Craig",
-    "status": "Widowed",
+    "status": "Alive",
     "gender": "Male",
     "home": [],
     "family": ["Franklin DeGraaf"],
@@ -237,7 +237,7 @@
   {
     "name": "M. Cruz",
     "aliases": "MCRN Deputy Minister, Special Envoy",
-    "status": "Alive [citation needed]",
+    "status": "Alive",
     "gender": "Female",
     "portrayedBy": "Alison J. Palmer",
     "seasons": ["Season 2"],
@@ -246,7 +246,7 @@
   },
   {
     "name": "Pyotr Korshunov",
-    "status": "Deceased fatally poisoned by Sadavir Errinwright",
+    "status": "Deceased",
     "age": "50-60",
     "gender": "Male",
     "home": ["Mars", "SOL"],
@@ -390,7 +390,7 @@
   },
   {
     "name": "Janus",
-    "status": "Deceased killed by the Arboghast's disaggregation",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Earth", "SOL"],
     "occupation": "UNMC Colonel",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Michael Iturbi",
-    "status": "Deceased killed by the Arboghast's disaggregation[1]",
+    "status": "Deceased",
     "age": "50-60s",
     "gender": "Male",
     "home": ["Earth", "Sol system"],
@@ -523,7 +523,7 @@
   {
     "name": "Hansen",
     "status": "Deceased",
-    "gender": "",
+    "gender": "Unspecified",
     "occupation": "U.N. Fleet Military Police",
     "portrayedBy": "Joel DeLong",
     "seasons": ["Season 3"],
@@ -819,7 +819,7 @@
   },
   {
     "name": "Lieutenant Sutton",
-    "status": "Deceased KIA",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Mars", "Sol system"],
     "occupation": "Executive Officer, MCRN Scirocco",
@@ -839,7 +839,7 @@
   },
   {
     "name": "Sa'id",
-    "status": "Deceased Presumed killed on Ganymede",
+    "status": "Deceased",
     "gender": "Male",
     "occupation": "Corporal, Martian Marine Corps",
     "portrayedBy": "Dewshane Williams",
@@ -850,7 +850,7 @@
   {
     "name": "Hillman",
     "aliases": "Hilly",
-    "status": "Deceased killed by a human-protomolecule hybrid",
+    "status": "Deceased",
     "gender": "Female",
     "home": ["Mars", "Sol system"],
     "family": [],
@@ -887,7 +887,7 @@
   },
   {
     "name": "Richard Travis",
-    "status": "Deceased killed by a human-protomolecule hybrid",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Earth", "Sol system", "Mars", "Sol system"],
     "family": [],
@@ -1216,7 +1216,7 @@
   },
   {
     "name": "Staz",
-    "status": "DeceasedShot to death by Drummer",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Tycho Station", "SOL"],
     "occupation": "Tycho Station Dock WorkerOPA Faction Leader",
@@ -1247,7 +1247,7 @@
   },
   {
     "name": "Darren",
-    "status": "Deceased infected and assimilated by the protomolecule",
+    "status": "Deceased",
     "age": "40 - 50",
     "gender": "Male",
     "home": ["Belt", "SOL"],
@@ -1287,7 +1287,7 @@
   },
   {
     "name": "Wan Li",
-    "status": "Deceased killed by unprotected exposure to the vacuum of space",
+    "status": "Deceased",
     "age": "35 - 45",
     "gender": "Male",
     "home": ["Belt", "SOL"],
@@ -1302,7 +1302,7 @@
     "aliases":
       "Juliette Andromeda Mao (full name), Delightingale, Low gravity, no pressure (LGNP dating profile)",
     "status":
-      "Deceased, infected by the protomolecule, killed by Eros' impact into Venus",
+      "Deceased",
     "age": "22",
     "gender": "Female",
     "home": ["Earth", "SOL", "Ceres", "Eros"],
@@ -1325,7 +1325,7 @@
   },
   {
     "name": "Nalida",
-    "status": "Deceased insistent to stay on Eros",
+    "status": "Deceased",
     "gender": "Female",
     "home": ["Eros"],
     "family": ["Shukri"],
@@ -1334,7 +1334,7 @@
   },
   {
     "name": "Kenzo Gabriel",
-    "status": "Deceased killed by the protomolecule",
+    "status": "Deceased",
     "gender": "Male",
     "occupation": "Industrial espionage",
     "affiliation": ["Davila Aerospatiale"],
@@ -1354,7 +1354,7 @@
   {
     "name": "Shukri",
     "aliases": "Little Girl ⸱ Setara mali",
-    "status": "Deceased remained on Eros",
+    "status": "Deceased",
     "gender": "Female",
     "home": ["Eros"],
     "family": ["Nalida"],
@@ -1368,7 +1368,7 @@
     "gender": "Male",
     "home": ["Ceres", "Belt", "SOL"],
     "family": [],
-    "occupation": "Detective formerat Star Helix Security",
+    "occupation": "Detective (former) at Star Helix Security",
     "portrayedBy": "Thomas Jane",
     "seasons": ["Season 1", "Season 2"],
     "firstAppearance": "Dulcinea",
@@ -1440,7 +1440,7 @@
   },
   {
     "name": "Geir",
-    "status": "deceased",
+    "status": "Deceased",
     "gender": "Male",
     "portrayedBy": "Cyrus Aazam",
     "seasons": ["Season 2"],
@@ -1448,7 +1448,7 @@
   },
   {
     "name": "Umea",
-    "status": "Deceased killed by a human-protomolecule hybrid",
+    "status": "Deceased",
     "gender": "Female",
     "home": ["Ganymede", "Sol system"],
     "occupation": "Genetic Research Assistant  Member of Project Caliban",
@@ -1509,7 +1509,7 @@
   },
   {
     "name": "Doris Bourne",
-    "status": "Deceased killed by prolonged vacuum exposure",
+    "status": "Deceased",
     "gender": "Female",
     "home": ["Ganymede", "Sol system", "Mars", "Sol system"],
     "occupation": "Botanist on Ganymede",
@@ -1529,7 +1529,7 @@
   },
   {
     "name": "Arum Lee",
-    "status": "deceased",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Mars", "SOL"],
     "affiliation": ["MCRN", "Inaros OPA"],
@@ -1573,7 +1573,7 @@
   },
   {
     "name": "Victor Sohiro",
-    "status": "deceased",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Belt"],
     "family": ["Jorge Sohiro"],
@@ -1644,7 +1644,7 @@
   },
   {
     "name": "Sematimba",
-    "aliases": "\"Semi\"",
+    "aliases": "Semi",
     "status": "Deceased",
     "gender": "Male",
     "occupation": "Carne Por la Machina Inspector on Eros Station",
@@ -1813,7 +1813,7 @@
   },
   {
     "name": "Coop",
-    "status": "Deceased shot to death by Murtry",
+    "status": "Deceased",
     "gender": "Male",
     "home": ["Ilus", "ILU", "Ganymede", "SOL"],
     "portrayedBy": "Kris Holden-Ried",

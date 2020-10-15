@@ -19,6 +19,7 @@ pub struct SpacecraftClass {
     pub uuid: Option<Uuid>,
     pub name: String,
     #[serde(default)]
+    #[serde(alias = "owner")]
     pub owner_navy: Vec<String>,
     #[serde(default)]
     pub propulsion: Vec<String>,

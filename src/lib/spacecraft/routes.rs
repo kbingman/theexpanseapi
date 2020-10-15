@@ -14,7 +14,7 @@ use crate::state::State;
 use crate::util::get_database;
 
 /// List spacecraft
-pub(crate) async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
     let find_options = FindOptions::builder().limit(50).build();
@@ -30,7 +30,7 @@ pub(crate) async fn list(req: Request<State>) -> tide::Result<impl Into<Response
 }
 
 /// Find spacecraft
-pub(crate) async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
     let uuid: String = req.param("uuid")?;
@@ -48,7 +48,7 @@ pub(crate) async fn show(req: Request<State>) -> tide::Result<impl Into<Response
 }
 
 /// Create spacecraft
-pub(crate) async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
     let mut spacecraft: Spacecraft = req.body_json().await?;
@@ -65,7 +65,7 @@ pub(crate) async fn create(mut req: Request<State>) -> tide::Result<impl Into<Re
 }
 
 /// Update spacecraft
-pub(crate) async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
     let mut spacecraft: Spacecraft = req.body_json().await?;
@@ -84,7 +84,7 @@ pub(crate) async fn update(mut req: Request<State>) -> tide::Result<impl Into<Re
 }
 
 /// Delete person
-pub(crate) async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let uuid: Uuid = req.param("uuid")?;

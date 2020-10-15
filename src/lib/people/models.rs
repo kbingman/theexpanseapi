@@ -5,6 +5,7 @@ use uuid::Uuid;
 pub enum Status {
     Alive,
     Deceased,
+    Unknown,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

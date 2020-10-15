@@ -11,7 +11,7 @@ use crate::state::State;
 use crate::util::get_database;
 
 /// List people
-pub(crate) async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let mut cursor = collection.find(None, None).await?;
@@ -26,7 +26,7 @@ pub(crate) async fn list(req: Request<State>) -> tide::Result<impl Into<Response
 }
 
 /// Find person
-pub(crate) async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let uuid: String = req.param("uuid")?;
@@ -44,7 +44,7 @@ pub(crate) async fn show(req: Request<State>) -> tide::Result<impl Into<Response
 }
 
 /// Create person
-pub(crate) async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let mut person: Person = req.body_json().await?;
@@ -61,7 +61,7 @@ pub(crate) async fn create(mut req: Request<State>) -> tide::Result<impl Into<Re
 }
 
 /// Update person
-pub(crate) async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let mut person: Person = req.body_json().await?;
@@ -80,7 +80,7 @@ pub(crate) async fn update(mut req: Request<State>) -> tide::Result<impl Into<Re
 }
 
 /// Delete person
-pub(crate) async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let uuid: Uuid = req.param("uuid")?;
