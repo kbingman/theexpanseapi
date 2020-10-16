@@ -41,3 +41,12 @@ pub async fn error_handler(res: Response) -> tide::Result {
 pub(crate) fn get_database(req: &Request<State>) -> mongodb::Database {
     req.state().database("theexpanseapi-prod")
 }
+
+/// Formats a UUID into a path
+/// TODO add a base URL
+pub fn format_url<T: std::fmt::Display>(label: &str, uuid: &Option<T>) -> Option<String> {
+    match uuid {
+        Some(id) => Some(format!("/{}/{}", &label, &id)),
+        None => None,
+    }
+}

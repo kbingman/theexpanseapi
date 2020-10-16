@@ -10,17 +10,26 @@ use crate::messages;
 use crate::state::State;
 use crate::util::get_database;
 
-/// List people
-pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = get_database(&req).collection("people");
-
-    let mut cursor = collection.find(None, None).await?;
+/// Finds people using the given Filter, and converts the result into a Vec of Person
+pub async fn find_people(
+    db: &mongodb::Database,
+    filter: impl Into<Option<mongodb::bson::Document>>,
+) -> anyhow::Result<Vec<Person>> {
+    let collection = db.collection("people");
+    let mut cursor = collection.find(filter, None).await?;
     let mut people = Vec::<Person>::new();
 
     while let Some(result) = cursor.next().await {
         let person: Person = from_bson(Bson::Document(result?))?;
         people.push(person);
     }
+    Ok(people)
+}
+
+/// List people
+pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
+    let db = get_database(&req);
+    let people = find_people(&db, None).await?;
 
     Ok(Body::from_json(&people)?)
 }

@@ -8,10 +8,31 @@ use uuid::Uuid;
 use tide::prelude::*; // Pulls in the json! macro.
 use tide::{Body, Request, Response};
 
-use super::models::Spacecraft;
 use crate::messages;
+use crate::people::routes::find_people;
 use crate::state::State;
-use crate::util::get_database;
+use crate::util::{format_url, get_database};
+
+use super::db::find_spacecraft_class;
+use super::models::{Spacecraft, SpacecraftDetail};
+
+async fn find_thing(
+    db: &mongodb::Database,
+    document: mongodb::bson::Document,
+) -> anyhow::Result<SpacecraftDetail> {
+    let spacecraft: Spacecraft = from_bson(Bson::Document(document))?;
+    let detail = SpacecraftDetail {
+        name: spacecraft.name,
+        owner: spacecraft.owner_navy,
+        url: format_url("spacecraft", &spacecraft.uuid),
+        class: match &spacecraft.class {
+            Some(id) => find_spacecraft_class(&db, doc! { "uuid": &id }).await?,
+            None => None,
+        },
+        crew: find_people(&db, doc! { "uuid": { "$in": &spacecraft.crew } }).await?,
+    };
+    Ok(detail)
+}
 
 /// List spacecraft
 pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
@@ -25,23 +46,35 @@ pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
         let craft: Spacecraft = from_bson(Bson::Document(result?))?;
         spacecraft.push(craft);
     }
+    let records = spacecraft
+        .iter()
+        .map(|s| {
+            let mut ship = s.clone();
+            ship.url = format_url("spacecraft", &s.uuid);
+            ship.class = format_url("class", &s.class);
+            ship.crew = s
+                .crew
+                .iter()
+                .map(|id| format!("/people/{}", id))
+                .collect::<Vec<String>>();
+            return ship;
+        })
+        .collect::<Vec<Spacecraft>>();
 
-    Ok(Body::from_json(&spacecraft)?)
+    Ok(Body::from_json(&records)?)
 }
 
 /// Find spacecraft
 pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = get_database(&req).collection("spacecraft");
+    let db = get_database(&req);
 
     let uuid: String = req.param("uuid")?;
     let filter = doc! { "uuid": &uuid };
 
+    let collection = db.collection("spacecraft");
     let result = collection.find_one(filter, None).await?;
     match result {
-        Some(document) => {
-            let spacecraft: Spacecraft = from_bson(Bson::Document(document))?;
-            Ok(Body::from_json(&spacecraft)?)
-        }
+        Some(document) => Ok(Body::from_json(&find_thing(&db, document).await?)?),
         // TODO Add the correct 404 status code
         None => Ok(Body::from_json(&messages::not_found())?),
     }
