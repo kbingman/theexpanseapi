@@ -774,6 +774,7 @@ dependencies = [
  "dotenv",
  "env_logger",
  "femme 1.3.0",
+ "http-types",
  "log",
  "mongodb",
  "serde",

@@ -531,7 +531,7 @@
     "lastAppearance": "Triple Point"
   },
   {
-    "name": "Melba Koh",
+    "name": "Melba Alzbeta Koh",
     "gender": "Female",
     "occupation": "Electrical Technician",
     "portrayedBy": "Nadine Nicole",
@@ -608,7 +608,7 @@
     "firstAppearance": "Intransigence"
   },
   {
-    "name": "Howard",
+    "name": "Lieutenant Howard",
     "status": "Alive",
     "gender": "Male",
     "home": ["Earth", "Sol system"],
@@ -618,7 +618,7 @@
     "firstAppearance": "It Reaches Out"
   },
   {
-    "name": "Jordaan Nemeroff",
+    "name": "Lieutenant Jordaan Nemeroff",
     "status": "Deceased",
     "gender": "Male",
     "home": ["North American Trade Zone", "Earth", "SOL"],

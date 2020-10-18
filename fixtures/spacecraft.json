@@ -260,7 +260,7 @@
     "name": "Scopuli",
     "ownerNavy": ["Outer Planets Alliance"],
     "seasons": ["Season 1"],
-    "crew": ["Darren", "Julie Mao", "Wan"]
+    "crew": ["Darren", "Julie Mao", "Wan Li"]
   },
   {
     "name": "LDSS Nauvoo",
@@ -346,7 +346,7 @@
     "crew": [
       "Commander Kunis",
       "Dr. Gaskin",
-      "Dr. Kolvoord, Ph.D.",
+      "Dr. Kolvoord",
       "Lieutenant Jordaan Nemeroff",
       "Lieutenant Howard",
       "Butler",
@@ -394,6 +394,6 @@
     "ownerNavy": ["United Nations Navy"],
     "type": "destroyer",
     "appeared": ["Season 3", "Triple Point"],
-    "crew": ["Augusto Nguyễn"]
+    "crew": ["Admiral Augusto Nguyễn"]
   }
 ]

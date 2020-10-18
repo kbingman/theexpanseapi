@@ -31,7 +31,7 @@ pub struct SpacecraftDetail {
 #[derive(Clone, Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct SpacecraftClass {
-    // pub uuid: Option<Uuid>,
+    pub uuid: Option<Uuid>,
     pub name: String,
     #[serde(default)]
     #[serde(alias = "owner")]

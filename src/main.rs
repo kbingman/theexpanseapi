@@ -1,5 +1,7 @@
 use dotenv::dotenv;
+use http_types::headers::HeaderValue;
 use std::env;
+use tide::security::{CorsMiddleware, Origin};
 use tide::utils::After;
 
 use lib::state::State;
@@ -17,7 +19,14 @@ async fn main() -> tide::Result<()> {
     let state = State::new(&db_uri).await?;
     let mut app = tide::with_state(state);
 
+    // CORS settings
+    let cors = CorsMiddleware::new()
+        .allow_methods("GET, POST, PUT, DELETE, OPTIONS".parse::<HeaderValue>()?)
+        .allow_origin(Origin::from("*"))
+        .allow_credentials(false);
+
     // Middeware
+    app.with(cors);
     app.with(After(error_handler));
 
     // People routes
@@ -37,6 +46,9 @@ async fn main() -> tide::Result<()> {
         .get(spacecraft::routes::show)
         .put(spacecraft::routes::update)
         .delete(spacecraft::routes::remove);
+
+    app.at("/classes")
+        .get(spacecraft::routes::list_spacecraft_classes);
 
     app.listen(format!("localhost:{}", port)).await?;
 

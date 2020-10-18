@@ -14,7 +14,7 @@ use crate::state::State;
 use crate::util::{format_url, get_database};
 
 use super::db::find_spacecraft_class;
-use super::models::{Spacecraft, SpacecraftDetail};
+use super::models::{Spacecraft, SpacecraftClass, SpacecraftDetail};
 
 async fn find_thing(
     db: &mongodb::Database,
@@ -34,11 +34,26 @@ async fn find_thing(
     Ok(detail)
 }
 
+/// List Spacecraft Classes
+pub async fn list_spacecraft_classes(req: Request<State>) -> tide::Result<impl Into<Response>> {
+    let collection = get_database(&req).collection("classes");
+
+    let mut cursor = collection.find(None, None).await?;
+    let mut spacecraft_classes = Vec::<SpacecraftClass>::new();
+
+    while let Some(result) = cursor.next().await {
+        let craft: SpacecraftClass = from_bson(Bson::Document(result?))?;
+        spacecraft_classes.push(craft);
+    }
+
+    Ok(Body::from_json(&spacecraft_classes)?)
+}
+
 /// List spacecraft
 pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
-    let find_options = FindOptions::builder().limit(50).build();
+    let find_options = FindOptions::builder().skip(0).limit(40).build();
     let mut cursor = collection.find(None, find_options).await?;
     let mut spacecraft = Vec::<Spacecraft>::new();
 

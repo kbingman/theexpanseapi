@@ -1,4 +1,5 @@
 .env
 /target
 *.swp
+www/.next
 www/node_modules
