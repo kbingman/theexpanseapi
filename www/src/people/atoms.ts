@@ -1,16 +1,16 @@
-import { atom, selectorFamily } from 'recoil';
+import { atom, selectorFamily } from "recoil";
+import { Person } from "./types";
 
-export const crewState = atom({
-  key: 'crew',
+export const crewState = atom<Record<string, Person>>({
+  key: "crew",
   default: {},
 });
 
 export const crewDetailState = selectorFamily({
-  key: 'crewDetailState',
-  get: (url: string) => ({ get }) => {
+  key: "crewDetailState",
+  get: (uuid: string) => ({ get }) => {
     const crew = get(crewState);
-    const id = url.split('/').pop();
 
-    return crew[id] || { name: url };
+    return crew[uuid] || { name: uuid };
   },
 });

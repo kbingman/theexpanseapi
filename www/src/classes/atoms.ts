@@ -1,19 +1,19 @@
-import { atom, selectorFamily } from 'recoil';
+import { atom, selectorFamily } from "recoil";
+import { SpacecraftClass } from "./types";
 
-export const spacecraftClassState = atom<Record<string, any>>({
-  key: 'spacecraftClasses',
+export const spacecraftClassState = atom<Record<string, SpacecraftClass>>({
+  key: "spacecraftClasses",
   default: {},
 });
 
 export const spacecraftClassDetailState = selectorFamily({
-  key: 'spacecraftClassDetailState',
-  get: (url: string) => ({ get }) => {
-    if (!url) {
+  key: "spacecraftClassDetailState",
+  get: (uuid: string) => ({ get }) => {
+    if (!uuid) {
       return null;
     }
     const classes = get(spacecraftClassState);
-    const id = url.split('/').pop();
 
-    return classes[id] || null;
+    return classes[uuid] || null;
   },
 });

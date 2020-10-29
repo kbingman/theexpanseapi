@@ -1,2 +1,2 @@
-export { CrewDetail } from './components/crew';
-export { useLoadCrew } from './hooks';
+export { CrewDetail } from "./components";
+export { useLoadCrew } from "./hooks";

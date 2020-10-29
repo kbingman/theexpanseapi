@@ -1,41 +1,43 @@
-import { useLoadSpacecraft, SpacecraftList } from '../src/spacecraft';
-import { useLoadSpacecraftClasses } from '../src/classes';
-import { useLoadCrew } from '../src/people';
-import { fetchJSON } from '../src/utils';
+import { useLoadSpacecraft, SpacecraftList, getSpacecraft } from "../src/spacecraft";
+import { useLoadSpacecraftClasses } from "../src/classes";
+import { useLoadCrew } from "../src/people";
+import { logger } from "../src/utils";
 
 /**
  * IndexPage
  */
-const IndexPage = ({ classes, people, spacecraft }) => {
+const IndexPage = ({ classes = [], people = [], spacecraft = [], error = null }) => {
   useLoadSpacecraft(spacecraft);
   useLoadSpacecraftClasses(classes);
   useLoadCrew(people);
+  logger({ error });
 
   return (
     <div>
       <h1>Hello World</h1>
       <SpacecraftList />
+      {error && <div>{error}</div>}
     </div>
   );
 };
 
 export const getServerSideProps = async () => {
   try {
-    // console.time('request');
-    const [classes, people, spacecraft] = await Promise.all([
-      fetchJSON('/classes'),
-      fetchJSON('/people'),
-      fetchJSON('/spacecraft')
+    console.time("request");
+    const [spacecraft] = await Promise.all([
+      // fetchJSON("/classes"),
+      // fetchJSON("/people"),
+      getSpacecraft(),
     ]);
-    // console.timeEnd('request');
+    console.timeEnd("request");
 
     return {
-      props: { classes, people, spacecraft }
+      props: { spacecraft },
     };
   } catch (err) {
     console.error(err);
     return {
-      props: { data: [], error: err.message }
+      props: { error: err.message },
     };
   }
 };
