@@ -1,6 +1,8 @@
-import { FormEvent, useState } from "react";
-import { SpacecraftClass } from "../../classes";
-import { CrewDetail } from "../../people";
+import { FormEvent, Suspense, useState } from "react";
+import { useRecoilValue } from "recoil";
+// import { SpacecraftClass } from "../../classes";
+// import { CrewDetail } from "../../people";
+import { spacecraftDetailSelector } from "../atoms/spacecraft";
 
 import {
   useActiveSpacecraft,
@@ -14,14 +16,20 @@ import { updateSpacecraft } from "../utils";
  *
  * @returns JSX.Element
  */
-export const SpacecraftDetail = ({ crew, classURL }) => (
-  <div className="spacecraft">
-    <SpacecraftClass url={classURL} />
-    {crew.map((url: string) => (
-      <CrewDetail key={url} url={url} />
-    ))}
-  </div>
-);
+export const SpacecraftDetail = ({ uuid }) => {
+  const spacecraft = useRecoilValue(spacecraftDetailSelector(uuid));
+  console.log(spacecraft);
+  if (!spacecraft) {
+    return null;
+  }
+  return (
+    <Suspense fallback={<div>Loading</div>}>
+    <div className="spacecraft">
+      <h2>TEST</h2>
+    </div>
+    </Suspense>
+  );
+};
 
 /**
  * Spacecraft Class and Crew
@@ -56,11 +64,11 @@ export const SpacecraftForm = ({ name, uuid, setSpacecraft }) => {
  * @returns JSX.Element
  */
 export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
-  const { spacecraft, setSpacecraft } = useSpacecraft(uuid);
+  const { spacecraft } = useSpacecraft(uuid);
   if (!spacecraft) {
     return null;
   }
-  const { crew, name, class: classURL } = spacecraft;
+  const { name } = spacecraft;
   const { isVisible, setIsVisible } = useActiveSpacecraft(uuid);
 
   return (
@@ -69,8 +77,8 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
         {name}
         <button onClick={() => setIsVisible(uuid)}>Show Details</button>
       </h4>
-      {/* isVisible && <SpacecraftDetail {...{ crew, classURL }} /> */}
-      {isVisible && <SpacecraftForm {...{ name, uuid, setSpacecraft }} />}
+      {isVisible && <SpacecraftDetail {...{ uuid }} />}
+      {/* isVisible && <SpacecraftForm {...{ name, uuid, setSpacecraft }} /> */}
     </div>
   );
 };

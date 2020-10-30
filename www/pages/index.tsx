@@ -1,16 +1,14 @@
 import { useLoadSpacecraft, SpacecraftList, getSpacecraft } from "../src/spacecraft";
-import { useLoadSpacecraftClasses } from "../src/classes";
-import { useLoadCrew } from "../src/people";
-import { logger } from "../src/utils";
+// import { useLoadSpacecraftClasses } from "../src/classes";
+// import { useLoadCrew } from "../src/people";
 
 /**
  * IndexPage
  */
-const IndexPage = ({ classes = [], people = [], spacecraft = [], error = null }) => {
+const IndexPage = ({ spacecraft = [], error = null }) => {
   useLoadSpacecraft(spacecraft);
-  useLoadSpacecraftClasses(classes);
-  useLoadCrew(people);
-  logger({ error });
+  // useLoadSpacecraftClasses(classes);
+  // useLoadCrew(people);
 
   return (
     <div>

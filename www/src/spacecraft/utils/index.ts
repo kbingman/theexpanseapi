@@ -6,6 +6,11 @@ export const getSpacecraft = (): Promise<Spacecraft[]> =>
     method: "GET",
   });
 
+export const getSpacecraftDetail = (uuid: string): Promise<Spacecraft> =>
+  fetchJSON(`/spacecraft/${uuid}`, {
+    method: "GET",
+  });
+
 export const createSpacecraft = (data: Spacecraft): Promise<Spacecraft> =>
   fetchJSON(`/spacecraft`, {
     method: "POST",

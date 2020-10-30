@@ -1,5 +1,6 @@
-import { atom, selectorFamily } from "recoil";
+import { atom, selector, selectorFamily } from "recoil";
 import { Spacecraft } from "../types";
+import { getSpacecraft, getSpacecraftDetail } from "../utils";
 
 /**
  * Base atom for all Spacecraft
@@ -17,32 +18,37 @@ export const spacecraftIdsState = atom<string[]>({
   default: [],
 });
 
-export const removeSpacecraft = selectorFamily({
+export const removeSpacecraftSelector = selector({
   key: "removeSpacecraft",
-  get: (uuid: string) => ({ get }) => {
-    const spacecraft = get(spacecraftState);
+  get: () => null,
+  set: ({ get, set }, uuid: string) => {
+    const ids = get(spacecraftIdsState).filter((id) => id !== uuid);
+    const { [uuid]: removedKey, ...spacecraft } = get(spacecraftState);
 
-    return spacecraft[uuid] || null;
+    set(spacecraftIdsState, ids);
+    set(spacecraftState, spacecraft);
   },
-  set: (uuid: string) => ({ get, set }) => {
-    // const spacecraft = get(spacecraftState);
-    const ids = get(spacecraftIdsState);
+});
 
-    set(
-      spacecraftIdsState,
-      ids.filter((id) => id !== uuid)
-    );
+export const spacecraftDetailSelector = selectorFamily({
+  key: "spacecraftDetailSelector",
+  get: (uuid: string) => async () => {
+    try {
+      // const spacecraft = await getSpacecraftDetail(uuid);
+      return uuid;
+    } catch(err) {
+      return { error: err.message }
+    }
   },
 });
 
 /**
  * Spacecraft Selector
  */
-export const spacecraftDetailState = selectorFamily({
-  key: "spacecraftDetailState",
+export const spacecraftListingSelector = selectorFamily({
+  key: "spacecraftListingSelector",
   get: (uuid: string) => ({ get }) => {
     const spacecraft = get(spacecraftState);
-
     return spacecraft[uuid] || null;
   },
   set: (uuid: string) => async ({ get, set }, options: Partial<Spacecraft>) => {
@@ -51,11 +57,6 @@ export const spacecraftDetailState = selectorFamily({
       ...spacecraft[uuid],
       ...options,
     };
-    // const response = await fetchJSON(`/spacecraft/${uuid}`, {
-    //   method: "PUT",
-    //   body: JSON.stringify(updatedSpacecraft),
-    // });
-    // console.log(response);
 
     set(spacecraftState, {
       ...spacecraft,

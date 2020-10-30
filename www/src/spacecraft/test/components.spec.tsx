@@ -9,9 +9,9 @@ import { spacecraftState, spacecraftIdsState } from "../atoms/spacecraft";
 const rocinante = getMockSpacecraft();
 const initializeState = (snap: MutableSnapshot) => {
   snap.set(spacecraftIdsState, [rocinante.uuid]),
-  snap.set(spacecraftState, {
-    [rocinante.uuid]: rocinante,
-  });
+    snap.set(spacecraftState, {
+      [rocinante.uuid]: rocinante,
+    });
 };
 
 test("Spacecraft", () => {

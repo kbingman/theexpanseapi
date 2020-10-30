@@ -4,7 +4,7 @@ import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil";
 import { getEntities } from "../utils";
 
 import {
-  spacecraftDetailState,
+  spacecraftListingSelector,
   spacecraftIdsState,
   spacecraftState,
 } from "./atoms/spacecraft";
@@ -43,7 +43,7 @@ export const useActiveSpacecraft = (uuid: string) => {
 
 export const useSpacecraft = (uuid: string) => {
   const [spacecraft, setSpacecraft] = useRecoilState(
-    spacecraftDetailState(uuid)
+    spacecraftListingSelector(uuid)
   );
   return { spacecraft, setSpacecraft };
 };
