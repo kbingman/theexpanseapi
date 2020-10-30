@@ -2,4 +2,5 @@
 /target
 *.swp
 www/.next
+www/coverage
 www/node_modules
