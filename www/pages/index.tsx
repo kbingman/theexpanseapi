@@ -12,7 +12,7 @@ const IndexPage = ({ spacecraft = [], error = null }) => {
 
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>The Expanse</h1>
       <SpacecraftList />
       {error && <div>{error}</div>}
     </div>
@@ -21,13 +21,13 @@ const IndexPage = ({ spacecraft = [], error = null }) => {
 
 export const getServerSideProps = async () => {
   try {
-    console.time("request");
+    // console.time("request");
     const [spacecraft] = await Promise.all([
       // fetchJSON("/classes"),
       // fetchJSON("/people"),
       getSpacecraft(),
     ]);
-    console.timeEnd("request");
+    // console.timeEnd("request");
 
     return {
       props: { spacecraft },

@@ -6,10 +6,16 @@ const API_ENDPOINT =
 
 // type Method = "GET" | "OPTION" | "POST" | "PUT" | "DELETE";
 
-export const fetchJSON = async (
+/**
+ * @param {pathname}
+ * @param {options}
+ *
+ * @returns Promise<>
+ */
+export const fetchJSON = async <T>(
   pathname: string,
   options: RequestInit = {}
-): Promise<any> => {
+): Promise<T> => {
   try {
     const response = await fetch(`${API_ENDPOINT}${pathname}`, {
       ...options,

@@ -5,14 +5,15 @@ import { render } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 
 import IndexPage, { getServerSideProps } from '../../pages';
-import { getMockSpacecraft, getMockSpacecraftClass } from '../mocks';
+import { getMockSpacecraft } from '../../mocks/models';
 import { server } from '../../mocks/server';
 
+const mockSpacecraft = getMockSpacecraft();
 const renderIndexPage = () =>
   render(
     <RecoilRoot>
       <IndexPage
-        spacecraft={[getMockSpacecraft()]}
+        spacecraft={[mockSpacecraft]}
       />
     </RecoilRoot>
   );
@@ -23,7 +24,7 @@ describe('IndexPage', () => {
     const ship = getByText('Rocinante');
     // const shipClass = getByText('Corvette Class');
 
-    expect(ship.tagName).toBe('H4');
+    expect(ship.tagName).toBe('H3');
     // expect(shipClass.tagName).toBe('DIV');
   });
 });
@@ -31,7 +32,8 @@ describe('IndexPage', () => {
 describe('getServerSideProps', () => {
   server.listen();
   test('gets correct props', async () => {
-    const response = await getServerSideProps();
-    console.log(response.props.spacecraft); 
+    const { props } = await getServerSideProps();
+
+    expect(props.spacecraft).toEqual([mockSpacecraft])
   });
 });

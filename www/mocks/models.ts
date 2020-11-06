@@ -1,5 +1,5 @@
-import { SpacecraftClass } from "../../src/classes/types";
-import { Spacecraft } from "../../src/spacecraft/types";
+import { SpacecraftClass } from "../src/classes/types";
+import { Spacecraft } from "../src/spacecraft/types";
 
 export const getMockSpacecraft = (attr?: Partial<Spacecraft>): Spacecraft => ({
   name: 'Rocinante',

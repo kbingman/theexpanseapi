@@ -1,3 +1,5 @@
+// import { SpacecraftClass } from "../classes/types";
+
 export type UUID = string;
 
 export type Spacecraft = {

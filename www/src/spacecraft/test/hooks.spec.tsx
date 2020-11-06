@@ -1,7 +1,11 @@
 import { act, renderRecoilHook } from "react-recoil-hooks-testing-library";
-import {useSetRecoilState} from "recoil";
-import {getMockSpacecraft} from "../../../test/mocks";
-import {removeSpacecraftSelector, spacecraftIdsState, spacecraftState} from "../atoms/spacecraft";
+import { useSetRecoilState } from "recoil";
+import { getMockSpacecraft } from "../../../mocks/models";
+import {
+  removeSpacecraftSelector,
+  spacecraftIdsState,
+  spacecraftState,
+} from "../atoms/spacecraft";
 import { activeSpacecraftState } from "../atoms/ui";
 import { useActiveSpacecraft } from "../hooks";
 
@@ -20,12 +24,18 @@ test("checks if current uuid is selected", () => {
 });
 
 test("removes object associated with UUID", () => {
-  const { result } = renderRecoilHook(() => useSetRecoilState(removeSpacecraftSelector), {
-    states: [
-      { recoilState: spacecraftState, initialValue: mockSpacecraft }, 
-      { recoilState: spacecraftIdsState, initialValue: [mockSpacecraft.uuid] }
-    ],
-  });
+  const { result } = renderRecoilHook(
+    () => useSetRecoilState(removeSpacecraftSelector),
+    {
+      states: [
+        { recoilState: spacecraftState, initialValue: mockSpacecraft },
+        {
+          recoilState: spacecraftIdsState,
+          initialValue: [mockSpacecraft.uuid],
+        },
+      ],
+    }
+  );
 
   act(() => {
     result.current(mockSpacecraft.uuid);

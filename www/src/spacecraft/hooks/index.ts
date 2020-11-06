@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil";
 
-import { getEntities } from "../utils";
+import { getEntities } from "../../utils";
 
 import {
   spacecraftListingSelector,
   spacecraftIdsState,
   spacecraftState,
-} from "./atoms/spacecraft";
-import { activeSpacecraftSelector } from "./atoms/ui";
-import { Spacecraft } from "./types";
+} from "../atoms/spacecraft";
+import { activeSpacecraftSelector } from "../atoms/ui";
+import { Spacecraft } from "../types";
 
 const getUUID = (str: string | null) => (str && str.split("/").pop()) || null;
 
