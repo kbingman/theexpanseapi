@@ -1,13 +1,12 @@
 import Head from "next/head";
-import type { AppProps /*, AppContext */ } from "next/app";
-
 import { RecoilRoot } from "recoil";
-// import RecoilizeDebugger from "recoilize";
 
 // Mock API
 if (process.env.NODE_ENV !== "production") {
   require("../mocks");
 }
+
+import type { AppProps /*, AppContext */ } from "next/app";
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>

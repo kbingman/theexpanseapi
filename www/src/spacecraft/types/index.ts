@@ -3,7 +3,7 @@
 export type UUID = string;
 
 export type Spacecraft = {
-  class: string;
+  class: any;
   crew: string[];
   name: string;
   ownerNavy: string[];
