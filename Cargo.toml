@@ -9,8 +9,8 @@ name = "lib"
 path = "src/lib/mod.rs"
 
 [[bin]]
-name = "import"
-path = "src/bin/import.rs"
+name = "importer"
+path = "src/bin/importer/main.rs"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -31,3 +31,4 @@ bson="*"
 serde_json = "1.0.58"
 anyhow = "1.0.33"
 http-types = "2.5.0"
+regex = "1.4.2"
