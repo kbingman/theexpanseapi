@@ -6,9 +6,9 @@ import { SpacecraftList } from "../components/listing";
 import { spacecraftState, spacecraftIdsState } from "../atoms/spacecraft";
 
 const rocinante = getMockSpacecraft();
-const initializeState = (snap: MutableSnapshot) => {
-  snap.set(spacecraftIdsState, [rocinante.uuid]),
-    snap.set(spacecraftState, {
+const initializeState = ({ set }: MutableSnapshot) => {
+  set(spacecraftIdsState, [rocinante.uuid]),
+    set(spacecraftState, {
       [rocinante.uuid]: rocinante,
     });
 };

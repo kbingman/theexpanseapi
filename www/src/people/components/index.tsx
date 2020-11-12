@@ -1,8 +1,8 @@
 import { useRecoilValue } from "recoil";
 import { crewDetailState } from "../atoms";
 
-export const CrewDetail = ({ url }) => {
-  const crew = useRecoilValue(crewDetailState(url));
+export const CrewDetail = ({ uuid }) => {
+  const crew = useRecoilValue(crewDetailState(uuid));
   if (!crew) {
     return null;
   }

@@ -43,6 +43,7 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
  */
 export const SpacecraftList = () => {
   const uuids = useSpacecraftUuids();
+  console.log('render list', uuids.length, Date.now());
 
   return (
     <div>

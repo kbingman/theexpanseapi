@@ -1,4 +1,4 @@
-import { getEntities } from "../entities";
+import { getEntities } from "../util/entities";
 
 const arr = [
   { uuid: "item-1", name: "Me I am Counting" },

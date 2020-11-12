@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil";
 
-import { getEntities } from "../../utils";
+import { getEntities } from "../../shared";
 
 import {
   spacecraftListingSelector,

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 
-import { getEntities } from "../utils";
+import { getEntities } from "../shared";
 import { crewState } from "./atoms";
 import { Person } from "./types";
 

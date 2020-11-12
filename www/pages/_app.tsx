@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { RecoilRoot } from "recoil";
+import { DebugObserver } from '../src/shared';
 
 // Mock API
 if (process.env.NODE_ENV !== "production") {
-  require("../mocks");
+  // require("../mocks");
 }
 
 import type { AppProps /*, AppContext */ } from "next/app";
@@ -22,10 +23,10 @@ const App = ({ Component, pageProps }: AppProps) => (
         padding: 0 10px;
       }
     `}</style>
-    <RecoilRoot>
-      {/* <RecoilizeDebugger root={app} /> */}
+    {/* <RecoilRoot>
+      <DebugObserver /> */}
       <Component {...pageProps} />
-    </RecoilRoot>
+    {/* </RecoilRoot> */}
   </>
 );
 

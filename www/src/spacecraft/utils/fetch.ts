@@ -1,4 +1,4 @@
-import { fetchJSON } from "../../utils";
+import { fetchJSON } from "../../shared";
 import { Spacecraft } from "../types";
 
 export const getSpacecraft = (): Promise<Spacecraft[]> =>

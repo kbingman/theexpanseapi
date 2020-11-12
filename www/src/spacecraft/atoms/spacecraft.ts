@@ -1,6 +1,5 @@
 import { atom, selector, selectorFamily } from "recoil";
 import { Spacecraft } from "../types";
-import { getSpacecraftDetail } from "../utils";
 
 /**
  * Base atom for all Spacecraft
@@ -32,13 +31,12 @@ export const removeSpacecraftSelector = selector({
 
 export const spacecraftDetailSelector = selectorFamily({
   key: "spacecraftDetailSelector",
-  get: (uuid: string) => async () => {
-    try {
-      const spacecraft = await getSpacecraftDetail(uuid);
-      return { spacecraft };
-    } catch (err) {
-      return { error: err.message };
-    }
+  get: (uuid: string) => ({ get }) => {
+    const collection = get(spacecraftState);
+    const spacecraft = collection[uuid] || null;
+    const error = spacecraft ? null : 'Spacecraft not found';
+ 
+    return { spacecraft, error };
   },
 });
 
