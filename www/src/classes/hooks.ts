@@ -10,7 +10,7 @@ import { SpacecraftClass } from "./types";
  */
 export const useLoadSpacecraftClasses = (classes: SpacecraftClass[]) => {
   const setClasses = useSetRecoilState(spacecraftClassState);
-  
+
   useEffect(() => {
     const { entities } = getEntities(classes);
 

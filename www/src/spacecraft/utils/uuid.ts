@@ -1,6 +1,7 @@
-import type { Spacecraft } from '../types';
+import type { Spacecraft } from "../types";
 
-export const getUUID = (str: string | null) => (str && str.split("/").pop()) || null;
+export const getUUID = (str: string | null) =>
+  (str && str.split("/").pop()) || null;
 
 export const getSpacecraftUuids = (spacecraft: Spacecraft): Spacecraft => ({
   ...spacecraft,

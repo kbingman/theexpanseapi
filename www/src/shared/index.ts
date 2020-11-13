@@ -1,4 +1,4 @@
-export { DebugObserver } from './components/debug-observer';
+export { DebugObserver } from "./components/debug-observer";
 
 export * from "./fp/index";
 

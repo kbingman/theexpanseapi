@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { RecoilRoot } from "recoil";
-import { DebugObserver } from '../src/shared';
+
+import { getInitializeState } from "../src/spacecraft";
 
 // Mock API
 if (process.env.NODE_ENV !== "production") {
@@ -23,10 +24,10 @@ const App = ({ Component, pageProps }: AppProps) => (
         padding: 0 10px;
       }
     `}</style>
-    {/* <RecoilRoot>
-      <DebugObserver /> */}
+    <RecoilRoot initializeState={getInitializeState({ spacecraft: pageProps.spacecraft })}>
+      {/* <DebugObserver /> */}
       <Component {...pageProps} />
-    {/* </RecoilRoot> */}
+    </RecoilRoot> 
   </>
 );
 

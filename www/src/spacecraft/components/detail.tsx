@@ -14,13 +14,17 @@ export const SpacecraftDetail = ({ uuid }) => {
     return <p>No details available</p>;
   }
 
-  const { class: classUuid, crew: crewUuids, ownerNavy } = spacecraft; 
+  const { class: classUuid, crew: crewUuids, ownerNavy } = spacecraft;
 
   return (
     <div className="spacecraft">
-      {ownerNavy.map(owner => <h4 key={owner}>{owner}</h4>)}
+      {ownerNavy.map((owner) => (
+        <h4 key={owner}>{owner}</h4>
+      ))}
       <SpacecraftClass uuid={classUuid} />
-      {crewUuids.map(uuid => <CrewDetail key={uuid} uuid={uuid} />)}
+      {crewUuids.map((uuid) => (
+        <CrewDetail key={uuid} uuid={uuid} />
+      ))}
     </div>
   );
 };

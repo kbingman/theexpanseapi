@@ -34,8 +34,8 @@ export const spacecraftDetailSelector = selectorFamily({
   get: (uuid: string) => ({ get }) => {
     const collection = get(spacecraftState);
     const spacecraft = collection[uuid] || null;
-    const error = spacecraft ? null : 'Spacecraft not found';
- 
+    const error = spacecraft ? null : "Spacecraft not found";
+
     return { spacecraft, error };
   },
 });
@@ -45,10 +45,7 @@ export const spacecraftDetailSelector = selectorFamily({
  */
 export const spacecraftListingSelector = selectorFamily({
   key: "spacecraftListingSelector",
-  get: (uuid: string) => ({ get }) => {
-    const spacecraft = get(spacecraftState);
-    return spacecraft[uuid] || null;
-  },
+  get: (uuid: string) => ({ get }) => get(spacecraftState)[uuid] || null,
   set: (uuid: string) => async ({ get, set }, options: Partial<Spacecraft>) => {
     const spacecraft = get(spacecraftState);
     const updatedSpacecraft: Spacecraft = {

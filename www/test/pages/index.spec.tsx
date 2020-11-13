@@ -1,4 +1,5 @@
-// Adds the nest polyfills... add to a setup file
+// Adds the next polyfills... 
+// TODO add to a setup file
 import 'next';
 
 import { render } from '@testing-library/react';
@@ -7,14 +8,13 @@ import { RecoilRoot } from 'recoil';
 import IndexPage, { getServerSideProps } from '../../pages';
 import { getMockSpacecraft } from '../../mocks/models';
 import { server } from '../../mocks/server';
+import { getInitializeState } from '../../src/spacecraft';
 
 const mockSpacecraft = getMockSpacecraft();
 const renderIndexPage = () =>
   render(
-    <RecoilRoot>
-      <IndexPage
-        spacecraft={[mockSpacecraft]}
-      />
+    <RecoilRoot initializeState={getInitializeState({ spacecraft: [mockSpacecraft] })}>
+      <IndexPage />
     </RecoilRoot>
   );
 
@@ -22,10 +22,8 @@ describe('IndexPage', () => {
   test('renders a list of Spacecraft', () => {
     const { getByText } = renderIndexPage();
     const ship = getByText('Rocinante');
-    // const shipClass = getByText('Corvette Class');
 
     expect(ship.tagName).toBe('H3');
-    // expect(shipClass.tagName).toBe('DIV');
   });
 });
 

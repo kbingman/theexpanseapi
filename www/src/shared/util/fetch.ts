@@ -1,8 +1,8 @@
-const API_ENDPOINT = "http://[::1]:5000";
-// const API_ENDPOINT =
-//   process.env.NODE_ENV === "production"
-//     ? "http://[::1]:5000"
-//     : "http://localhost:5000";
+// const API_ENDPOINT = "http://[::1]:5000";
+const API_ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? "http://[::1]:5000"
+    : "http://localhost:5000";
 
 // type Method = "GET" | "OPTION" | "POST" | "PUT" | "DELETE";
 
