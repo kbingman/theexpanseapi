@@ -1,8 +1,9 @@
-export { DebugObserver } from "./components/debug-observer";
+export { DebugObserver } from './components/debug-observer';
 
-export * from "./fp/index";
+export * from './fp/index';
 
-export { getEntities } from "./util/entities";
-export { fetchJSON } from "./util/fetch";
-export { logger } from "./util/logger";
-export { getModifiedNodes } from "./util/nodes";
+export { fetchJSON } from './util/fetch';
+export { getEntities } from './util/entities';
+export { getInitializeState } from './util/initialize';
+export { logger } from './util/logger';
+export { getModifiedNodes } from './util/nodes';

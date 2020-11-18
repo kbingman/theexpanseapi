@@ -1,5 +1,5 @@
-import { FormEvent, useState } from "react";
-import { updateSpacecraft } from "../utils";
+import { FormEvent, useState } from 'react';
+import { updateSpacecraft } from '../utils';
 
 /**
  * Spacecraft Class and Crew

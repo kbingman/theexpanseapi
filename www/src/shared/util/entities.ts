@@ -1,4 +1,4 @@
-import { reduce } from "../fp/reduce";
+import { reduce } from '../fp/reduce';
 
 // type Key<T> = keyof T & string;
 
@@ -10,9 +10,12 @@ interface Entities<T> {
 /**
  * Reducer function
  */
-const objectReducer = <T extends { uuid: string }>(acc: Entities<T>, c: T) => ({
-  ids: [...acc.ids, c.uuid],
-  entities: { ...acc.entities, [c.uuid]: c },
+const objectReducer = <T extends { uuid: string }>(
+  acc: Entities<T>,
+  value: T
+) => ({
+  ids: [...acc.ids, value.uuid],
+  entities: { ...acc.entities, [value.uuid]: value },
 });
 
 /**

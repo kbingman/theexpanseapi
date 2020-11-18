@@ -1,38 +1,11 @@
-import { useEffect, useMemo } from "react";
-import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil";
+import { useEffect } from 'react';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+import { getEntities } from '../../shared';
 
-import { getEntities } from "../../shared";
-
-import {
-  spacecraftListingSelector,
-  spacecraftIdsState,
-  spacecraftState,
-} from "../atoms/spacecraft";
-import { activeSpacecraftSelector } from "../atoms/ui";
-import { Spacecraft } from "../types";
-
-const getUUID = (str: string | null) => (str && str.split("/").pop()) || null;
-
-const getSpacecraftUuids = (spacecraft: Spacecraft): Spacecraft => ({
-  ...spacecraft,
-  class: getUUID(spacecraft.class),
-  crew: spacecraft.crew.map(getUUID),
-});
-
-/**
- * Sets the Spacecraft Atom with the given data
- */
-export const useLoadSpacecraft = (spacecraft: Spacecraft[]) => {
-  const setSpacecraft = useSetRecoilState(spacecraftState);
-  const setSpacecraftIds = useSetRecoilState(spacecraftIdsState);
-
-  useEffect(() => {
-    const { ids, entities } = getEntities(spacecraft.map(getSpacecraftUuids));
-
-    setSpacecraft(entities);
-    setSpacecraftIds(ids);
-  }, [spacecraft]);
-};
+import { spacecraftIdsState, spacecraftState } from '../atoms/atoms';
+import { spacecraftListingSelector } from '../atoms/selectors';
+import { activeSpacecraftSelector } from '../atoms/ui';
+import { Spacecraft } from '../types';
 
 export const useActiveSpacecraft = (uuid: string) => {
   const [isVisible, setIsVisible] = useRecoilState(
@@ -51,4 +24,17 @@ export const useSpacecraft = (uuid: string) => {
 export const useSpacecraftUuids = () => {
   const uuids = useRecoilValue(spacecraftIdsState);
   return uuids;
+};
+
+export const useServerSideSpacecraft = (spacecraft: Spacecraft[]) => {
+  const [ids, setIds] = useRecoilState(spacecraftIdsState);
+  const setEntities = useSetRecoilState(spacecraftState);
+
+  useEffect(() => {  
+    if (!ids.length) {
+      const data = getEntities(spacecraft);
+      setIds(data.ids);
+      setEntities(data.entities);
+    }
+  }, []);
 };

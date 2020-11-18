@@ -1,10 +1,9 @@
-import { Suspense } from "react";
 import {
   useActiveSpacecraft,
   useSpacecraft,
   useSpacecraftUuids,
-} from "../hooks";
-import { SpacecraftDetail } from "./detail";
+} from '../hooks';
+import { SpacecraftDetail } from './detail';
 
 /**
  * Displays a single Spacecraft
@@ -19,7 +18,8 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
   }
   const { name } = spacecraft;
   const { isVisible, setIsVisible } = useActiveSpacecraft(uuid);
-  const label = isVisible ? "Hide" : "Show";
+  const label = isVisible ? 'Hide' : 'Show';
+
   return (
     <div>
       <h3>
@@ -27,9 +27,7 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
         <button onClick={() => setIsVisible(uuid)}>{label} Details</button>
       </h3>
       {isVisible && (
-        <Suspense fallback={<div>Loading</div>}>
           <SpacecraftDetail {...{ uuid }} />
-        </Suspense>
       )}
       {/* isVisible && <SpacecraftForm {...{ name, uuid, setSpacecraft }} /> */}
     </div>
@@ -43,11 +41,9 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
  */
 export const SpacecraftList = () => {
   const uuids = useSpacecraftUuids();
-  console.log("render list", uuids.length, Date.now());
 
   return (
     <div>
-      <h2>Spacecraft</h2>
       {uuids.map((uuid) => (
         <SpacecraftListing key={`spacecraft-${uuid}`} uuid={uuid} />
       ))}

@@ -1,3 +1,3 @@
-import { fetchJSON } from "../shared";
+import { fetchJSON } from '../shared';
 
-export const getSpacecraftClasses = () => fetchJSON("/classes");
+export const getSpacecraftClasses = () => fetchJSON('/classes');

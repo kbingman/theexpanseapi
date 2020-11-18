@@ -1,4 +1,4 @@
-// Adds the next polyfills... 
+// Adds the next polyfills...
 // TODO add to a setup file
 import 'next';
 
@@ -8,12 +8,14 @@ import { RecoilRoot } from 'recoil';
 import IndexPage, { getServerSideProps } from '../../pages';
 import { getMockSpacecraft } from '../../mocks/models';
 import { server } from '../../mocks/server';
-import { getInitializeState } from '../../src/spacecraft';
+import { getInitializeState } from '../../src/shared';
 
 const mockSpacecraft = getMockSpacecraft();
 const renderIndexPage = () =>
   render(
-    <RecoilRoot initializeState={getInitializeState({ spacecraft: [mockSpacecraft] })}>
+    <RecoilRoot
+      initializeState={getInitializeState({ spacecraft: [mockSpacecraft] })}
+    >
       <IndexPage />
     </RecoilRoot>
   );
@@ -32,6 +34,6 @@ describe('getServerSideProps', () => {
   test('gets correct props', async () => {
     const { props } = await getServerSideProps();
 
-    expect(props.spacecraft).toEqual([mockSpacecraft])
+    expect(props.spacecraft).toEqual([mockSpacecraft]);
   });
 });

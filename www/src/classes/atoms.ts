@@ -1,13 +1,13 @@
-import { atom, selectorFamily } from "recoil";
-import { SpacecraftClass } from "./types";
+import { atom, selectorFamily } from 'recoil';
+import { SpacecraftClass } from './types';
 
 export const spacecraftClassState = atom<Record<string, SpacecraftClass>>({
-  key: "spacecraftClasses",
+  key: 'spacecraftClasses',
   default: {},
 });
 
 export const spacecraftClassDetailState = selectorFamily({
-  key: "spacecraftClassDetailState",
+  key: 'spacecraftClassDetailState',
   get: (uuid: string) => ({ get }) => {
     if (!uuid) {
       return null;

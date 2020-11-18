@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { useSetRecoilState } from "recoil";
+import { useEffect } from 'react';
+import { useSetRecoilState } from 'recoil';
 
-import { getEntities } from "../shared";
-import { spacecraftClassState } from "./atoms";
-import { SpacecraftClass } from "./types";
+import { getEntities } from '../shared';
+import { spacecraftClassState } from './atoms';
+import { SpacecraftClass } from './types';
 
 /**
  * Sets the Spacecraft Class Atom with the given data

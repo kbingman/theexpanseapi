@@ -1,2 +1,1 @@
-export { CrewDetail } from "./components";
-export { useLoadCrew } from "./hooks";
+export { CrewDetail } from './components';

@@ -1,5 +1,5 @@
-import { useRecoilTransactionObserver_UNSTABLE } from "recoil";
-import { getModifiedNodes } from "../util/nodes";
+import { useRecoilTransactionObserver_UNSTABLE } from 'recoil';
+import { getModifiedNodes } from '../util/nodes';
 
 /**
  * Logs modified nodes

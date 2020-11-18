@@ -1,5 +1,5 @@
-import { curry } from "./curry";
-import { map as mapBase, reduce, asyncMap } from "./reduce";
+import { curry } from './curry';
+import { map as mapBase, reduce, asyncMap } from './reduce';
 
 export const map = curry(mapBase);
 

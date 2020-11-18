@@ -1,5 +1,5 @@
-import { RecoilValue, Snapshot } from "recoil";
-import { reduce } from "../fp";
+import { RecoilValue, Snapshot } from 'recoil';
+import { reduce } from '../fp';
 
 type NodeData = {
   key: string;

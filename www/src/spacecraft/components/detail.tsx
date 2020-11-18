@@ -1,7 +1,8 @@
-import { useRecoilValue } from "recoil";
-import { SpacecraftClass } from "../../classes";
-import { CrewDetail } from "../../people";
-import { spacecraftDetailSelector } from "../atoms/spacecraft";
+import { useRecoilValue } from 'recoil';
+import { SpacecraftClass } from '../../classes';
+import { CrewDetail } from '../../people';
+import { spacecraftDetailState } from '../atoms/atoms';
+import { spacecraftListingSelector } from '../atoms/selectors';
 
 /**
  * Spacecraft Class and Crew
@@ -9,21 +10,25 @@ import { spacecraftDetailSelector } from "../atoms/spacecraft";
  * @returns JSX.Element
  */
 export const SpacecraftDetail = ({ uuid }) => {
-  const { spacecraft } = useRecoilValue(spacecraftDetailSelector(uuid));
+  // const spacecraft = useRecoilValue(spacecraftListingSelector(uuid));
+  const spacecraft = useRecoilValue(spacecraftDetailState(uuid));
+
   if (!spacecraft) {
-    return <p>No details available</p>;
+    return <p>Loading...</p>;
   }
 
-  const { class: classUuid, crew: crewUuids, ownerNavy } = spacecraft;
+  const { class: spacecraftClass, crew, owner } = spacecraft;
 
   return (
     <div className="spacecraft">
-      {ownerNavy.map((owner) => (
-        <h4 key={owner}>{owner}</h4>
+      {owner.map((name: string) => (
+        <h4 key={name}>{name}</h4>
       ))}
-      <SpacecraftClass uuid={classUuid} />
-      {crewUuids.map((uuid) => (
-        <CrewDetail key={uuid} uuid={uuid} />
+      {spacecraft.name}
+      <SpacecraftClass {...spacecraftClass} />
+      {/* @ts-ignore */}
+      {crew.map(({ name, uuid }) => (
+        <CrewDetail key={`crew-${uuid}`} {...{ uuid, name }} />
       ))}
     </div>
   );

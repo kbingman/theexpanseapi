@@ -1,19 +1,19 @@
-import { fetchJSON } from "../../shared";
-import { Spacecraft } from "../types";
+import { fetchJSON } from '../../shared';
+import { Spacecraft, SpacecraftDetail } from '../types';
 
 export const getSpacecraft = (): Promise<Spacecraft[]> =>
   fetchJSON(`/spacecraft`, {
-    method: "GET",
+    method: 'GET',
   });
 
-export const getSpacecraftDetail = (uuid: string): Promise<Spacecraft> =>
-  fetchJSON<Spacecraft>(`/spacecraft/${uuid}`, {
-    method: "GET",
+export const getSpacecraftDetail = (uuid: string): Promise<SpacecraftDetail> =>
+  fetchJSON<SpacecraftDetail>(`/spacecraft/${uuid}`, {
+    method: 'GET',
   });
 
 export const createSpacecraft = (data: Spacecraft): Promise<Spacecraft> =>
   fetchJSON<Spacecraft>(`/spacecraft`, {
-    method: "POST",
+    method: 'POST',
     body: JSON.stringify(data),
   });
 
@@ -22,11 +22,11 @@ export const updateSpacecraft = (
   data: Partial<Spacecraft>
 ): Promise<Spacecraft> =>
   fetchJSON<Spacecraft>(`/spacecraft/${uuid}`, {
-    method: "PUT",
+    method: 'PUT',
     body: JSON.stringify(data),
   });
 
 export const deleteSpacecraft = (uuid: string): Promise<{ uuid: string }> =>
   fetchJSON<Spacecraft>(`/spacecraft/${uuid}`, {
-    method: "DELETE",
+    method: 'DELETE',
   });
