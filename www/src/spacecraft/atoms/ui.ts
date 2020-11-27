@@ -4,7 +4,7 @@ import { atom, selectorFamily } from 'recoil';
  * Spacecraft Selector
  */
 export const activeSpacecraftState = atom<string | null>({
-  key: 'activeSpacecraftState',
+  key: 'activeSpacecraft',
   default: null,
 });
 
@@ -12,7 +12,7 @@ export const activeSpacecraftState = atom<string | null>({
  * Visibility Selector
  */
 export const activeSpacecraftSelector = selectorFamily({
-  key: 'activeSpacecraftStateSelector',
+  key: 'activeSpacecraftSelector',
   get: (currentUuid: string) => ({ get }) => {
     return currentUuid === get(activeSpacecraftState);
   },

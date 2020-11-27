@@ -3,15 +3,14 @@ import { spacecraftClassDetailState } from '../atoms';
 
 type Props = {
   uuid: string;
-  name: string;
 };
 
-export const SpacecraftClass = ({ name }: Props) => {
-  // const spacecraftClass = useRecoilValue(spacecraftClassDetailState(uuid));
-  // if (!spacecraftClass) {
-  //   return null;
-  // }
-  // const { name } = spacecraftClass;
+export const SpacecraftClassInfo = ({ uuid }: Props) => {
+  const spacecraftClass = useRecoilValue(spacecraftClassDetailState(uuid));
+  if (!spacecraftClass) {
+    return null;
+  }
+  const { name } = spacecraftClass;
 
-  return <div>{name}</div>;
+  return <h3>{name}</h3>;
 };

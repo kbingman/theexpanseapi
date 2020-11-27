@@ -1,8 +1,19 @@
-import { useRecoilValue } from 'recoil';
-import { SpacecraftClass } from '../../classes';
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
 import { CrewDetail } from '../../people';
-import { spacecraftDetailState } from '../atoms/atoms';
 import { spacecraftListingSelector } from '../atoms/selectors';
+import { getSpacecraftDetail } from '../utils';
+
+const useSpacecraftDetail = (uuid: string) => {
+  const [spacecraft /* , setSpacecraft */] = useRecoilState(
+    spacecraftListingSelector(uuid)
+  );
+  useEffect(() => {
+    getSpacecraftDetail(uuid).then((r) => console.log(r));
+    // setSpacecraft(response);
+  }, [uuid]);
+  return spacecraft;
+};
 
 /**
  * Spacecraft Class and Crew
@@ -10,14 +21,15 @@ import { spacecraftListingSelector } from '../atoms/selectors';
  * @returns JSX.Element
  */
 export const SpacecraftDetail = ({ uuid }) => {
+  const spacecraft = useSpacecraftDetail(uuid);
   // const spacecraft = useRecoilValue(spacecraftListingSelector(uuid));
-  const spacecraft = useRecoilValue(spacecraftDetailState(uuid));
+  // const spacecraft = useRecoilValue(spacecraftDetailSelector(uuid));
 
   if (!spacecraft) {
     return <p>Loading...</p>;
   }
 
-  const { class: spacecraftClass, crew, owner } = spacecraft;
+  const { crew, owner } = spacecraft;
 
   return (
     <div className="spacecraft">
@@ -25,10 +37,9 @@ export const SpacecraftDetail = ({ uuid }) => {
         <h4 key={name}>{name}</h4>
       ))}
       {spacecraft.name}
-      <SpacecraftClass {...spacecraftClass} />
-      {/* @ts-ignore */}
-      {crew.map(({ name, uuid }) => (
-        <CrewDetail key={`crew-${uuid}`} {...{ uuid, name }} />
+      {/* <SpacecraftClass {...spacecraftClass} /> */}
+      {crew.map((uuid) => (
+        <CrewDetail key={`crew-${uuid}`} {...{ uuid }} />
       ))}
     </div>
   );

@@ -1,4 +1,4 @@
-import { asyncMap, map } from '../fp/reduce';
+import { asyncMap, map } from '../util/reduce';
 
 test('map', async () => {
   const double = (num: number) => num * 2;
@@ -6,7 +6,14 @@ test('map', async () => {
   expect(map(double, [2, 3])).toEqual([4, 6]);
 });
 
-test('Async mapper', async () => {
+test('map object', async () => {
+  const pluck = (obj: { uuid: string }) => obj.uuid;
+  const data = [{ uuid: 'foo' }, { uuid: 'bar' }];
+
+  expect(map(pluck, data)).toEqual(['foo', 'bar']);
+});
+
+test('async mapper', async () => {
   const asyncDouble = (num: number) =>
     new Promise((resolve) => {
       setTimeout(() => resolve(num * 2), 100);

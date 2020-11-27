@@ -1,26 +1,29 @@
-// const API_ENDPOINT = "http://[::1]:5000";
+import { logger } from "./logger";
+
 const API_ENDPOINT =
   process.env.NODE_ENV === 'test'
     ? 'http://localhost:5000'
     : 'http://[::1]:5000';
 
-// type Method = "GET" | "OPTION" | "POST" | "PUT" | "DELETE";
-
 /**
  * @param {pathname}
  * @param {options}
  *
- * @returns Promise<>
+ * @returns Promise<Type>
  */
 export const fetchJSON = async <T>(
   pathname: string,
   options: RequestInit = {}
 ): Promise<T> => {
   try {
+    const method = options.method || 'GET';
+    const resource = pathname.split('/')[1];
+    logger.time(`${method} ${resource}`)
     const response = await fetch(`${API_ENDPOINT}${pathname}`, {
       ...options,
-      method: options.method || 'GET',
+      method,
     });
+    logger.timeEnd(`${method} ${resource}`)
     return response.json();
   } catch (err) {
     console.error(err);

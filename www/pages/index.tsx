@@ -1,9 +1,11 @@
+import { logger } from '../src/shared';
 import { SpacecraftList, getSpacecraft, useServerSideSpacecraft } from '../src/spacecraft';
 
 /**
  * IndexPage
  */
 const IndexPage = ({ spacecraft, error }) => {
+  // Sets Recoil State if not already set
   useServerSideSpacecraft(spacecraft);
   return (
     <div>
@@ -13,6 +15,10 @@ const IndexPage = ({ spacecraft, error }) => {
   );
 };
 
+/**
+ * Server Side props
+ * Runs only on the server, providind data to the frontend
+ */
 export const getServerSideProps = async () => {
   try {
     const spacecraft = await getSpacecraft();
@@ -22,7 +28,7 @@ export const getServerSideProps = async () => {
       props: { spacecraft },
     };
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     return {
       props: { error: err.message },
     };

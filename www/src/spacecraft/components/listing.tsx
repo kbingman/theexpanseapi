@@ -1,13 +1,15 @@
+import { SpacecraftClassInfo } from '../../classes';
+import { CrewDetail } from '../../people';
 import {
   useActiveSpacecraft,
   useSpacecraft,
   useSpacecraftUuids,
 } from '../hooks';
-import { SpacecraftDetail } from './detail';
+import { SpacecraftDisplay } from './form';
 
 /**
  * Displays a single Spacecraft
- * @oaram {Props}
+ * @oaram {uuid}
  *
  * @returns JSX.Element
  */
@@ -22,14 +24,16 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
 
   return (
     <div>
-      <h3>
+      <h2>
         {name}
+        {' '}
         <button onClick={() => setIsVisible(uuid)}>{label} Details</button>
-      </h3>
+      </h2>
       {isVisible && (
-          <SpacecraftDetail {...{ uuid }} />
+        <>
+          <SpacecraftDisplay {...{ uuid }} />
+        </>
       )}
-      {/* isVisible && <SpacecraftForm {...{ name, uuid, setSpacecraft }} /> */}
     </div>
   );
 };

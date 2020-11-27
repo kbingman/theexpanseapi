@@ -1,5 +1,5 @@
 import { EpisodesList, useServerSideEpisodes } from '../src/episodes';
-import { fetchJSON } from '../src/shared';
+import { fetchJSON, logger } from '../src/shared';
 
 /**
  * EpisodesPage
@@ -16,16 +16,14 @@ const EpisodesPage = ({ episodes, error = null }) => {
 
 export const getServerSideProps = async () => {
   try {
-    console.time('request');
     const episodes = await fetchJSON('/episodes');
-    console.timeEnd('request');
 
     // Needed to hydrate the data for the RecoilRoot, see `_app`
     return {
       props: { episodes },
     };
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     return {
       props: { error: err.message },
     };

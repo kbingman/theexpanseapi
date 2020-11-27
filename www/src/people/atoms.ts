@@ -1,9 +1,21 @@
-import { atom, selectorFamily } from 'recoil';
+import { atom, selector, selectorFamily } from 'recoil';
 import { Person } from './types';
 
-export const crewState = atom<Record<string, Person>>({
+type CrewState = { [uuid: string]: Person };
+
+export const crewState = atom<CrewState>({
   key: 'crew',
   default: {},
+});
+
+export const crewStateSelector = selector<CrewState>({
+  key: 'crewStateSelector',
+  get: ({ get }) => get(crewState),
+  set: ({ get, set }, value) =>
+    set(crewState, {
+      ...get(crewState),
+      ...value,
+    }),
 });
 
 export const crewDetailState = selectorFamily({
@@ -11,6 +23,6 @@ export const crewDetailState = selectorFamily({
   get: (uuid: string) => ({ get }) => {
     const crew = get(crewState);
 
-    return crew[uuid] || { name: uuid };
+    return crew[uuid] || null;
   },
 });

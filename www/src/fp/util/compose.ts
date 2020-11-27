@@ -23,7 +23,7 @@ type LastFnReturnType<T extends any[]> = ReturnType<T[0]>;
  */
 export const compose = <T extends ArityOneFn[]>(...fns: T) => (
   p: FirstFnParameterType<T>
-): LastFnReturnType<T> => fns.reduceRight((acc: any, cur: any) => cur(acc), p);
+): LastFnReturnType<T> => fns.reduce((acc: any, cur: any) => cur(acc), p);
 
 /**
  * @param {...fns} a list of function with matching signatures
@@ -35,4 +35,4 @@ export const compose = <T extends ArityOneFn[]>(...fns: T) => (
  */
 export const pipe = <T extends ArityOneFn[]>(...fns: T) => (
   p: FirstFnParameterType<T>
-): LastFnReturnType<T> => fns.reduce((acc: any, cur: any) => cur(acc), p);
+): LastFnReturnType<T> => fns.reduceRight((acc: any, cur: any) => cur(acc), p);

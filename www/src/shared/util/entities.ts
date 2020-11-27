@@ -1,4 +1,4 @@
-import { reduce } from '../fp/reduce';
+import { reduce } from '../../fp';
 
 // type Key<T> = keyof T & string;
 

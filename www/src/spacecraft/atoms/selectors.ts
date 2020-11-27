@@ -1,38 +1,18 @@
-import { selector, selectorFamily } from 'recoil';
-import { spacecraftIdsState, spacecraftState } from './atoms';
+import { selectorFamily } from 'recoil';
+import { spacecraftState } from './atoms';
 
 import type { Spacecraft } from '../types';
 
-// export const removeSpacecraftSelector = selector({
-//   key: 'removeSpacecraft',
-//   get: () => null,
-//   set: ({ get, set }, uuid: string) => {
-//     const ids = get(spacecraftIdsState).filter((id) => id !== uuid);
-//     const { [uuid]: removedKey, ...spacecraft } = get(spacecraftState);
-//
-//     set(spacecraftIdsState, ids);
-//     set(spacecraftState, spacecraft);
-//   },
-// });
-//
-// export const spacecraftDetailSelector = selectorFamily({
-//   key: 'spacecraftDetailSelector',
-//   get: (uuid: string) => ({ get }) => {
-//     const collection = get(spacecraftState);
-//     const spacecraft = collection[uuid] || null;
-//     const error = spacecraft ? null : 'Spacecraft not found';
-//
-//     return { spacecraft, error };
-//   },
-// });
-
 /**
- * Spacecraft Selector
+ * Spacecraft Summary Selector
+ * @param {uuid} spacecraft uuid
  */
-export const spacecraftListingSelector = selectorFamily({
+export const spacecraftListingSelector = selectorFamily<Spacecraft, string>({
   key: 'spacecraftListingSelector',
-  get: (uuid: string) => ({ get }) => get(spacecraftState)[uuid] || null,
-  set: (uuid: string) => async ({ get, set }, options: Partial<Spacecraft>) => {
+  get: (uuid: string) => ({ get }) => {
+    return get(spacecraftState)[uuid] || null;
+  },
+  set: (uuid: string) => ({ get, set }, options) => {
     const spacecraft = get(spacecraftState);
     const updatedSpacecraft: Spacecraft = {
       ...spacecraft[uuid],

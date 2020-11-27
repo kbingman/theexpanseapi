@@ -1,7 +1,5 @@
-// import { SpacecraftClass } from "../classes/types";
-
-import { SpacecraftClass } from "../../classes/types";
-import { Person } from "../../people/types";
+import { SpacecraftClass } from '../../classes';
+import { Person } from '../../people';
 
 export type UUID = string;
 
@@ -9,7 +7,8 @@ export type Spacecraft = {
   class: string;
   crew: string[];
   name: string;
-  ownerNavy: string[];
+  owner: string[];
+  url: string;
   uuid: string;
 };
 
@@ -18,5 +17,6 @@ export type SpacecraftDetail = {
   crew: Person[];
   name: string;
   owner: string[];
+  url: string;
   uuid: string;
 };

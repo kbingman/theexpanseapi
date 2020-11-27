@@ -4,9 +4,10 @@ import { Spacecraft } from '../src/spacecraft/types';
 export const getMockSpacecraft = (attr?: Partial<Spacecraft>): Spacecraft => ({
   name: 'Rocinante',
   uuid: 'aebf1a71-4349-463b-bec6-c5e65f06ce7f',
+  url: '/spacecraft/aebf1a71-4349-463b-bec6-c5e65f06ce7f',
   class: '/class/b6a4d0ce-c4e9-4da9-b9d8-42455fd09b45',
   crew: [],
-  ownerNavy: [],
+  owner: [],
   ...attr,
 });
 

@@ -17,11 +17,12 @@ export const reduce = <T, R>(
  * Wrapper for reduce function
  */
 export const map = <T, R>(fn: (arg: T) => R, collection: Iterable<T>): R[] => {
-  const arr = [];
-  for (const item of collection) {
-    arr.push(fn(item));
-  }
-  return arr;
+  // const arr = [];
+  // for (const item of collection) {
+  //   arr.push(fn(item));
+  // }
+  // return arr;
+  return Array.from(collection).map(fn);
 };
 
 /**

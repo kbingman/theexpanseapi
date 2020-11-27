@@ -2,18 +2,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { RecoilRoot } from 'recoil';
 
+import { DebugObserver } from '../src/debug';
 import { getInitializeState } from '../src/shared';
-
-// Mock API
-if (process.env.NODE_ENV !== 'production') {
-  // require("../mocks");
-}
 
 import type { AppProps /*, AppContext */ } from 'next/app';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
-    <Head>
+<Head>
+    <meta name="description" content="A demo REST API for all things concerning The Expanse TV series" />
       <title>The Expanse Api</title>
     </Head>
     <style jsx global>{`
@@ -26,11 +23,12 @@ const App = ({ Component, pageProps }: AppProps) => (
       }
     `}</style>
     <RecoilRoot initializeState={getInitializeState({ ...pageProps })}>
-      {/* <DebugObserver /> */}
+      <DebugObserver />
       <header>
         <h1>The Expanse</h1>
-        <Link prefetch href="/">Spacecraft</Link>
-        <Link prefetch href="/episodes">Episodes</Link>
+        <Link href="/">Spacecraft</Link>
+        {' | '}
+        <Link href="/episodes">Episodes</Link>
       </header>
       <Component {...pageProps} />
     </RecoilRoot>

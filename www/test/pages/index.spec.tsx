@@ -16,7 +16,7 @@ const renderIndexPage = () =>
     <RecoilRoot
       initializeState={getInitializeState({ spacecraft: [mockSpacecraft] })}
     >
-      <IndexPage />
+      <IndexPage error={null} spacecraft={mockSpacecraft} />
     </RecoilRoot>
   );
 
@@ -25,7 +25,7 @@ describe('IndexPage', () => {
     const { getByText } = renderIndexPage();
     const ship = getByText('Rocinante');
 
-    expect(ship.tagName).toBe('H3');
+    expect(ship.tagName).toBe('H2');
   });
 });
 

@@ -1,16 +1,14 @@
 import { useRecoilValue } from 'recoil';
-import { map } from '../../shared';
 import { episodesState } from '../atoms';
 
 export const EpisodeListing = ({ title, episode, uuid }) => (
-  <h3 key={uuid}>
+  <h2 key={uuid}>
     {title} - {episode}
-  </h3>
+  </h2>
 );
 
 export const EpisodesList = () => {
   const episodes = useRecoilValue(episodesState);
-  return (
-    <div>{map(EpisodeListing, episodes)}</div>
-  );
+  // Episodes is a set, so we use a custom map function
+  return <div>{Array.from(episodes).map(EpisodeListing)}</div>;
 };

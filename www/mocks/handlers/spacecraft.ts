@@ -16,7 +16,7 @@ export const spacecraftHandlers = [
     (_req, res, ctx) => {
       return res(
         ctx.delay(1500),
-        ctx.json({ ...mockSpacecraft, class: mockSpacecraftClass })
+        ctx.json({ ...mockSpacecraft, class: mockSpacecraftClass, crew: [] })
       );
     }
   ),
