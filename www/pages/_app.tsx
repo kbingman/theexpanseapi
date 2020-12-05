@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { RecoilRoot } from 'recoil';
 
 import { DebugObserver } from '../src/debug';
-import { getInitializeState } from '../src/shared';
+import { getInitializeState, Header } from '../src/shared';
 
 import type { AppProps /*, AppContext */ } from 'next/app';
 
@@ -24,12 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => (
     `}</style>
     <RecoilRoot initializeState={getInitializeState({ ...pageProps })}>
       <DebugObserver />
-      <header>
-        <h1>The Expanse</h1>
-        <Link href="/">Spacecraft</Link>
-        {' | '}
-        <Link href="/episodes">Episodes</Link>
-      </header>
+      <Header />
       <Component {...pageProps} />
     </RecoilRoot>
   </>

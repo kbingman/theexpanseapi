@@ -20,7 +20,7 @@ type Curried<A extends Arr, R> = <P extends Partial<A>>(
  * const fn = (a: number, b: number) => a + b;
  * curry(fn) = fn(a: number) => (b: number) => a + b;
  *
- * @param {fn} - a function with 2 or more arguments
+ * @param fn - a function with 2 or more arguments
  *
  * @returns function
  */

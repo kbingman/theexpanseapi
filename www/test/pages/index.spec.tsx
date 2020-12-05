@@ -1,7 +1,3 @@
-// Adds the next polyfills...
-// TODO add to a setup file
-import 'next';
-
 import { render } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 

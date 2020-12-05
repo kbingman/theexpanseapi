@@ -4,7 +4,7 @@ import { SpacecraftClass } from './types';
 type SpacecraftClasses = { [uuid: string]: SpacecraftClass };
 
 export const spacecraftClassState = atom<SpacecraftClasses>({
-  key: 'classes',
+  key: '@class/entities',
   default: {},
 });
 
@@ -19,7 +19,7 @@ export const spacecraftClassSelector = selector<SpacecraftClasses>({
 });
 
 export const spacecraftClassDetailState = selectorFamily({
-  key: 'spacecraftClassDetailState',
+  key: '@class/detail',
   get: (uuid: string) => ({ get }) => {
     if (!uuid) {
       return null;

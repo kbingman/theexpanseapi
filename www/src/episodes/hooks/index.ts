@@ -1,13 +1,14 @@
-import { useEffect } from 'react';
-import { useRecoilState } from 'recoil';
+import {useServerSideModel} from '../../shared/hooks';
 import { episodesState } from '../atoms';
 import { Episode } from '../types';
 
-export const useServerSideEpisodes = (episodes: Episode[]) => {
-  const [data, setData] = useRecoilState(episodesState);
-  useEffect(() => {
-    if (!data.size) {
-      setData(new Set(episodes));
-    }
-  }, []);
-};
+/**
+ * Takes an array of episodes loaded server side and adds them
+ * to the client-side atoms if missing.
+ *
+ * This runs only client-side (useEffect)
+ * 
+ * @param {episodes}
+ */
+export const useServerSideEpisodes = (episodes: Episode[]) =>
+  useServerSideModel<Episode>(episodesState, episodes);

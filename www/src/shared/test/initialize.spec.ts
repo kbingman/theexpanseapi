@@ -9,7 +9,7 @@ test('Initialize State with Spacecraft data', () => {
 
   // sets the spacecraft atom
   expect(set).toHaveBeenCalledWith(
-    { key: 'spacecraft' },
+    { key: '@spacecraft/entities' },
     {
       [mockSpacecraft.uuid]: {
         ...mockSpacecraft,
@@ -18,7 +18,7 @@ test('Initialize State with Spacecraft data', () => {
     }
   );
   // sets the spacecraft IDs atom
-  expect(set).toHaveBeenCalledWith({ key: 'spacecraftIds' }, [
+  expect(set).toHaveBeenCalledWith({ key: '@spacecraft/ids' }, [
     mockSpacecraft.uuid,
   ]);
 });

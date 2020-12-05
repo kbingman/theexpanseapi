@@ -16,7 +16,7 @@ const getNodeLogger = (snapshot: Snapshot) => (node: RecoilValue<any>) => {
 
   return {
     key: node.key,
-    contents: loadable.contents
+    contents: loadable?.contents
   };
 };
 
@@ -27,11 +27,12 @@ const getNodeLogger = (snapshot: Snapshot) => (node: RecoilValue<any>) => {
  *
  * @return Nodes
  */
-export const getModifiedNodes = (snapshot: Snapshot) =>
-  sequence(
+export const getModifiedNodes = (snapshot: Snapshot): any[] =>
+  sequence<any, any[]>(
+    // @ts-ignore
     compose(
       map(getNodeLogger(snapshot)), 
-      filter(getNodeFilter(snapshot))
+      filter(getNodeFilter(snapshot)),
     ),
     snapshot.getNodes_UNSTABLE()
   );

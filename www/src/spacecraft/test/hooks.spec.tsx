@@ -1,5 +1,3 @@
-import 'next';
-
 import { act, renderRecoilHook } from 'react-recoil-hooks-testing-library';
 import { getMockSpacecraft } from '../../../mocks/models';
 import { server } from '../../../mocks/server';

@@ -1,18 +1,27 @@
 import { FormEvent, useState } from 'react';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { SpacecraftClassInfo } from '../../classes';
 import { CrewDetail } from '../../people';
+import { putAndSetSpacecraft } from '../api';
+import { spacecraftListingSelector } from '../atoms/selectors';
 import { useSpacecraftDetail } from '../hooks';
 import { Spacecraft } from '../types';
-import { updateSpacecraft } from '../utils';
+
+export const LoadSpacecraftDetail = ({ uuid }) => {
+  useSpacecraftDetail(uuid);
+  return null;
+};
 
 export const SpacecraftDisplay = ({ uuid }) => {
-  const [spacecraft, setSpacecraft] = useSpacecraftDetail(uuid);
+  const spacecraft = useRecoilValue(spacecraftListingSelector(uuid));
   if (!spacecraft) {
     return <div>Loading...</div>;
   }
+
   return (
     <>
-      <SpacecraftForm {...{ spacecraft, setSpacecraft }} />
+      <LoadSpacecraftDetail {...{ uuid }} />
+      <SpacecraftForm {...{ spacecraft }} />
       <SpacecraftClassInfo uuid={spacecraft.class} />
       {spacecraft.crew.map((uuid) => (
         <CrewDetail key={`crew-${uuid}`} uuid={uuid} />
@@ -26,17 +35,20 @@ export const SpacecraftDisplay = ({ uuid }) => {
  *
  * @returns JSX.Element
  */
-export const SpacecraftForm = ({ spacecraft, setSpacecraft }) => {
+export const SpacecraftForm = ({ spacecraft }) => {
+  const setSpacecraft = useSetRecoilState(
+    spacecraftListingSelector(spacecraft.uuid)
+  );
   const [spacecraftData, setSpacecraftData] = useState<Partial<Spacecraft>>(
     spacecraft
   );
 
-  const submit = async (e: FormEvent) => {
+  const submit = (e: FormEvent) => {
     e.preventDefault();
-    setSpacecraft(await updateSpacecraft(spacecraft.uuid, {
+    putAndSetSpacecraft(setSpacecraft, {
       ...spacecraft,
       ...spacecraftData,
-    }));
+    });
   };
 
   return (

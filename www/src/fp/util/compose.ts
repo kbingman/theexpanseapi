@@ -14,7 +14,7 @@ type FirstFnParameterType<T extends any[]> = Parameters<
 type LastFnReturnType<T extends any[]> = ReturnType<T[0]>;
 
 /**
- * @param {...fns} a list of function with matching signatures
+ * @param ...fns a list of function with matching signatures
  *
  * @example
  * compose(fn1, fn2)
@@ -26,7 +26,7 @@ export const compose = <T extends ArityOneFn[]>(...fns: T) => (
 ): LastFnReturnType<T> => fns.reduce((acc: any, cur: any) => cur(acc), p);
 
 /**
- * @param {...fns} a list of function with matching signatures
+ * @param ...fns a list of function with matching signatures
  *
  * @example
  * pipe(fn1, fn2)

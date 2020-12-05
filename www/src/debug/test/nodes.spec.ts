@@ -1,4 +1,4 @@
-import { Snapshot, snapshot_UNSTABLE } from 'recoil';
+import { snapshot_UNSTABLE } from 'recoil';
 import { getMockSpacecraft } from '../../../mocks/models';
 import { spacecraftListingSelector } from '../../spacecraft/atoms/selectors';
 import { getModifiedNodes } from '../util/nodes';
@@ -13,7 +13,7 @@ test('filter the modified nodes', () => {
 
   expect(nodes).toEqual([
     {
-      key: 'spacecraft',
+      key: '@spacecraft/entities',
       contents: { [uuid]: mockSpacecraft },
     },
   ]);

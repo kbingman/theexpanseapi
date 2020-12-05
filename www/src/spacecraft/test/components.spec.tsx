@@ -1,6 +1,4 @@
-import 'next';
-
-import { act, fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 
 import { getMockSpacecraft } from '../../../mocks/models';
@@ -25,12 +23,13 @@ test('Spacecraft', async () => {
 
   expect(title.tagName).toBe('H2');
   expect(button.tagName).toBe('BUTTON');
-  act(() => {
-    fireEvent.click(button);
-  });
+  fireEvent.click(button);
 
-  const form = await findByLabelText('Name') as HTMLInputElement;
-  // const classname = await findByText('Corvette Class');
-  console.log(form.value);
-  // console.log(classname.tagName);
+  // waitFor(() => 3000)
+  const nameInput = await findByLabelText('Name') as HTMLInputElement; 
+  expect(nameInput.value).toBe('Rocinante');
+  await new Promise((res) => setTimeout(() => res(), 3000));
+  
+  const classname = await findByText('Corvette Class');
+  console.log(classname.tagName);
 });

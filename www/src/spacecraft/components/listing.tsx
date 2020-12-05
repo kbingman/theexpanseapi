@@ -1,15 +1,13 @@
+import { useRecoilValue } from 'recoil';
 import { SpacecraftClassInfo } from '../../classes';
 import { CrewDetail } from '../../people';
-import {
-  useActiveSpacecraft,
-  useSpacecraft,
-  useSpacecraftUuids,
-} from '../hooks';
+import { spacecraftIDs } from '../atoms/selectors';
+import { useActiveSpacecraft, useSpacecraft } from '../hooks';
 import { SpacecraftDisplay } from './form';
 
 /**
  * Displays a single Spacecraft
- * @oaram {uuid}
+ * @oaram uuid
  *
  * @returns JSX.Element
  */
@@ -24,11 +22,10 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
 
   return (
     <div>
-      <h2>
+      <div>
         {name}
-        {' '}
         <button onClick={() => setIsVisible(uuid)}>{label} Details</button>
-      </h2>
+      </div>
       {isVisible && (
         <>
           <SpacecraftDisplay {...{ uuid }} />
@@ -44,7 +41,7 @@ export const SpacecraftListing = ({ uuid }: { uuid: string }) => {
  * @returns JSX.Element
  */
 export const SpacecraftList = () => {
-  const uuids = useSpacecraftUuids();
+  const uuids = useRecoilValue(spacecraftIDs);
 
   return (
     <div>

@@ -2,14 +2,14 @@ const logger = (...msg: any) => {
   if (process.env.NODE_ENV !== 'development') {
     return;
   }
-  console.log('[The Expanse]', msg.join(' '));
+  console.log('[The Expanse]', ...msg);
 };
 
 logger.error = (...msg: any) => {
   if (process.env.NODE_ENV !== 'development') {
     return;
   }
-  console.error(`[The Expanse: Error]`, msg.join(' '));
+  console.error(`[The Expanse: Error]`, ...msg);
 };
 
 logger.time = (name: string) => {

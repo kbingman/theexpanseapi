@@ -1,10 +1,13 @@
-import { atom } from 'recoil';
+import { atom, selector } from 'recoil';
+import { map, pluckEntity } from '../../shared';
 import { Episode } from '../types';
 
-export const episodesState = atom<Set<Episode>>({
-  key: 'episodes',
-  default: new Set(),
-  // effects_UNSTABLE: [({ setSelf }) => {
-  //   console.log('hey');
-  // }],
+export const episodesState = atom<Map<string, Episode>>({
+  key: '@episodes/map',
+  default: new Map(),
+});
+
+export const episodesListSelector = selector<Episode[]>({
+  key: '@episodes/list',
+  get: ({ get }) => map(pluckEntity, get(episodesState)),
 });
