@@ -6,7 +6,7 @@ use tide::utils::After;
 
 use lib::state::State;
 use lib::util::error_handler;
-use lib::{people, spacecraft};
+use lib::{episodes, people, spacecraft};
 
 #[async_std::main]
 async fn main() -> tide::Result<()> {
@@ -28,6 +28,8 @@ async fn main() -> tide::Result<()> {
     // Middeware
     app.with(cors);
     app.with(After(error_handler));
+
+    app.at("/episodes").get(episodes::routes::list);
 
     // People routes
     app.at("/people")

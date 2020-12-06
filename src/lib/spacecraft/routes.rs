@@ -1,6 +1,5 @@
-use async_std::prelude::*;
 use mongodb::{
-    bson::{doc, from_bson, to_bson, Bson},
+    bson::{doc, from_bson, to_bson},
     options::FindOptions,
 };
 use uuid::Uuid;
@@ -8,43 +7,18 @@ use uuid::Uuid;
 use tide::prelude::*; // Pulls in the json! macro.
 use tide::{Body, Request, Response};
 
+use crate::db::{find_all, find_one, update_one};
 use crate::messages;
-use crate::people::routes::find_people;
 use crate::state::State;
-use crate::util::{format_url, get_database};
+use crate::util::get_database;
 
-use super::db::find_spacecraft_class;
-use super::models::{Spacecraft, SpacecraftClass, SpacecraftDetail};
-
-async fn find_thing(
-    db: &mongodb::Database,
-    document: mongodb::bson::Document,
-) -> anyhow::Result<SpacecraftDetail> {
-    let spacecraft: Spacecraft = from_bson(Bson::Document(document))?;
-    let detail = SpacecraftDetail {
-        name: spacecraft.name,
-        owner: spacecraft.owner_navy,
-        url: format_url("spacecraft", &spacecraft.uuid),
-        class: match &spacecraft.class {
-            Some(id) => find_spacecraft_class(&db, doc! { "uuid": &id }).await?,
-            None => None,
-        },
-        crew: find_people(&db, doc! { "uuid": { "$in": &spacecraft.crew } }).await?,
-    };
-    Ok(detail)
-}
+use super::models::{Spacecraft, SpacecraftClass};
+use super::util::{find_spacecraft_detail, format_spacecraft};
 
 /// List Spacecraft Classes
 pub async fn list_spacecraft_classes(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("classes");
-
-    let mut cursor = collection.find(None, None).await?;
-    let mut spacecraft_classes = Vec::<SpacecraftClass>::new();
-
-    while let Some(result) = cursor.next().await {
-        let craft: SpacecraftClass = from_bson(Bson::Document(result?))?;
-        spacecraft_classes.push(craft);
-    }
+    let spacecraft_classes: Vec<SpacecraftClass> = find_all(collection, None, None).await?;
 
     Ok(Body::from_json(&spacecraft_classes)?)
 }
@@ -53,43 +27,25 @@ pub async fn list_spacecraft_classes(req: Request<State>) -> tide::Result<impl I
 pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
-    let find_options = FindOptions::builder().skip(0).limit(40).build();
-    let mut cursor = collection.find(None, find_options).await?;
-    let mut spacecraft = Vec::<Spacecraft>::new();
+    let find_options = FindOptions::builder().skip(0).limit(100).sort(doc! { "name": 1 }).build();
+    let spacecraft: Vec<Spacecraft> = find_all(collection, None, find_options).await?;
 
-    while let Some(result) = cursor.next().await {
-        let craft: Spacecraft = from_bson(Bson::Document(result?))?;
-        spacecraft.push(craft);
-    }
-    let records = spacecraft
-        .iter()
-        .map(|s| {
-            let mut ship = s.clone();
-            ship.url = format_url("spacecraft", &s.uuid);
-            ship.class = format_url("class", &s.class);
-            ship.crew = s
-                .crew
-                .iter()
-                .map(|id| format!("/people/{}", id))
-                .collect::<Vec<String>>();
-            return ship;
-        })
-        .collect::<Vec<Spacecraft>>();
-
-    Ok(Body::from_json(&records)?)
+    Ok(Body::from_json(&format_spacecraft(spacecraft))?)
 }
 
 /// Find spacecraft
 pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let db = get_database(&req);
+    let collection = db.collection("spacecraft");
 
     let uuid: String = req.param("uuid")?;
     let filter = doc! { "uuid": &uuid };
 
-    let collection = db.collection("spacecraft");
-    let result = collection.find_one(filter, None).await?;
+    let result: Option<Spacecraft> = find_one(&collection, filter, None).await?;
     match result {
-        Some(document) => Ok(Body::from_json(&find_thing(&db, document).await?)?),
+        Some(document) => Ok(Body::from_json(
+            &find_spacecraft_detail(&db, document).await?,
+        )?),
         // TODO Add the correct 404 status code
         None => Ok(Body::from_json(&messages::not_found())?),
     }
@@ -106,7 +62,7 @@ pub async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>
         None => Some(Uuid::new_v4()),
     };
 
-    let _result = collection
+    collection
         .insert_one(from_bson(to_bson(&spacecraft)?)?, None)
         .await?;
     Ok(Body::from_json(&spacecraft)?)
@@ -114,24 +70,20 @@ pub async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>
 
 /// Update spacecraft
 pub async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = get_database(&req).collection("spacecraft");
-
     let mut spacecraft: Spacecraft = req.body_json().await?;
     let uuid: Uuid = req.param("uuid")?;
     spacecraft.uuid = Some(uuid);
     let filter = doc! { "uuid": uuid.to_string() };
 
-    let document = to_bson(&spacecraft)?;
-
-    if let Bson::Document(result) = document {
-        let _result = collection.update_one(filter, result, None).await?;
-        Ok(Body::from_json(&spacecraft)?)
-    } else {
-        Ok(Body::from_json(&messages::internal_error())?)
+    let collection = get_database(&req).collection("spacecraft");
+    let result: Option<Spacecraft> = update_one(collection, spacecraft, filter, None).await?;
+    match result {
+        Some(spacecraft) => Ok(Body::from_json(&spacecraft)?),
+        None => Ok(Body::from_json(&messages::internal_error())?),
     }
 }
 
-/// Delete person
+/// Delete spacecraft
 pub async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 

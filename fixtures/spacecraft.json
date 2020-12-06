@@ -81,7 +81,7 @@
     "class": "Donnager Class",
     "type": "Battleship",
     "hullNumber": "84",
-    "appeared": ["Season 1"],
+    "appeared": ["Season 1", "Remember the Cant", "CBQ"],
     "crew": [
       "Captain Theresa Yao",
       "Lieutenant Lopez",
@@ -101,7 +101,7 @@
     "name": "Epstein's Yacht",
     "ownerNavy": ["Solomon Epstein"],
     "type": "Private yacht",
-    "seasons": ["Season 2"],
+    "seasons": ["Season 2", "Paradigm Shift"],
     "crew": ["Solomon Epstein"]
   },
   {

@@ -2,9 +2,9 @@ use anyhow::Result;
 use mongodb::bson::doc;
 
 use crate::util::{find_uuid, update_model};
-use lib::episodes::models::Episode;
 use lib::people::models::Person;
 use lib::spacecraft::models::{Spacecraft, SpacecraftClass};
+use lib::{db::find_one, episodes::models::Episode};
 
 pub async fn import_spacecraft(db: mongodb::Database, string_data: &str) -> Result<()> {
     let collection = db.collection("spacecraft");
@@ -61,8 +61,23 @@ pub async fn import_classes(db: mongodb::Database, string_data: &str) -> Result<
     Ok(())
 }
 
+async fn find_episode_id(
+    collection: &mongodb::Collection,
+    title: Option<String>,
+) -> Result<Option<String>> {
+    match title {
+        Some(t) => {
+            let doc = find_one(collection, doc! { "title": t }, None).await?;
+            let id = find_uuid(doc)?;
+            Ok(Some(id))
+        }
+        None => Ok(None),
+    }
+}
+
 pub async fn import_people(db: mongodb::Database, string_data: &str) -> Result<()> {
     let collection = db.collection("people");
+    let episode_collection = db.collection("episodes");
     let data: Vec<Person> = serde_json::from_str(&string_data)?;
     for mut model in data {
         let document = collection
@@ -70,6 +85,11 @@ pub async fn import_people(db: mongodb::Database, string_data: &str) -> Result<(
             .await?;
         let uuid = find_uuid(document)?;
         model.uuid = Some(uuid::Uuid::parse_str(&uuid)?);
+        model.first_appearance =
+            find_episode_id(&episode_collection, model.first_appearance).await?;
+        model.last_appearance = find_episode_id(&episode_collection, model.last_appearance).await?;
+        println!("First Appeared: {:#?}", model.first_appearance);
+        println!("Last Appeared: {:#?}", model.last_appearance);
         update_model(&collection, doc! { "name": &model.name }, &model).await?;
         println!("Name: {:#?}", &model.name);
     }

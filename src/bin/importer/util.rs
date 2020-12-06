@@ -1,10 +1,13 @@
-use uuid::Uuid;
 use anyhow::Result;
 use mongodb::{
-    bson::{to_bson, Bson, Document}, results::UpdateResult, options::UpdateOptions,
+    bson::{to_bson, Bson, Document},
+    options::UpdateOptions,
+    results::UpdateResult,
     Collection,
 };
+use uuid::Uuid;
 
+/// Find UUID
 pub fn find_uuid(result: Option<Document>) -> Result<String> {
     let uuid = match result {
         Some(document) => match document.get("uuid") {
@@ -19,14 +22,13 @@ pub fn find_uuid(result: Option<Document>) -> Result<String> {
     Ok(uuid)
 }
 
+/// Find UUID
 pub async fn update_model<T: serde::ser::Serialize>(
     collection: &Collection,
     filter: mongodb::bson::Document,
     model: &T,
 ) -> Result<Option<UpdateResult>> {
-    let options = UpdateOptions::builder()
-        .upsert(true)
-        .build();
+    let options = UpdateOptions::builder().upsert(true).build();
 
     let document = to_bson(&model)?;
     if let Bson::Document(bson_doc) = document {

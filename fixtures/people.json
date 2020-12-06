@@ -7,7 +7,8 @@
     "affiliation": ["Pur'n'Kleen Water Company"],
     "portrayedBy": "Joe Pingue",
     "seasons": ["Season 1"],
-    "episode": "Dulcinea"
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Dulcinea"
   },
   {
     "name": "Canterbury XO",
@@ -74,7 +75,8 @@
     "gender": "Male",
     "occupation": "Ice hauler, P&K Canterbury",
     "portrayedBy": "Adrian Nguyen",
-    "episode": "Dulcinea"
+    "firstAppearance": "Dulcinea",
+    "lastAppearance": "Dulcinea"
   },
   {
     "name": "Paolo Cortázar",
@@ -112,7 +114,8 @@
     "affiliation": ["Jules-Pierre Mao", "Guanshiyin"],
     "portrayedBy": "Curtis Caravaggio",
     "seasons": ["Season 2"],
-    "episode": "The Monster and the Rocket"
+    "firstAppearance": "The Monster and the Rocket",
+    "lastAppearance": "The Monster and the Rocket"
   },
   {
     "name": "Craig",
@@ -500,7 +503,8 @@
     "occupation": "UNN Communications Officer",
     "portrayedBy": "Khalid Klein",
     "seasons": ["Season 3"],
-    "episode": "Triple Point\">Triple Point"
+    "firstAppearance": "Triple Point\">Triple Point",
+    "lastAppearance": "Triple Point\">Triple Point"
   },
   {
     "name": "Ensign Larson",
@@ -508,7 +512,8 @@
     "gender": "Female",
     "occupation": "Ensign UNN Agatha King",
     "portrayedBy": "Sydney Meyer",
-    "episode": "Immolation"
+    "firstAppearance": "Immolation",
+    "lastAppearance": "Immolation"
   },
   {
     "name": "Iafrate",
@@ -536,7 +541,8 @@
     "occupation": "Electrical Technician",
     "portrayedBy": "Nadine Nicole",
     "seasons": ["Season 3"],
-    "firstAppearance": "Delta-V"
+    "firstAppearance": "Delta-V",
+    "lastAppearance": "Delta-V"
   },
   {
     "name": "Stannislaw Kulp",
@@ -546,7 +552,8 @@
     "occupation": "Electrician",
     "portrayedBy": "Ari Millen",
     "seasons": ["Season 3"],
-    "firstAppearance": "Delta-V"
+    "firstAppearance": "Delta-V",
+    "lastAppearance": "Delta-V"
   },
   {
     "name": "Tilly Fagan",
@@ -565,7 +572,8 @@
     "occupation": "IASG",
     "portrayedBy": "Chris Owens",
     "seasons": ["Season 3"],
-    "firstAppearance": "Delta-V"
+    "firstAppearance": "Delta-V",
+    "lastAppearance": "Delta-V"
   },
   {
     "name": "Hector Cortez",
@@ -636,7 +644,7 @@
     "affiliation": ["Savage Industries"],
     "portrayedBy": "John Kapelos",
     "seasons": ["Season 3"],
-    "episode": "Delta-V"
+    "firstAppearance": "Delta-V"
   },
   {
     "name": "Melas Kamal",
@@ -753,7 +761,9 @@
     "home": ["Mars", "Sol system", "Donnager"],
     "occupation": "Captain, MCRN Donnager",
     "portrayedBy": "Jean Yoon",
-    "seasons": ["Season 1"]
+    "seasons": ["Season 1"],
+    "firstAppearance": "CQB",
+    "lastAppearance": "CQB"
   },
   {
     "name": "Sargeant Grimes",
@@ -762,7 +772,9 @@
     "home": ["Mars", "Sol system"],
     "occupation": "Sergeant, Martian Marine Corps, MCRN Donnager",
     "portrayedBy": "Diana Bentley",
-    "seasons": ["Season 1"]
+    "seasons": ["Season 1"],
+    "firstAppearance": "CQB",
+    "lastAppearance": "CQB"
   },
   {
     "name": "Corporal Dookie",
@@ -771,7 +783,9 @@
     "home": ["Mars", "Sol system", "Donnager"],
     "occupation": "Corporal, Martian Marine Corps, MCRN Donnager",
     "portrayedBy": "Jordan Van Dyck",
-    "seasons": ["Season 1"]
+    "seasons": ["Season 1"],
+    "firstAppearance": "CQB",
+    "lastAppearance": "CQB"
   },
   {
     "name": "Corporal Mole",
@@ -906,7 +920,7 @@
     "family": [],
     "occupation": "Captain, MCRN Hammurabi",
     "portrayedBy": "Krista Bridges",
-    "episode": "Triple Point"
+    "firstAppearance": "Triple Point"
   },
   {
     "name": "Lieutenant Durant",
@@ -928,7 +942,7 @@
     "occupation": "Ensign, MCRN Hammurabi",
     "portrayedBy": "Alain Chanoine",
     "seasons": ["Season 3"],
-    "episode": "Reload"
+    "firstAppearance": "Reload"
   },
   {
     "name": "Chief Joslin",
@@ -938,7 +952,7 @@
     "occupation": "Duty Officer, MCRN Hammurabi",
     "portrayedBy": "Darryl Hinds",
     "seasons": ["Season 3"],
-    "episode": "Triple Point"
+    "firstAppearance": "Triple Point"
   },
   {
     "name": "Chandra Lucas",
@@ -979,7 +993,7 @@
     "occupation": "MCRN",
     "portrayedBy": "Uncredited",
     "seasons": ["Season 3"],
-    "episode": "Reload"
+    "firstAppearance": "Reload"
   },
   {
     "name": "Dimitri Havelock",
@@ -1892,4 +1906,3 @@
     "firstAppearance": "New Terra",
     "lastAppearance": "Cibola Burn"
   }
-]

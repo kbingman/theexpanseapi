@@ -1,52 +1,34 @@
-use async_std::prelude::*;
 use mongodb::bson::{doc, from_bson, to_bson, Bson};
 use uuid::Uuid;
 
 use tide::prelude::*; // Pulls in the json! macro.
-use tide::{Body, Request, Response};
+use tide::{Body, Request, Response, Result};
 
 use super::models::Person;
+use crate::db::{find_all, find_one};
 use crate::messages;
 use crate::state::State;
 use crate::util::get_database;
 
-/// Finds people using the given Filter, and converts the result into a Vec of Person
-pub async fn find_people(
-    db: &mongodb::Database,
-    filter: impl Into<Option<mongodb::bson::Document>>,
-) -> anyhow::Result<Vec<Person>> {
-    let collection = db.collection("people");
-    let mut cursor = collection.find(filter, None).await?;
-    let mut people = Vec::<Person>::new();
-
-    while let Some(result) = cursor.next().await {
-        let person: Person = from_bson(Bson::Document(result?))?;
-        people.push(person);
-    }
-    Ok(people)
-}
-
 /// List people
-pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let db = get_database(&req);
-    let people = find_people(&db, None).await?;
+pub async fn list(req: Request<State>) -> Result<impl Into<Response>> {
+    let collection = get_database(&req).collection("people");
+    let find_options = mongodb::options::FindOptions::builder().sort(doc! { "name": 1 }).build();
+    let people: Vec<Person> = find_all(collection, None, find_options).await?;
 
     Ok(Body::from_json(&people)?)
 }
 
 /// Find person
-pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
+pub async fn show(req: Request<State>) -> Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
 
     let uuid: String = req.param("uuid")?;
     let filter = doc! { "uuid": &uuid };
 
-    let result = collection.find_one(filter, None).await?;
+    let result: Option<Person> = find_one(&collection, filter, None).await?;
     match result {
-        Some(document) => {
-            let person: Person = from_bson(Bson::Document(document))?;
-            Ok(Body::from_json(&person)?)
-        }
+        Some(person) => Ok(Body::from_json(&person)?),
         // TODO Add the correct 404 status code
         None => Ok(Body::from_json(&messages::not_found())?),
     }

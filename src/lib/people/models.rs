@@ -12,10 +12,12 @@ pub enum Status {
 pub enum Gender {
     Male,
     Female,
+    NonBinary,
     Unspecified,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+#[serde(rename_all = "camelCase")]
 pub struct Person {
     pub name: String,
     pub uuid: Option<Uuid>,
@@ -23,4 +25,6 @@ pub struct Person {
     pub status: Option<Status>,
     pub gender: Option<Gender>,
     pub occupation: Option<String>,
+    pub first_appearance: Option<String>,
+    pub last_appearance: Option<String>,
 }
