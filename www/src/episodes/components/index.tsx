@@ -1,6 +1,7 @@
 import { useRecoilValue } from 'recoil';
-import { map } from '../../shared';
+import { H2, P, map, Cell, Grid } from '../../shared';
 import { episodesListSelector } from '../atoms';
+import { Episode } from '../types';
 
 /**
  * @param title
@@ -9,10 +10,18 @@ import { episodesListSelector } from '../atoms';
  *
  * @returns JSX.Element
  */
-export const EpisodeListing = ({ title, episode, uuid }) => (
-  <div key={uuid}>
-    {episode} - {title}
-  </div>
+export const EpisodeListing = ({
+  description,
+  episode,
+  title,
+  uuid,
+}: Episode) => (
+  <Cell key={uuid}>
+    <H2>
+      {episode} - {title}
+    </H2>
+    <P>{description}</P>
+  </Cell>
 );
 
 /**
@@ -22,5 +31,5 @@ export const EpisodeListing = ({ title, episode, uuid }) => (
  */
 export const EpisodesList = () => {
   const episodes = useRecoilValue(episodesListSelector);
-  return <div>{map(EpisodeListing, episodes)}</div>;
+  return <Grid>{map(EpisodeListing, episodes)}</Grid>;
 };

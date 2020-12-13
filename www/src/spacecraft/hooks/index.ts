@@ -3,21 +3,21 @@ import { useServerSideModel } from '../../shared/hooks';
 // import { useServerSideModel } from '../../shared/hooks';
 
 import { spacecraftState } from '../atoms/atoms';
-import { spacecraftIDs, spacecraftListingSelector } from '../atoms/selectors';
-import { activeSpacecraftSelector } from '../atoms/ui';
+import { spacecraftIDs } from '../atoms/selectors';
+// import { activeSpacecraftSelector } from '../atoms/ui';
 import { Spacecraft } from '../types';
 
-export const useActiveSpacecraft = (uuid: string) => {
-  const [isVisible, setIsVisible] = useRecoilState(
-    activeSpacecraftSelector(uuid)
-  );
-  return { isVisible, setIsVisible };
-};
-
-export const useSpacecraft = (uuid: string) => {
-  const spacecraft = useRecoilValue(spacecraftListingSelector(uuid));
-  return { spacecraft };
-};
+// export const useActiveSpacecraft = (uuid: string) => {
+//   const [isVisible, setIsVisible] = useRecoilState(
+//     activeSpacecraftSelector(uuid)
+//   );
+//   return { isVisible, setIsVisible };
+// };
+// 
+// export const useSpacecraft = (uuid: string) => {
+//   const spacecraft = useRecoilValue(spacecraftListingSelector(uuid));
+//   return { spacecraft };
+// };
 
 export const useSpacecraftUuids = () => {
   const uuids = useRecoilValue(spacecraftIDs);
@@ -36,4 +36,4 @@ export const useSpacecraftUuids = () => {
 export const useServerSideSpacecraft = (spacecraft: Spacecraft[]) => 
   useServerSideModel<Spacecraft>(spacecraftState, spacecraft);
 
-export { useSpacecraftDetail } from './use-spacecraft-detail';
+// export { useSpacecraftDetail } from './use-spacecraft-detail';

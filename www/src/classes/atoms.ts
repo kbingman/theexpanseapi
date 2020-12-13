@@ -1,31 +1,27 @@
 import { atom, selector, selectorFamily } from 'recoil';
 import { SpacecraftClass } from './types';
 
-type SpacecraftClasses = { [uuid: string]: SpacecraftClass };
+type SpacecraftClassMap = Map<string, SpacecraftClass>;
 
-export const spacecraftClassState = atom<SpacecraftClasses>({
+export const spacecraftClassState = atom<SpacecraftClassMap>({
   key: '@class/entities',
-  default: {},
+  default: new Map(),
 });
 
-export const spacecraftClassSelector = selector<SpacecraftClasses>({
-  key: 'spacecraftClassSelector',
+export const spacecraftClassSelector = selector<SpacecraftClassMap>({
+  key: '@class/selector',
   get: ({ get }) => get(spacecraftClassState),
-  set: ({ get, set }, value) =>
-    set(spacecraftClassState, {
-      ...get(spacecraftClassState),
-      ...value,
-    }),
+  set: ({ get, set }, value: SpacecraftClassMap) => {
+    set(
+      spacecraftClassState,
+      new Map([...get(spacecraftClassState), ...value])
+    );
+  },
 });
 
 export const spacecraftClassDetailState = selectorFamily({
   key: '@class/detail',
   get: (uuid: string) => ({ get }) => {
-    if (!uuid) {
-      return null;
-    }
-    const classes = get(spacecraftClassState);
-
-    return classes[uuid] || null;
+    return get(spacecraftClassState).get(uuid) || null;
   },
 });

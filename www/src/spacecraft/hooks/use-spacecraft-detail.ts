@@ -11,17 +11,17 @@ import { SpacecraftDetail } from '../types';
  *
  * @returns [Spacecraft, RecoilState<SpacecraftDetail>]
  */
-export const useSpacecraftDetail = (
-  uuid: string
-): [SpacecraftDetail, SetterOrUpdater<SpacecraftDetail>] => {
-  const [spacecraftDetail, setSpacecraftDetail] = useRecoilState(
-    spacecraftDetailSelector(uuid)
-  );
-  const setError = useSetRecoilState(errorState);
-
-  useEffect(() => {
-    getDetailAndSetSpacecraft(setSpacecraftDetail, setError, uuid);
-  }, [uuid]);
-
-  return [spacecraftDetail, setSpacecraftDetail];
-};
+// export const useSpacecraftDetail = (
+//   uuid: string
+// ): [SpacecraftDetail, SetterOrUpdater<SpacecraftDetail>] => {
+//   const [spacecraftDetail, setSpacecraftDetail] = useRecoilState(
+//     spacecraftDetailSelector(uuid)
+//   );
+//   // const setError = useSetRecoilState(errorState);
+// 
+//   useEffect(() => {
+//     getDetailAndSetSpacecraft(setSpacecraftDetail, uuid);
+//   }, [uuid]);
+// 
+//   return [spacecraftDetail, setSpacecraftDetail];
+// };

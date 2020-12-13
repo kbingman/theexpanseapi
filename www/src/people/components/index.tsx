@@ -1,15 +1,16 @@
 import { useRecoilValue } from 'recoil';
+import { Cell, Grid } from '../../shared';
 import { crewDetailState, personIDs } from '../atoms';
 
 export const PeopleList = () => {
   const uuids = useRecoilValue(personIDs);
 
   return (
-    <div>
+    <Grid>
       {uuids.map((uuid) => (
         <CrewDetail key={uuid} uuid={uuid} />
       ))}
-    </div>
+    </Grid>
   );
 };
 
@@ -19,5 +20,5 @@ export const CrewDetail = ({ uuid }) => {
     return null;
   }
 
-  return <div className="crew-detail">{crew.name}</div>;
+  return <Cell>{crew.name}</Cell>;
 };

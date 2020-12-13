@@ -1,4 +1,4 @@
-import { atom, selectorFamily } from 'recoil';
+import { atom, selector } from 'recoil';
 
 /**
  * Spacecraft Selector
@@ -11,16 +11,16 @@ export const activeSpacecraftState = atom<string | null>({
 /**
  * Visibility Selector
  */
-export const activeSpacecraftSelector = selectorFamily({
+export const activeSpacecraftSelector = selector<string>({
   key: '@spacecraft/activeSelector',
-  get: (currentUuid: string) => ({ get }) => {
-    return currentUuid === get(activeSpacecraftState);
+  get: ({ get }) => {
+    return get(activeSpacecraftState);
   },
-  set: (uuid: string) => ({ set, get }, newUuid) => {
+  set: ({ set, get }, uuid) => {
     if (uuid === get(activeSpacecraftState)) {
       set(activeSpacecraftState, null);
     } else {
-      set(activeSpacecraftState, newUuid);
+      set(activeSpacecraftState, uuid);
     }
   },
 });

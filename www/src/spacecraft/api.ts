@@ -5,16 +5,16 @@ import { getSpacecraftDetail, updateSpacecraft } from './utils/fetch';
 
 export const getDetailAndSetSpacecraft = async (
   set: SetterOrUpdater<SpacecraftDetail>,
-  setError: SetterOrUpdater<any>,
+  // setError: SetterOrUpdater<any>,
   uuid: string
 ): Promise<void> => {
   try {
     set(await getSpacecraftDetail(uuid));
-    setError(null);
+    // setError(null);
   } catch (err) {
     logger.error(err);
     set(null);
-    setError(err.message);
+    // setError(err.message);
   }
 };
 

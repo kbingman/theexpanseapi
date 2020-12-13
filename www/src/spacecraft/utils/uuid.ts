@@ -15,7 +15,7 @@ export const stripSpacecraftModels = (
   name: detail.name,
   uuid: getUUID(detail.url),
   url: detail.url,
-  owner: detail.owner,
+  ownerNavy: detail.owner,
   class: detail.class?.uuid || null,
   crew: detail.crew?.map(({ uuid }) => uuid),
 });

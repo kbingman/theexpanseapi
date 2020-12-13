@@ -1,7 +1,7 @@
 import { snapshot_UNSTABLE } from 'recoil';
 import { getMockSpacecraft } from '../../../mocks/models';
 import { spacecraftState } from '../atoms/atoms';
-import { spacecraftListingSelector } from '../atoms/selectors';
+import { spacecraftSelector } from '../atoms/selectors';
 
 test('get spacecraftListingSelector', () => {
   const mockSpacecraft = getMockSpacecraft({ name: 'Rocinante' });
@@ -13,10 +13,10 @@ test('get spacecraftListingSelector', () => {
   );
 
   const testSnapshot = snapshot_UNSTABLE(({ set }) =>
-    set(spacecraftListingSelector(uuid), mockSpacecraft)
+    set(spacecraftSelector(uuid), mockSpacecraft)
   );
   expect(
-    testSnapshot.getLoadable(spacecraftListingSelector(uuid)).valueOrThrow()
+    testSnapshot.getLoadable(spacecraftSelector(uuid)).valueOrThrow()
   ).toEqual(mockSpacecraft);
 });
 
@@ -25,7 +25,7 @@ test('set spacecraftListingSelector', () => {
   const mockSpacecraft = getMockSpacecraft({ name: 'rocinant' });
   const { uuid } = mockSpacecraft;
   const initialSnapshot = snapshot_UNSTABLE(({ set }) => {
-    set(spacecraftListingSelector(uuid), mockSpacecraft);
+    set(spacecraftSelector(uuid), mockSpacecraft);
   });
 
   expect(initialSnapshot.getLoadable(spacecraftState).valueOrThrow()).toEqual({
@@ -33,13 +33,13 @@ test('set spacecraftListingSelector', () => {
   });
 
   const testSnapshot = snapshot_UNSTABLE(({ set }) =>
-    set(spacecraftListingSelector(uuid), {
+    set(spacecraftSelector(uuid), {
       ...mockSpacecraft,
       name: 'Rocinante',
     })
   );
   expect(
-    testSnapshot.getLoadable(spacecraftListingSelector(uuid)).valueOrThrow()
+    testSnapshot.getLoadable(spacecraftSelector(uuid)).valueOrThrow()
       .name
   ).toBe('Rocinante');
 });

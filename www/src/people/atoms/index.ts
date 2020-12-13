@@ -33,9 +33,6 @@ export const crewDetailState = selectorFamily({
   get: (uuid: string) => ({ get }) => {
     return get(personState).get(uuid) || null;
   },
-  // set: (uuid: string) => ({ get, set }) => {
-  //   const
-  // })
 });
 
 export const crewUUIDsState = selectorFamily({
@@ -43,6 +40,6 @@ export const crewUUIDsState = selectorFamily({
   get: (uuids: string[]) => ({ get }) => {
     const getPeople = (uuid: string) => get(crewDetailState(uuid));
 
-    return map(getPeople, uuids);
+    return map(getPeople, uuids).filter(Boolean);
   },
 });

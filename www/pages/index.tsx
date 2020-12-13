@@ -1,31 +1,26 @@
-import { logger } from '../src/shared';
-import { SpacecraftList, getSpacecraft, useServerSideSpacecraft } from '../src/spacecraft';
+import { EpisodesList, useServerSideEpisodes } from '../src/episodes';
+import { fetchJSON, logger } from '../src/shared';
 
 /**
- * IndexPage
+ * EpisodesPage
  */
-const IndexPage = ({ spacecraft, error }) => {
-  // Sets Recoil State if not already set
-  useServerSideSpacecraft(spacecraft);
+const EpisodesPage = ({ episodes, error = null }) => {
+  useServerSideEpisodes(episodes);
   return (
     <div>
-      <SpacecraftList />
       {error && <div>{error}</div>}
+      <EpisodesList />
     </div>
   );
 };
 
-/**
- * Server Side props
- * Runs only on the server, providind data to the frontend
- */
 export const getServerSideProps = async () => {
   try {
-    const spacecraft = await getSpacecraft();
+    const episodes = await fetchJSON('/episodes');
 
     // Needed to hydrate the data for the RecoilRoot, see `_app`
     return {
-      props: { spacecraft },
+      props: { episodes },
     };
   } catch (err) {
     logger.error(err);
@@ -35,4 +30,4 @@ export const getServerSideProps = async () => {
   }
 };
 
-export default IndexPage;
+export default EpisodesPage;

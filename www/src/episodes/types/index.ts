@@ -1,6 +1,7 @@
 export interface Episode {
-  title: string;
-  uuid: string;
+  description: string;
   episode: number;
   season: number;
+  title: string;
+  uuid: string;
 }

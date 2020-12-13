@@ -1,12 +1,14 @@
 import { createMapFromArray } from './entities';
 import { logger } from './logger';
 
+import { SpacecraftClass, spacecraftClassState } from '../../classes';
 import { episodesState, Episode } from '../../episodes';
 import { personState, Person } from '../../people';
 import { spacecraftState } from '../../spacecraft';
 import { Spacecraft } from '../../spacecraft/types';
 
 type InitialProps = {
+  classes?: SpacecraftClass[];
   episodes?: Episode[];
   people?: Person[];
   spacecraft?: Spacecraft[];
@@ -22,10 +24,17 @@ type InitialProps = {
  * @returns void
  */
 export const getInitializeState = ({
+  classes,
   episodes,
   people,
   spacecraft,
 }: InitialProps) => ({ set }) => {
+  // Initializes the Spacecraft states
+  if (classes) {
+    logger('initialize classes', Date.now());
+    set(spacecraftClassState, createMapFromArray(classes));
+  }
+
   // Initializes the Spacecraft states
   if (spacecraft) {
     logger('initialize spacecraft', Date.now());
