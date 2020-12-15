@@ -27,7 +27,7 @@ pub async fn list_spacecraft_classes(req: Request<State>) -> tide::Result<impl I
 pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
-    let find_options = FindOptions::builder().skip(0).limit(100).sort(doc! { "name": 1 }).build();
+    let find_options = FindOptions::builder().skip(0).limit(50).sort(doc! { "name": 1 }).build();
     let spacecraft: Vec<Spacecraft> = find_all(collection, None, find_options).await?;
 
     Ok(Body::from_json(&format_spacecraft(spacecraft))?)

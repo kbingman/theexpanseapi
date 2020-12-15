@@ -41,7 +41,7 @@ fn get_episodes_table(document: &Html) -> anyhow::Result<Vec<String>> {
 
 fn get_episodes_li(document: &Html) -> anyhow::Result<Vec<String>> {
     let selector =
-        Selector::parse("h2 + h3 + ul li, h2 + p + ul li, .appearances-season-div li").unwrap();
+        Selector::parse("h2 + h3 + ul li, h2 + p + ul li, h2 + div + h3 + ul li, .appearances-season-div li").unwrap();
 
     let mut episodes: Vec<String> = Vec::new();
     for li in document.select(&selector) {

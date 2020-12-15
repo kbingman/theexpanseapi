@@ -13,7 +13,7 @@ use super::models::Episode;
 /// List Episode Classes
 pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("episodes");
-    let find_options = FindOptions::builder().sort(doc! { "episode": 1 }).build();
+    let find_options = FindOptions::builder().limit(50).sort(doc! { "episode": 1 }).build();
     let spacecraft_classes: Vec<Episode> = find_all(collection, None, find_options).await?;
 
     Ok(Body::from_json(&spacecraft_classes)?)
