@@ -36,4 +36,4 @@ export const useSpacecraftUuids = () => {
 export const useServerSideSpacecraft = (spacecraft: Spacecraft[]) => 
   useServerSideModel<Spacecraft>(spacecraftState, spacecraft);
 
-// export { useSpacecraftDetail } from './use-spacecraft-detail';
+export { useSpacecraftDetail } from './use-spacecraft-detail';

@@ -23,9 +23,9 @@ export const personEntities = selector<Person[]>({
   set: ({ get, set }, data: Person[]) => {
     const people = get(personState);
     // Sets the data for each person
-    data.forEach(d => people.set(d.uuid, d))
-    set(personState, people)
-  }
+    data.forEach((d) => people.set(d.uuid, d));
+    set(personState, people);
+  },
 });
 
 export const crewDetailState = selectorFamily({
@@ -39,7 +39,13 @@ export const crewUUIDsState = selectorFamily({
   key: '@people/byUuid',
   get: (uuids: string[]) => ({ get }) => {
     const getPeople = (uuid: string) => get(crewDetailState(uuid));
-
-    return map(getPeople, uuids).filter(Boolean);
+    // return map(getPeople, uuids).filter(Boolean);
+    return uuids.reduce((acc, uuid) => {
+      const crew = getPeople(uuid);
+      if (crew) {
+        acc.push(crew);
+      }
+      return acc;
+    }, []);
   },
 });

@@ -1,12 +1,12 @@
 import classnames from 'classnames';
 
 export interface InputProps {
-  defaultValue?: string;
+  name: string;
+  value: string;
   disabled?: boolean;
   placeholder?: string;
   textSize?: 'text-base' | 'text-lg' | 'text-xl' | 'text-2xl';
   type?: 'text' | 'email';
-  value?: string;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;

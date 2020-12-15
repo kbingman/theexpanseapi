@@ -25,15 +25,14 @@ const SpacecraftPage = ({ people, spacecraft, error }) => {
  */
 export const getServerSideProps = async () => {
   try {
-    const [classes, people, spacecraft] = await Promise.all([
+    const [classes, spacecraft] = await Promise.all([
       fetchJSON('/classes'),
-      fetchJSON('/people'),
       fetchJSON('/spacecraft'),
     ]);
 
     // Needed to hydrate the data for the RecoilRoot, see `_app`
     return {
-      props: { classes, people, spacecraft },
+      props: { classes, spacecraft },
     };
   } catch (err) {
     logger.error(err);

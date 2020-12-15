@@ -1,105 +1,62 @@
-import { Person } from '../../people';
-import {
-  CloseButton,
-  TextButton,
-  Input,
-  Field,
-  Fieldset,
-  Label,
-  Form,
-  Modal,
-  Overlay,
-} from '../../shared';
+import { Suspense, useEffect, useState } from 'react';
+import { SetterOrUpdater, useRecoilState, useRecoilValue } from 'recoil';
 
-// export interface SpacecraftFormProps {
-//   className: string;
-//   crew: Person[];
-//   name: string;
-//   owner: string[];
-//   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-//   toggleModal: (e: React.MouseEvent) => void;
-// }
+import { spacecraftDetailState } from '../atoms/atoms';
+import { spacecraftDetailSelector, spacecraftIDs } from '../atoms/selectors';
+import { SpacecraftForm } from './form';
+import { useSpacecraftDetail } from '../hooks';
+import { logger } from '../../shared';
 
-const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-  console.log(e.target.value);
+interface SpacecraftListingProps {
+  uuid: string;
+  setActiveUUID: SetterOrUpdater<string>;
+}
 
 /**
- * @param className
- * @param crew
- * @param name
- * @param owner
- * @param toggleModal
- * @param updateName
- * @param onSubmit
+ * Displays Spacecraft modal
+ * @param uuid
+ * @param setActiveUUID
  *
  * @returns JSX.Element
  */
-export const SpacecraftForm = ({
-  className,
-  crew,
-  name,
-  owner,
-  updateModel,
-  toggleModal,
-  updateName,
-}) => (
-  <Overlay>
-    <CloseButton onClick={toggleModal} />
-    <Modal>
-      <Form onSubmit={updateModel}>
-        <Fieldset>
-          <Field>
-            Name
-            <Input
-              textSize="text-2xl"
-              defaultValue={name}
-              onChange={updateName}
-            />
-          </Field>
-          <Field>
-            Owner
-            <Input
-              textSize="text-base"
-              key={`owner-${name}`}
-              onChange={onChange}
-              defaultValue={(owner || []).join(', ')}
-            />
-          </Field>
-        </Fieldset>
+export const SpacecraftModal = ({
+  uuid,
+  setActiveUUID,
+}: SpacecraftListingProps) => {
+  useSpacecraftDetail(uuid);
+  const spacecraft = useRecoilValue(spacecraftDetailState(uuid));
+  const [data, setData] = useState({
+    ...spacecraft,
+    owner: spacecraft?.owner.join(', '),
+  });
 
-        <button type="submit">Save</button>
-      </Form>
-      <div className="mb-2">
-        <Label>Class</Label>
-        <div className="mb-1 font-sans text-base font-normal">
-          {className ? (
-            <>
-              {className}
-              <TextButton onClick={(e) => console.log(e)}>Edit</TextButton>
-              {'|'}
-              <TextButton onClick={(e) => console.log(e)}>Remove</TextButton>
-            </>
-          ) : (
-            <div className="relative -left-2">
-              <TextButton onClick={(e) => console.log(e)}>Add</TextButton>
-            </div>
-          )}
-        </div>
-      </div>
-      <div className="mb-2">
-        <Label>Crew</Label>
-        {(crew || []).map(({ name, uuid }) => (
-          <div key={`crew-${uuid}`} className="text-sm font-regular">
-            {name}
-            <TextButton onClick={(e) => console.log(e)}>Edit</TextButton>
-            {'|'}
-            <TextButton onClick={(e) => console.log(e)}>Remove</TextButton>
-          </div>
-        ))}
-        <div className="relative -left-2">
-          <TextButton onClick={(e) => console.log(e)}>Add</TextButton>
-        </div>
-      </div>
-    </Modal>
-  </Overlay>
-);
+  const updateKey = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const { name, owner, crew, className } = data;
+  const toggleModal = (_: React.MouseEvent) => {
+    setActiveUUID(uuid);
+  };
+  const updateModel = (e: React.FormEvent) => {
+    e.preventDefault();
+    // logger('request goes here');
+    // setSpacecraft({ ...data, owner: data.owner.split(', ') });
+  };
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SpacecraftForm
+        {...{
+          className,
+          crew,
+          name,
+          owner,
+          updateModel,
+          toggleModal,
+          updateKey,
+        }}
+      />
+    </Suspense>
+  );
+};

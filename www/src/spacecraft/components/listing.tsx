@@ -1,10 +1,9 @@
-import {useState} from 'react';
 import { SetterOrUpdater, useRecoilState, useRecoilValue } from 'recoil';
 
-import { TextButton, H2, H3, Cell, Grid } from '../../shared';
-import { spacecraftDetailSelector, spacecraftIDs } from '../atoms/selectors';
+import { TextButton, H2, H3, Cell, Grid, logger } from '../../shared';
+import { spacecraftDetailSelector, spacecraftIDs, spacecraftSelector } from '../atoms/selectors';
 import { activeSpacecraftSelector } from '../atoms/ui';
-import { SpacecraftForm } from './modal';
+import {SpacecraftModal} from './modal';
 
 const SpacecraftClassName = ({ name }: { name: string }) => {
   if (!name) {
@@ -56,7 +55,7 @@ export const SpacecraftListing = ({
   uuid,
   setActiveUUID,
 }: SpacecraftListingProps) => {
-  const spacecraft = useRecoilValue(spacecraftDetailSelector(uuid));
+  const spacecraft = useRecoilValue(spacecraftSelector(uuid));
   if (!spacecraft) {
     return null;
   }
@@ -67,39 +66,6 @@ export const SpacecraftListing = ({
 
   return (
     <SpacecraftListingDisplay {...{ name, owner, className, toggleModal }} />
-  );
-};
-
-/**
- * Displays Spacecraft modal
- * @param uuid
- *
- * @returns JSX.Element
- */
-export const SpacecraftModal = ({
-  uuid,
-  setActiveUUID,
-}: SpacecraftListingProps) => {
-    const spacecraft = useRecoilValue(spacecraftDetailSelector(uuid));
-    const data = useState(spacecraft);
-  // const setSpacecraft = useSetRecoilState(spacecraftState);
-
-  const { name, owner, crew, className } = data;
-  const toggleModal = (_: React.MouseEvent) => {
-    setActiveUUID(uuid);
-  };
-  const updateModel = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('hey');
-  };
-  const updateName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-  }
-
-  return (
-    <SpacecraftForm
-      {...{ className, crew, name, owner, updateModel, toggleModal, updateName }}
-    />
   );
 };
 
