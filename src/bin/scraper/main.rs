@@ -6,19 +6,19 @@ use surf::Result;
 const BASE_URL: &str = "https://expanse.fandom.com";
 
 fn get_episode_title_cell(row: &ElementRef) -> Option<String> {
-     let cell_selector = Selector::parse("td:nth-of-type(1) a").unwrap();
-     match row.select(&cell_selector).next() {
-         Some(title_cell) => {
-             let title = title_cell.text().collect::<Vec<_>>()[0];
-             Some(title.to_string())
-         },
-         None => None,
-     }
+    let cell_selector = Selector::parse("td:nth-of-type(1) a").unwrap();
+    match row.select(&cell_selector).next() {
+        Some(title_cell) => {
+            let title = title_cell.text().collect::<Vec<_>>()[0];
+            Some(title.to_string())
+        }
+        None => None,
+    }
 }
 
 fn get_episodes_table(document: &Html) -> anyhow::Result<Vec<String>> {
     let selector = Selector::parse(".mw-collapsible tr").unwrap();
- 
+
     let mut episodes: Vec<String> = Vec::new();
     for row in document.select(&selector) {
         let appears_selector = Selector::parse("td:nth-of-type(2)").unwrap();
@@ -28,11 +28,11 @@ fn get_episodes_table(document: &Html) -> anyhow::Result<Vec<String>> {
                 if appeared == "Appears" {
                     match get_episode_title_cell(&row) {
                         Some(title) => episodes.push(title),
-                        None => {},
+                        None => {}
                     }
                 }
-            },
-            None => {},
+            }
+            None => {}
         }
     }
 
@@ -40,8 +40,10 @@ fn get_episodes_table(document: &Html) -> anyhow::Result<Vec<String>> {
 }
 
 fn get_episodes_li(document: &Html) -> anyhow::Result<Vec<String>> {
-    let selector =
-        Selector::parse("h2 + h3 + ul li, h2 + p + ul li, h2 + div + h3 + ul li, .appearances-season-div li").unwrap();
+    let selector = Selector::parse(
+        "h2 + h3 + ul li, h2 + p + ul li, h2 + div + h3 + ul li, .appearances-season-div li",
+    )
+    .unwrap();
 
     let mut episodes: Vec<String> = Vec::new();
     for li in document.select(&selector) {
@@ -64,7 +66,7 @@ async fn fetch_episodes(url: &str) -> Result<Vec<String>> {
                 }
             }
             Ok(episodes)
-        },
+        }
         _ => Ok(Vec::new()),
     }
 }

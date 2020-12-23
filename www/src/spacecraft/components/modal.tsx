@@ -1,11 +1,11 @@
-import { Suspense, useEffect, useState } from 'react';
-import { SetterOrUpdater, useRecoilState, useRecoilValue } from 'recoil';
+import { useState } from 'react';
+import { SetterOrUpdater } from 'recoil';
 
-import { spacecraftDetailState } from '../atoms/atoms';
-import { spacecraftDetailSelector, spacecraftIDs } from '../atoms/selectors';
 import { SpacecraftForm } from './form';
 import { useSpacecraftDetail } from '../hooks';
-import { logger } from '../../shared';
+import { CloseButton, Modal, Overlay } from '../../shared';
+import { ClassData } from './class';
+import { CrewData } from './crew';
 
 interface SpacecraftListingProps {
   uuid: string;
@@ -23,40 +23,44 @@ export const SpacecraftModal = ({
   uuid,
   setActiveUUID,
 }: SpacecraftListingProps) => {
-  useSpacecraftDetail(uuid);
-  const spacecraft = useRecoilValue(spacecraftDetailState(uuid));
-  const [data, setData] = useState({
-    ...spacecraft,
-    owner: spacecraft?.owner.join(', '),
-  });
+  const [spacecraft, setSpacecraft] = useSpacecraftDetail(uuid);
+
+  // TODO Replace with Recoil State
+  const [data, setData] = useState(spacecraft.data);
+  const { name } = data;
 
   const updateKey = (e: React.ChangeEvent<HTMLInputElement>) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const { name, owner, crew, className } = data;
-  const toggleModal = (_: React.MouseEvent) => {
+  const toggleModal = (e: React.MouseEvent) => {
+    e.preventDefault(); 
     setActiveUUID(uuid);
   };
   const updateModel = (e: React.FormEvent) => {
     e.preventDefault();
-    // logger('request goes here');
-    // setSpacecraft({ ...data, owner: data.owner.split(', ') });
+    setSpacecraft({ ...spacecraft, data });
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <SpacecraftForm
-        {...{
-          className,
-          crew,
-          name,
-          owner,
-          updateModel,
-          toggleModal,
-          updateKey,
-        }}
-      />
-    </Suspense>
+    <Overlay>
+      {spacecraft.loaded ? (
+        <Modal>
+          <CloseButton onClick={toggleModal} />
+          <SpacecraftForm
+            {...{
+              name,
+              // owner,
+              updateModel,
+              updateKey,
+            }}
+          />
+          <ClassData uuid={spacecraft.data.class} />
+          <CrewData uuids={spacecraft.data.crew} />
+        </Modal>
+      ) : (
+        <div className="text-sm">Loading...</div>
+      )}
+    </Overlay>
   );
 };

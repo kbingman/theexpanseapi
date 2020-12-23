@@ -27,7 +27,7 @@ pub async fn import_spacecraft(db: mongodb::Database, string_data: &str) -> Resu
             println!("Crew: {} {}", &name, &id);
             crew_ids.push(id);
         }
-        model.uuid = Some(uuid::Uuid::parse_str(&uuid)?);
+        model.uuid = uuid::Uuid::parse_str(&uuid)?;
         model.crew = crew_ids;
         // Adding Spacecraft Class IDs
         model.class = match model.class {

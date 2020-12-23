@@ -1,5 +1,7 @@
 import { atom, selector, selectorFamily } from 'recoil';
 import { logger, map, pluckEntity, pluckKey } from '../../shared';
+import { getUUID } from '../../spacecraft';
+import { sortByRank } from '../util/sort';
 import { Person } from '../types';
 
 export const personState = atom<Map<string, Person>>({
@@ -21,31 +23,33 @@ export const personEntities = selector<Person[]>({
     return map(pluckEntity, get(personState));
   },
   set: ({ get, set }, data: Person[]) => {
-    const people = get(personState);
-    // Sets the data for each person
-    data.forEach((d) => people.set(d.uuid, d));
-    set(personState, people);
+    set(
+      personState,
+      new Map([...get(personState), ...new Map(data.map((d) => [d.uuid, d]))])
+    );
   },
 });
 
 export const crewDetailState = selectorFamily({
   key: '@people/detail',
   get: (uuid: string) => ({ get }) => {
-    return get(personState).get(uuid) || null;
+    return get(personState).get(getUUID(uuid));
   },
 });
 
 export const crewUUIDsState = selectorFamily({
   key: '@people/byUuid',
   get: (uuids: string[]) => ({ get }) => {
-    const getPeople = (uuid: string) => get(crewDetailState(uuid));
+    const getPeople = (uuid: string) => get(crewDetailState(getUUID(uuid)));
     // return map(getPeople, uuids).filter(Boolean);
-    return uuids.reduce((acc, uuid) => {
-      const crew = getPeople(uuid);
+    const people = uuids.reduce((acc, uuid) => {
+      const crew = getPeople(getUUID(uuid));
       if (crew) {
         acc.push(crew);
       }
       return acc;
     }, []);
+
+    return sortByRank(people);
   },
 });

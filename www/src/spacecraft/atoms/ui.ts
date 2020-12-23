@@ -1,4 +1,4 @@
-import { atom, selector } from 'recoil';
+import { atom, selector, selectorFamily } from 'recoil';
 
 /**
  * Spacecraft Selector
@@ -22,5 +22,21 @@ export const activeSpacecraftSelector = selector<string>({
     } else {
       set(activeSpacecraftState, uuid);
     }
+  },
+});
+
+export const spacecraftLoadingData = atom<Map<string, boolean>>({
+  key: '@spacecraft/loading',
+  default: new Map(),
+});
+
+export const spacecraftLoadingSelector = selectorFamily<boolean, string>({
+  key: '@spacecraft/uuid-loading',
+  get: (uuid) => ({ get }) => get(spacecraftLoadingData).get(uuid),
+  set: (uuid) => ({ get, set }, value) => {
+    set(
+      spacecraftLoadingData,
+      new Map([...get(spacecraftLoadingData), ...new Map([[uuid, value]])])
+    );
   },
 });

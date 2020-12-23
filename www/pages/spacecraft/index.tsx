@@ -1,9 +1,9 @@
-import { useServerSidePeople } from '../src/people/hooks';
-import { fetchJSON, logger } from '../src/shared';
+import { useServerSidePeople } from '../../src/people/hooks';
+import { fetchJSON, logger } from '../../src/shared';
 import {
   SpacecraftList,
   useServerSideSpacecraft,
-} from '../src/spacecraft';
+} from '../../src/spacecraft';
 
 /**
  * IndexPage
@@ -25,14 +25,13 @@ const SpacecraftPage = ({ people, spacecraft, error }) => {
  */
 export const getServerSideProps = async () => {
   try {
-    const [classes, spacecraft] = await Promise.all([
-      fetchJSON('/classes'),
+    const [spacecraft] = await Promise.all([
       fetchJSON('/spacecraft'),
     ]);
 
     // Needed to hydrate the data for the RecoilRoot, see `_app`
     return {
-      props: { classes, spacecraft },
+      props: { spacecraft },
     };
   } catch (err) {
     logger.error(err);

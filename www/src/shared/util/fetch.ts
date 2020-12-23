@@ -17,14 +17,13 @@ export const fetchJSON = async <T>(
 ): Promise<T> => {
   try {
     const method = options.method || 'GET';
-    const resource = pathname.split('/')[1];
 
-    logger.time(`${method} ${resource}`)
+    // logger.time(`${method} ${pathname}`)
     const response = await fetch(`${API_ENDPOINT}${pathname}`, {
       ...options,
       method,
     });
-    logger.timeEnd(`${method} ${resource}`)
+    // logger.timeEnd(`${method} ${pathname}`)
 
     return response.json();
   } catch (err) {

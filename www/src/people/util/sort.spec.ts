@@ -1,4 +1,4 @@
-import { sortByRank, findRankIndex } from '../../utils/sort';
+import { sortByRank, findRankIndex } from './sort';
 
 test('findRankIndex', () => {
   const result = findRankIndex('Amos Burton');

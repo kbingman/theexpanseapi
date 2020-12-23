@@ -3,6 +3,7 @@ import classnames from 'classnames';
 export interface InputProps {
   name: string;
   value: string;
+  autoFocus?: boolean;
   disabled?: boolean;
   placeholder?: string;
   textSize?: 'text-base' | 'text-lg' | 'text-xl' | 'text-2xl';
@@ -41,16 +42,6 @@ export const Field = ({ children }) => (
   <div className="mb-2 text-gray-400 transition duration-300 ease-in-out focus-within:text-indigo-800">
     <label className="m-0 text-xs">{children}</label>
   </div>
-);
-
-export const Overlay = ({ children }) => (
-  <div className="fixed top-0 bottom-0 left-0 right-0 content-center justify-center bg-white grid bg-opacity-90">
-    {children}
-  </div>
-);
-
-export const Modal = ({ children }) => (
-  <div className="p-4 mb-12 bg-white w-96 box-content">{children}</div>
 );
 
 export const Form = ({ children, onSubmit }) => (

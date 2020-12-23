@@ -13,7 +13,7 @@ use crate::state::State;
 use crate::util::get_database;
 
 use super::models::{Spacecraft, SpacecraftClass};
-use super::util::{find_spacecraft_detail, format_spacecraft};
+use super::util::{find_spacecraft_detail};
 
 /// List Spacecraft Classes
 pub async fn list_spacecraft_classes(req: Request<State>) -> tide::Result<impl Into<Response>> {
@@ -27,10 +27,14 @@ pub async fn list_spacecraft_classes(req: Request<State>) -> tide::Result<impl I
 pub async fn list(req: Request<State>) -> tide::Result<impl Into<Response>> {
     let collection = get_database(&req).collection("spacecraft");
 
-    let find_options = FindOptions::builder().skip(0).limit(50).sort(doc! { "name": 1 }).build();
+    let find_options = FindOptions::builder()
+        .skip(0)
+        .limit(50)
+        .sort(doc! { "name": 1 })
+        .build();
     let spacecraft: Vec<Spacecraft> = find_all(collection, None, find_options).await?;
 
-    Ok(Body::from_json(&format_spacecraft(spacecraft))?)
+    Ok(Body::from_json(&spacecraft)?)
 }
 
 /// Find spacecraft
@@ -51,28 +55,28 @@ pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
     }
 }
 
-/// Create spacecraft
-pub async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = get_database(&req).collection("spacecraft");
-
-    let mut spacecraft: Spacecraft = req.body_json().await?;
-    // Adds a `uuid` if none is found.
-    spacecraft.uuid = match spacecraft.uuid {
-        Some(_uuid) => spacecraft.uuid,
-        None => Some(Uuid::new_v4()),
-    };
-
-    collection
-        .insert_one(from_bson(to_bson(&spacecraft)?)?, None)
-        .await?;
-    Ok(Body::from_json(&spacecraft)?)
-}
+// /// Create spacecraft
+// pub async fn create(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
+//     let collection = get_database(&req).collection("spacecraft");
+//
+//     let mut spacecraft: Spacecraft = req.body_json().await?;
+//     // Adds a `uuid` if none is found.
+//     spacecraft.uuid = match spacecraft.uuid {
+//         Some(_uuid) => spacecraft.uuid,
+//         None => Some(Uuid::new_v4()),
+//     };
+//
+//     collection
+//         .insert_one(from_bson(to_bson(&spacecraft)?)?, None)
+//         .await?;
+//     Ok(Body::from_json(&spacecraft)?)
+// }
 
 /// Update spacecraft
 pub async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>> {
     let mut spacecraft: Spacecraft = req.body_json().await?;
     let uuid: Uuid = req.param("uuid")?;
-    spacecraft.uuid = Some(uuid);
+    spacecraft.uuid = uuid;
     let filter = doc! { "uuid": uuid.to_string() };
 
     let collection = get_database(&req).collection("spacecraft");
@@ -83,13 +87,13 @@ pub async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>
     }
 }
 
-/// Delete spacecraft
-pub async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
-    let collection = get_database(&req).collection("people");
-
-    let uuid: Uuid = req.param("uuid")?;
-    let filter = doc! { "uuid": uuid.to_string() };
-
-    let _result = collection.delete_one(filter, None).await?;
-    Ok(Body::from_json(&json!({ "uuid": uuid.to_string() }))?)
-}
+// /// Delete spacecraft
+// pub async fn remove(req: Request<State>) -> tide::Result<impl Into<Response>> {
+//     let collection = get_database(&req).collection("people");
+//
+//     let uuid: Uuid = req.param("uuid")?;
+//     let filter = doc! { "uuid": uuid.to_string() };
+//
+//     let _result = collection.delete_one(filter, None).await?;
+//     Ok(Body::from_json(&json!({ "uuid": uuid }))?)
+// }

@@ -1,7 +1,7 @@
 [
   {
     "name": "Agatha King",
-    "ownerNavy": ["United Nations Navy"],
+    "owner": ["United Nations Navy"],
     "class": "Truman Class",
     "type": "Dreadnought",
     "registration": "T-DRN-32",
@@ -25,34 +25,34 @@
   },
   {
     "name": "Ambedkar",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Morrigan Class",
     "type": "Patrol Destroyer",
     "appeared": ["Season 1", "Windmills"]
   },
   {
     "name": "Amunet",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 1"]
   },
   {
     "name": "Anubis 1A",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "seasons": ["Season 1"],
     "referenced": ["Windmills"]
   },
   {
     "name": "Apophis",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 1"]
   },
   {
     "name": "Aryabhata",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Scirocco Class",
     "type": "Assault cruiser",
     "registration": "EML-34",
@@ -60,7 +60,7 @@
   },
   {
     "name": "Barbapiccola",
-    "ownerNavy": [
+    "owner": [
       "Mao-Kwikowski Mercantile (former)",
       "Belter refugees/original Ilus IV colonists"
     ],
@@ -69,7 +69,7 @@
   },
   {
     "name": "Cú Chulainn",
-    "ownerNavy": ["Martian Congressional Republic Navy", ""],
+    "owner": ["Martian Congressional Republic Navy", ""],
     "class": "Morrigan Class",
     "type": "Patrol Destroyer",
     "hullNumber": "512",
@@ -77,7 +77,7 @@
   },
   {
     "name": "Donnager",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Donnager Class",
     "type": "Battleship",
     "hullNumber": "84",
@@ -92,33 +92,33 @@
   },
   {
     "name": "Edward Israel",
-    "ownerNavy": ["Royal Charter Energy"],
+    "owner": ["Royal Charter Energy"],
     "type": "Colony ship",
     "seasons": ["Season 4"],
     "crew": ["Adolphus Murtry", "Chandra Wei"]
   },
   {
     "name": "Epstein's Yacht",
-    "ownerNavy": ["Solomon Epstein"],
+    "owner": ["Solomon Epstein"],
     "type": "Private yacht",
     "seasons": ["Season 2", "Paradigm Shift"],
     "crew": ["Solomon Epstein"]
   },
   {
     "name": "Guanshiyin",
-    "ownerNavy": ["Jules-Pierre Mao"],
+    "owner": ["Jules-Pierre Mao"],
     "seasons": ["Season 2"],
     "referenced": ["The Monster and the Rocket"]
   },
   {
     "name": "Guy Molinari",
-    "ownerNavy": ["Outer Planets Alliance (Fred Johnson OPA)"],
+    "owner": ["Outer Planets Alliance (Fred Johnson OPA)"],
     "type": "Freighter",
     "seasons": ["Season 2", "Doors & Corners", "Godspeed"]
   },
   {
     "name": "Hammurabi",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Scirocco Class",
     "type": "Assault cruiser",
     "registration": "EML-05",
@@ -135,14 +135,14 @@
   },
   {
     "name": "Hathor",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 1"]
   },
   {
     "name": "Horus",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 1"]
@@ -150,14 +150,14 @@
   {
     "name": "Hotspur",
     "label": "(In orbit over Ganymede)",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Donnager Class",
     "type": "Battleship",
     "seasons": ["Season 2"]
   },
   {
     "name": "Karakum",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Corvette Class",
     "type": "Light frigate",
     "appeared": [
@@ -168,7 +168,7 @@
   },
   {
     "name": "Kittur Chennamma",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Morrigan Class",
     "type": "Patrol Destroyer",
     "registration": "ECS - 211",
@@ -183,7 +183,7 @@
   },
   {
     "name": "Knight",
-    "ownerNavy": ["Pur'n'Kleen Water Company"],
+    "owner": ["Pur'n'Kleen Water Company"],
     "type": "Shuttle",
     "seasons": ["Season 1", "Dulcinea"],
     "crew": [
@@ -196,7 +196,7 @@
   },
   {
     "name": "Nathan Hale",
-    "ownerNavy": ["United Nations Navy"],
+    "owner": ["United Nations Navy"],
     "class": "Leonidas Class",
     "type": "Battleship",
     "appeared": ["Season 1", "Season 2", "Season 3"],
@@ -204,33 +204,33 @@
   },
   {
     "name": "Nephthys",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 1"]
   },
   {
     "name": "Osiris",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 2"]
   },
   {
     "name": "Pizzouza",
-    "ownerNavy": ["Belters"],
+    "owner": ["Belters"],
     "type": "Civilian ship",
     "appeared": ["Season 4"]
   },
   {
     "name": "R R Martin",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "type": "Unknown",
     "appeared": ["Season 3"]
   },
   {
     "name": "Rocinante",
-    "ownerNavy": ["Martian Congressional Republic Navy (former)", "Rocicorp"],
+    "owner": ["Martian Congressional Republic Navy (former)", "Rocicorp"],
     "class": "Corvette Class",
     "type": "light frigate",
     "registration": "ECF - 270",
@@ -251,21 +251,21 @@
   },
   {
     "name": "Scipio Africanus",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Morrigan Class",
     "type": "Patrol Destroyer",
     "seasons": ["Season 1", "Rock Bottom"]
   },
   {
     "name": "Scopuli",
-    "ownerNavy": ["Outer Planets Alliance"],
+    "owner": ["Outer Planets Alliance"],
     "seasons": ["Season 1"],
     "crew": ["Darren", "Julie Mao", "Wan Li"]
   },
   {
     "name": "LDSS Nauvoo",
     "alias": "Behemoth, Medina Station",
-    "ownerNavy": ["LDS Church (former)", "Outer Planets Alliance"],
+    "owner": ["LDS Church (former)", "Outer Planets Alliance"],
     "type": "Generational Colony Ship",
     "width": "960 meters",
     "length": "2460 meters",
@@ -274,7 +274,7 @@
   },
   {
     "name": "OPAS Behemoth",
-    "ownerNavy": ["Outer Planets Alliance"],
+    "owner": ["Outer Planets Alliance"],
     "type": "Dreadnought",
     "width": "960 meters",
     "length": "2460 meters",
@@ -295,7 +295,7 @@
   },
   {
     "name": "Medina Station",
-    "ownerNavy": ["Outer Planets Alliance"],
+    "owner": ["Outer Planets Alliance"],
     "type": "Spinstation",
     "width": "960 meters",
     "length": "2460 meters",
@@ -303,13 +303,13 @@
   },
   {
     "name": "Seung Un",
-    "ownerNavy": ["United Nations Navy"],
+    "owner": ["United Nations Navy"],
     "type": "Fleet Support Ship",
     "seasons": ["Season 3"]
   },
   {
     "name": "Shandian",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Morrigan Class",
     "type": "Patrol Destroyer Modified for stealth",
     "hullNumber": "137",
@@ -322,14 +322,14 @@
   },
   {
     "name": "Sobek",
-    "ownerNavy": ["Protogen"],
+    "owner": ["Protogen"],
     "class": "Amun-Ra Class",
     "type": "Stealth frigate",
     "seasons": ["Season 1"]
   },
   {
     "name": "Thomas Prince",
-    "ownerNavy": ["United Nations Navy"],
+    "owner": ["United Nations Navy"],
     "class": "Truman Class",
     "type": "Dreadnought",
     "registration": "T-DRN-47",
@@ -362,21 +362,21 @@
   },
   {
     "name": "Valkyrie",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Scirocco Class",
     "type": "Assault cruiser",
     "appeared": ["Season 2", "The Monster and the Rocket"]
   },
   {
     "name": "Y Que",
-    "ownerNavy": ["Manéo Jung-Espinoza"],
+    "owner": ["Manéo Jung-Espinoza"],
     "type": "Slingshot racing ship",
     "seasons": ["Season 3"],
     "crew": ["Manéo Jung-Espinoza"]
   },
   {
     "name": "Xuesen",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "class": "Scirocco Class",
     "type": "Assault cruiser",
     "registration": "EML-12",
@@ -385,13 +385,13 @@
   },
   {
     "name": "Yangtse",
-    "ownerNavy": ["Martian Congressional Republic Navy"],
+    "owner": ["Martian Congressional Republic Navy"],
     "type": "Unknown Likely large capital ship",
     "appeared": ["Season 1", "Windmills"]
   },
   {
     "name": "Yasijuro",
-    "ownerNavy": ["United Nations Navy"],
+    "owner": ["United Nations Navy"],
     "type": "destroyer",
     "appeared": ["Season 3", "Triple Point"],
     "crew": ["Admiral Augusto Nguyễn"]

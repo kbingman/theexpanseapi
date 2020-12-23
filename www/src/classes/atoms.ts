@@ -19,9 +19,15 @@ export const spacecraftClassSelector = selector<SpacecraftClassMap>({
   },
 });
 
-export const spacecraftClassDetailState = selectorFamily({
+export const spacecraftClassDetailState = selectorFamily<SpacecraftClass, string>({
   key: '@class/detail',
   get: (uuid: string) => ({ get }) => {
     return get(spacecraftClassState).get(uuid) || null;
+  },
+  set: (uuid: string) => ({ get, set }, value: SpacecraftClass) => {
+    set(
+      spacecraftClassState,
+      new Map([...get(spacecraftClassState), ...new Map([[uuid, value]])])
+    );
   },
 });

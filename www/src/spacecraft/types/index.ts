@@ -5,10 +5,10 @@ export interface Spacecraft {
   class: string;
   crew: string[];
   name: string;
-  ownerNavy: string[]; // TODO 
+  ownerNavy: string[]; // TODO
   url: string;
   uuid: string;
-};
+}
 
 export interface SpacecraftDetail {
   class: SpacecraftClass;
@@ -18,4 +18,13 @@ export interface SpacecraftDetail {
   owner: string[];
   url: string;
   uuid: string;
-};
+}
+
+export interface SpacecraftResponse {
+  data: Spacecraft;
+  loaded: boolean;
+  included: {
+    class: SpacecraftClass;
+    crew: Person[];
+  };
+}

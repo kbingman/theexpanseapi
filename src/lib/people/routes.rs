@@ -13,7 +13,10 @@ use crate::util::get_database;
 /// List people
 pub async fn list(req: Request<State>) -> Result<impl Into<Response>> {
     let collection = get_database(&req).collection("people");
-    let find_options = mongodb::options::FindOptions::builder().limit(50).sort(doc! { "name": 1 }).build();
+    let find_options = mongodb::options::FindOptions::builder()
+        .limit(50)
+        .sort(doc! { "name": 1 })
+        .build();
     let people: Vec<Person> = find_all(collection, None, find_options).await?;
 
     Ok(Body::from_json(&people)?)

@@ -1,11 +1,12 @@
 import { selector, selectorFamily } from 'recoil';
 import { map, pluckKey } from '../../shared';
-import { spacecraftDetailState, spacecraftState } from './atoms';
+import { spacecraftState } from './atoms';
 
-import type { Spacecraft, SpacecraftDetail } from '../types';
+import type { Spacecraft, SpacecraftResponse } from '../types';
 import { crewUUIDsState, personEntities } from '../../people';
-import { getUUID, sortByRank, stripSpacecraftModels } from '../utils';
-import { spacecraftClassDetailState, spacecraftClassState } from '../../classes';
+import { getUUID } from '../utils';
+import { spacecraftClassDetailState } from '../../classes';
+import { spacecraftLoadingSelector } from './ui';
 
 /**
  * Gets an Array of spacecraft UUIDs
@@ -23,14 +24,7 @@ export const spacecraftIDs = selector({
 export const spacecraftSelector = selectorFamily<Spacecraft, string>({
   key: '@spacecraft/listing',
   get: (uuid: string) => ({ get }) => {
-    const spacecraft = get(spacecraftState).get(uuid);
-    if (!spacecraft) {
-      return null;
-    }
-    return {
-      ...spacecraft,
-      owner: spacecraft.ownerNavy,
-    };
+    return get(spacecraftState).get(uuid);
   },
   set: (uuid: string) => ({ get, set }, options: Spacecraft) => {
     const spacecraft = new Map(get(spacecraftState));
@@ -44,35 +38,24 @@ export const spacecraftSelector = selectorFamily<Spacecraft, string>({
  * Spacecraft Summary Selector
  * @param uuid spacecraft uuid
  */
-export const spacecraftDetailSelector = selectorFamily<
-  SpacecraftDetail,
-  string
->({
+export const spacecraftDetailSelector = selectorFamily<SpacecraftResponse, string>({
   key: '@spacecraft/detail',
   get: (uuid: string) => ({ get }) => {
-    const spacecraft: Spacecraft = get(spacecraftState).get(uuid);
-    // const detail = get(spacecraftDetailState(uuid));
-    const crew = get(crewUUIDsState(map(getUUID, spacecraft.crew)));
-    const spacecraftClass = get(
-       spacecraftClassDetailState(getUUID(spacecraft.class))
-    );
+    const spacecraft = get(spacecraftSelector(uuid));
+
     return {
-      ...spacecraft,
-      class: spacecraftClass,
-      className: spacecraftClass?.name || null,
-      crew: sortByRank(crew),
-      owner: spacecraft?.ownerNavy
+      data: spacecraft,
+      loaded: get(spacecraftLoadingSelector(uuid)),
+      included: {
+        class: get(spacecraftClassDetailState(spacecraft.class)),
+        crew: get(crewUUIDsState(spacecraft.crew)),
+      },
     };
   },
-  set: (uuid: string) => ({ get, set }, options: SpacecraftDetail) => {
-    const spacecraft = new Map(get(spacecraftState));
-    spacecraft.set(uuid, stripSpacecraftModels(options));
-    // const { entities: spacecraftClass } = getEntities(
-    //   options.class ? [options.class] : []
-    // );
-    // set(spacecraftClassState, spacecraftClass);
-    // set(spacecraftClassState, options.class);
-    set(personEntities, options.crew);
-    set(spacecraftState, spacecraft);
+  set: (uuid: string) => ({ set }, { data, included }: SpacecraftResponse) => {
+    set(spacecraftLoadingSelector(uuid), true);
+    set(spacecraftClassDetailState(data.class), included?.class);
+    set(personEntities, included?.crew);
+    set(spacecraftSelector(uuid), data);
   },
 });

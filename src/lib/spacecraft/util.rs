@@ -4,29 +4,26 @@ use mongodb::{bson::doc, Database};
 use crate::db::{find_all, find_one};
 use crate::util::format_url;
 
-use super::models::{Spacecraft, SpacecraftDetail};
+use super::models::{Included, Response, Spacecraft};
 
-pub async fn find_spacecraft_detail(
-    db: &Database,
-    spacecraft: Spacecraft,
-) -> Result<SpacecraftDetail> {
+pub async fn find_spacecraft_detail(db: &Database, spacecraft: Spacecraft) -> Result<Response> {
     let people_collection = db.collection("people");
-    let detail = SpacecraftDetail {
-        name: spacecraft.name,
-        owner: spacecraft.owner_navy,
-        url: format_url("spacecraft", &spacecraft.uuid),
-        class: match &spacecraft.class {
-            Some(id) => find_one(&db.collection("classes"), doc! { "uuid": &id }, None).await?,
-            None => None,
+    let response = Response {
+        included: Included {
+            class: match &spacecraft.class {
+                Some(id) => find_one(&db.collection("classes"), doc! { "uuid": &id }, None).await?,
+                None => None,
+            },
+            crew: find_all(
+                people_collection,
+                doc! { "uuid": { "$in": &spacecraft.crew } },
+                None,
+            )
+            .await?,
         },
-        crew: find_all(
-            people_collection,
-            doc! { "uuid": { "$in": &spacecraft.crew } },
-            None,
-        )
-        .await?,
+        data: spacecraft,
     };
-    Ok(detail)
+    Ok(response)
 }
 
 pub fn format_spacecraft(spacecraft: Vec<Spacecraft>) -> Vec<Spacecraft> {
@@ -34,7 +31,7 @@ pub fn format_spacecraft(spacecraft: Vec<Spacecraft>) -> Vec<Spacecraft> {
         .iter()
         .map(|s| {
             let mut ship = s.clone();
-            ship.url = format_url("spacecraft", &s.uuid);
+            // ship.url = format_url("spacecraft", &s.uuid);
             ship.class = format_url("class", &s.class);
             ship.crew = s
                 .crew

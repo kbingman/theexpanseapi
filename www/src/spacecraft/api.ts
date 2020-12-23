@@ -1,29 +1,28 @@
-import { SetterOrUpdater } from 'recoil';
-import { logger } from '../shared';
-import { Spacecraft, SpacecraftDetail } from './types';
-import { getSpacecraftDetail, updateSpacecraft } from './utils/fetch';
+import { fetchJSON, logger } from '../shared';
 
-export const getDetailAndSetSpacecraft = async (
-  set: SetterOrUpdater<SpacecraftDetail>,
-  // setError: SetterOrUpdater<any>,
+type Setter<T> = (arg: T) => void;
+
+export const getModel = (name: string) => async <T>(
+  set: Setter<T>,
   uuid: string
 ): Promise<void> => {
   try {
-    set(await getSpacecraftDetail(uuid));
-    // setError(null);
+    set(await fetchJSON(`/${name}/${uuid}`));
   } catch (err) {
     logger.error(err);
     set(null);
-    // setError(err.message);
   }
 };
 
-export const putAndSetSpacecraft = async (
-  set: SetterOrUpdater<Spacecraft>,
-  spacecraft: Spacecraft
+export const updateModel = (name: string) => async <T extends { uuid: string }>(
+  set: Setter<T>,
+  model: T
 ): Promise<void> => {
   try {
-    set(await updateSpacecraft(spacecraft.uuid, spacecraft));
+    set(await fetchJSON(`/${name}/${model.uuid}`, {
+      method: 'PUT',
+      body: JSON.stringify(model)
+    }));
   } catch (err) {
     set(null);
     logger.error(err);

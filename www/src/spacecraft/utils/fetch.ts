@@ -1,5 +1,5 @@
 import { fetchJSON } from '../../shared';
-import { Spacecraft, SpacecraftDetail } from '../types';
+import { Spacecraft, SpacecraftResponse } from '../types';
 
 /**
  * Feych all Spacecraft
@@ -12,8 +12,8 @@ export const getSpacecraft = (): Promise<Spacecraft[]> =>
 /**
  * Fetch Spacecraft
  */
-export const getSpacecraftDetail = (uuid: string): Promise<SpacecraftDetail> =>
-  fetchJSON<SpacecraftDetail>(`/spacecraft/${uuid}`, {
+export const getSpacecraftDetail = (uuid: string): Promise<SpacecraftResponse> =>
+  fetchJSON<SpacecraftResponse>(`/spacecraft/${uuid}`, {
     method: 'GET',
   });
 

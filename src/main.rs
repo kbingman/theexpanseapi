@@ -41,13 +41,12 @@ async fn main() -> tide::Result<()> {
         .delete(people::routes::remove);
 
     // Spacecraft routes
-    app.at("/spacecraft")
-        .get(spacecraft::routes::list)
-        .post(spacecraft::routes::create);
+    app.at("/spacecraft").get(spacecraft::routes::list);
+    // .post(spacecraft::routes::create);
     app.at("/spacecraft/:uuid")
         .get(spacecraft::routes::show)
-        .put(spacecraft::routes::update)
-        .delete(spacecraft::routes::remove);
+        .put(spacecraft::routes::update);
+    // .delete(spacecraft::routes::remove);
 
     app.at("/classes")
         .get(spacecraft::routes::list_spacecraft_classes);

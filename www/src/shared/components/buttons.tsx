@@ -38,12 +38,13 @@ export interface CloseButtonProps {
 export const CloseButton = ({ onClick }: CloseButtonProps) => (
   <button
     title="Close"
+    type="button"
     className={classnames(
       'transition duration-300 ease-in-out',
       'absolute top-5 right-6 px-2 rounded',
-      'font-sans text-3xl font-light text-indigo-900', 
-      'transition duration-500 ease-in-out', 
-      'focus:outline-none ring-gray-300 focus:ring-2',
+      'font-sans text-3xl font-light text-indigo-900',
+      'transition duration-500 ease-in-out',
+      'focus:outline-none ring-gray-300 focus:ring-2'
     )}
     onClick={onClick}
   >

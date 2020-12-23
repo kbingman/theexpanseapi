@@ -1,9 +1,9 @@
 import { SetterOrUpdater, useRecoilState, useRecoilValue } from 'recoil';
 
 import { TextButton, H2, H3, Cell, Grid, logger } from '../../shared';
-import { spacecraftDetailSelector, spacecraftIDs, spacecraftSelector } from '../atoms/selectors';
+import { spacecraftIDs, spacecraftSelector } from '../atoms/selectors';
 import { activeSpacecraftSelector } from '../atoms/ui';
-import {SpacecraftModal} from './modal';
+import { SpacecraftModal } from './modal';
 
 const SpacecraftClassName = ({ name }: { name: string }) => {
   if (!name) {
@@ -16,28 +16,26 @@ const SpacecraftClassName = ({ name }: { name: string }) => {
  * Displays a single Spacecraft
  * @param name
  * @param owner
- * @param className
  * @param toggleModal
  *
  * @returns JSX.Element
  */
 export const SpacecraftListingDisplay = ({
   name,
-  owner,
-  className,
+  // owner,
   toggleModal,
 }) => (
-  <Cell>
+  <div className="px-1 py-0 m-1 bg-gray-100">
     <H2>
-      {name} <SpacecraftClassName name={className} />
+      {name}
       <TextButton onClick={toggleModal}>Edit</TextButton>
     </H2>
-    {owner.map((name: string) => (
+    {/* owner.map((name: string) => (
       <H3 key={`owner-${name}`} className="truncate">
         {name}
       </H3>
-    ))}
-  </Cell>
+          )) */}
+  </div>
 );
 
 interface SpacecraftListingProps {
@@ -59,14 +57,12 @@ export const SpacecraftListing = ({
   if (!spacecraft) {
     return null;
   }
-  const { name, owner, className } = spacecraft;
+  const { name } = spacecraft;
   const toggleModal = (_: React.MouseEvent) => {
     setActiveUUID(uuid);
   };
 
-  return (
-    <SpacecraftListingDisplay {...{ name, owner, className, toggleModal }} />
-  );
+  return <SpacecraftListingDisplay {...{ name, toggleModal }} />;
 };
 
 /**
@@ -84,14 +80,12 @@ export const SpacecraftList = () => {
         <SpacecraftModal uuid={activeUUID} setActiveUUID={setActiveUUID} />
       )}
 
-      <Grid>
-        {uuids.map((uuid) => (
-          <SpacecraftListing
-            key={`spacecraft-${uuid}`}
-            {...{ uuid, setActiveUUID }}
-          />
-        ))}
-      </Grid>
+      {uuids.map((uuid) => (
+        <SpacecraftListing
+          key={`spacecraft-${uuid}`}
+          {...{ uuid, setActiveUUID }}
+        />
+      ))}
     </>
   );
 };
