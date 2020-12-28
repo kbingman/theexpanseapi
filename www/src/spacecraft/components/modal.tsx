@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { SetterOrUpdater } from 'recoil';
 
-import { SpacecraftForm } from './form';
+import { CloseButton, Message, Modal, Overlay } from '../../shared';
 import { useSpacecraftDetail } from '../hooks';
-import { CloseButton, Modal, Overlay } from '../../shared';
 import { ClassData } from './class';
 import { CrewData } from './crew';
+import { SpacecraftForm } from './form';
 
 interface SpacecraftListingProps {
   uuid: string;
@@ -34,7 +34,7 @@ export const SpacecraftModal = ({
   };
 
   const toggleModal = (e: React.MouseEvent) => {
-    e.preventDefault(); 
+    e.preventDefault();
     setActiveUUID(uuid);
   };
   const updateModel = (e: React.FormEvent) => {
@@ -47,6 +47,7 @@ export const SpacecraftModal = ({
       {spacecraft.loaded ? (
         <Modal>
           <CloseButton onClick={toggleModal} />
+          <Message {...{ uuid }} />
           <SpacecraftForm
             {...{
               name,

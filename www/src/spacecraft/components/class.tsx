@@ -3,9 +3,9 @@ import { spacecraftClassDetailState } from '../../classes';
 import { Label, TextButton } from '../../shared';
 
 /**
- *
+ * @param name
  */
-export const SpacecraftClassDisplay = ({ name }) => (
+export const ClassDisplay = ({ name }) => (
   <div className="mb-2">
     <Label>Class</Label>
     <div className="mb-1 font-sans text-base font-normal">
@@ -29,5 +29,5 @@ export const ClassData = ({ uuid }) => {
   const spacecraftClass = useRecoilValue(spacecraftClassDetailState(uuid));
   const name = spacecraftClass?.name; 
 
-  return <SpacecraftClassDisplay {...{ name }} />;
+  return <ClassDisplay {...{ name }} />;
 };

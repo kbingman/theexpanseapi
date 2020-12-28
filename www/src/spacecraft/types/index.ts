@@ -27,4 +27,8 @@ export interface SpacecraftResponse {
     class: SpacecraftClass;
     crew: Person[];
   };
+  errors: string[];
 }
+
+export type SetSpacecraftResponse = (response: SpacecraftResponse) => void;
+

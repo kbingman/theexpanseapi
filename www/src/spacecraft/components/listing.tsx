@@ -1,8 +1,8 @@
 import { SetterOrUpdater, useRecoilState, useRecoilValue } from 'recoil';
 
-import { TextButton, H2, H3, Cell, Grid, logger } from '../../shared';
-import { spacecraftIDs, spacecraftSelector } from '../atoms/selectors';
-import { activeSpacecraftSelector } from '../atoms/ui';
+import { TextButton, H2 } from '../../shared';
+import { spacecraftIDs, spacecraftSelector } from '../selectors';
+import { activeSpacecraftSelector } from '../selectors/ui';
 import { SpacecraftModal } from './modal';
 
 const SpacecraftClassName = ({ name }: { name: string }) => {

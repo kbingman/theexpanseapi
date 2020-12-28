@@ -18,12 +18,12 @@ export const fetchJSON = async <T>(
   try {
     const method = options.method || 'GET';
 
-    // logger.time(`${method} ${pathname}`)
+    logger.time(`${method} ${pathname}`)
     const response = await fetch(`${API_ENDPOINT}${pathname}`, {
       ...options,
       method,
     });
-    // logger.timeEnd(`${method} ${pathname}`)
+    logger.timeEnd(`${method} ${pathname}`)
 
     return response.json();
   } catch (err) {

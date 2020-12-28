@@ -1,9 +1,17 @@
-import { atom } from 'recoil';
+import { atomFamily } from 'recoil';
+
+interface Message {
+  message?: string;
+  messageType?: 'error' | 'message'
+}
 
 /**
  * Central error state
  */
-export const errorState = atom<string | null>({
+export const messageState = atomFamily<Message, string>({
   key: '@error/message',
-  default: null,
+  default: {
+    message: undefined,
+    messageType: undefined
+  },
 });

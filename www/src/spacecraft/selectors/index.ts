@@ -1,18 +1,19 @@
 import { selector, selectorFamily } from 'recoil';
-import { map, pluckKey } from '../../shared';
-import { spacecraftState } from './atoms';
 
-import type { Spacecraft, SpacecraftResponse } from '../types';
+import { map, pluckKey } from '../../shared';
 import { crewUUIDsState, personEntities } from '../../people';
-import { getUUID } from '../utils';
 import { spacecraftClassDetailState } from '../../classes';
+
+import { spacecraftState } from '../atoms';
+import type { Spacecraft, SpacecraftResponse } from '../types';
+
 import { spacecraftLoadingSelector } from './ui';
 
 /**
  * Gets an Array of spacecraft UUIDs
  * @returns Array of spacecraft IDs
  */
-export const spacecraftIDs = selector({
+export const spacecraftIDs = selector<string[]>({
   key: '@spacecraft/ids',
   get: ({ get }) => map(pluckKey, get(spacecraftState)),
 });
@@ -45,6 +46,7 @@ export const spacecraftDetailSelector = selectorFamily<SpacecraftResponse, strin
 
     return {
       data: spacecraft,
+      errors: [],
       loaded: get(spacecraftLoadingSelector(uuid)),
       included: {
         class: get(spacecraftClassDetailState(spacecraft.class)),
@@ -52,10 +54,17 @@ export const spacecraftDetailSelector = selectorFamily<SpacecraftResponse, strin
       },
     };
   },
-  set: (uuid: string) => ({ set }, { data, included }: SpacecraftResponse) => {
+  set: (uuid: string) => ({ set }, { data, included, errors }: SpacecraftResponse) => {
     set(spacecraftLoadingSelector(uuid), true);
-    set(spacecraftClassDetailState(data.class), included?.class);
-    set(personEntities, included?.crew);
-    set(spacecraftSelector(uuid), data);
+    if (errors?.length) {
+      // set(messageState(uuid), { messageType: 'error', message: errors[0] });
+      return;
+    }
+
+    set(spacecraftSelector(uuid), data); 
+    if (included) {
+      set(spacecraftClassDetailState(data.class), included.class);
+      set(personEntities, included.crew);
+    }
   },
 });

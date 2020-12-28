@@ -47,8 +47,8 @@ pub async fn show(req: Request<State>) -> tide::Result<impl Into<Response>> {
 
     let result: Option<Spacecraft> = find_one(&collection, filter, None).await?;
     match result {
-        Some(document) => Ok(Body::from_json(
-            &find_spacecraft_detail(&db, document).await?,
+        Some(spacecraft) => Ok(Body::from_json(
+            &find_spacecraft_detail(&db, spacecraft).await?,
         )?),
         // TODO Add the correct 404 status code
         None => Ok(Body::from_json(&messages::not_found())?),
@@ -79,10 +79,13 @@ pub async fn update(mut req: Request<State>) -> tide::Result<impl Into<Response>
     spacecraft.uuid = uuid;
     let filter = doc! { "uuid": uuid.to_string() };
 
-    let collection = get_database(&req).collection("spacecraft");
+    let db = get_database(&req);
+    let collection = db.collection("spacecraft");
     let result: Option<Spacecraft> = update_one(collection, spacecraft, filter, None).await?;
     match result {
-        Some(spacecraft) => Ok(Body::from_json(&spacecraft)?),
+        Some(spacecraft) => Ok(Body::from_json(
+            &find_spacecraft_detail(&db, spacecraft).await?,
+        )?),
         None => Ok(Body::from_json(&messages::internal_error())?),
     }
 }

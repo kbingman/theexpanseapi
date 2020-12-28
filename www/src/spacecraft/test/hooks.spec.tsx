@@ -7,22 +7,9 @@ import { spacecraftState } from '../atoms/atoms';
 // import { getMockSpacecraft } from '../../../mocks/models';
 
 // import { spacecraftIdsState, spacecraftState } from '../atoms/atoms';
-import { activeSpacecraftState } from '../atoms/ui';
-import { useActiveSpacecraft, useSpacecraftDetail } from '../hooks';
+import { useSpacecraftDetail } from '../hooks';
 
 // const mockSpacecraft = getMockSpacecraft();
-
-test('checks if current uuid is selected', () => {
-  const { result } = renderRecoilHook(() => useActiveSpacecraft('uuid'), {
-    states: [{ recoilState: activeSpacecraftState, initialValue: 'uuid' }],
-  });
-
-  expect(result.current.isVisible).toBe(true);
-  act(() => {
-    result.current.setIsVisible('uuid');
-  });
-  expect(result.current.isVisible).toBe(false);
-});
 
 test.skip('loads spacecraft', async () => {
   server.listen();

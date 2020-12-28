@@ -1,12 +1,5 @@
 import { atom, selector, selectorFamily } from 'recoil';
-
-/**
- * Spacecraft Selector
- */
-export const activeSpacecraftState = atom<string | null>({
-  key: '@spacecraft/active',
-  default: null,
-});
+import { activeSpacecraftState } from '../atoms';
 
 /**
  * Visibility Selector

@@ -5,6 +5,6 @@ export const Overlay = ({ children }) => (
 );
 
 export const Modal = ({ children }) => (
-  <div className="relative p-8 mb-12 bg-white w-96 box-content">{children}</div>
+  <div className="relative p-8 pt-10 mb-12 bg-white w-96 box-content">{children}</div>
 );
 
