@@ -1,0 +1,897 @@
+[
+  {
+    "name": "Captain McDowell",
+    "season": "S1",
+    "link": "/wiki/McDowell_(TV)"
+  },
+  {
+    "name": "Executive Officer",
+    "season": "S1",
+    "link": "/wiki/Canterbury_XO_(TV)"
+  },
+  {
+    "name": "Ade Nygaard",
+    "season": "S1",
+    "link": "/wiki/Ade_Nygaard_(TV)"
+  },
+  {
+    "name": "Rebecca Byers",
+    "season": "S1",
+    "link": "/wiki/Rebecca_Byers_(TV)"
+  },
+  {
+    "name": "Cameron Paj",
+    "season": "S1",
+    "link": "/wiki/Cameron_Paj_(TV)"
+  },
+  {
+    "name": "Riker",
+    "season": "S1",
+    "link": "/wiki/Riker_(TV)"
+  },
+  {
+    "name": "Antony Dresden",
+    "season": "S1",
+    "link": "/wiki/Antony_Dresden_(TV)"
+  },
+  {
+    "name": "Paolo Cortázar",
+    "season": "S2",
+    "link": "/wiki/Paolo_Cort%C3%A1zar_(TV)"
+  },
+  {
+    "name": "Captain Malick",
+    "season": "S2",
+    "link": "/wiki/Malick"
+  },
+  {
+    "name": "Avasarala",
+    "season": "S1",
+    "link": "/wiki/Chrisjen_Avasarala_(TV)"
+  },
+  {
+    "name": "Errinwright",
+    "season": "S1",
+    "link": "/wiki/Sadavir_Errinwright_(TV)"
+  },
+  {
+    "name": "Jules-Pierre Mao",
+    "season": "S1",
+    "link": "/wiki/Jules-Pierre_Mao_(TV)"
+  },
+  {
+    "name": "Franklin DeGraaf",
+    "season": "S1",
+    "link": "/wiki/Franklin_DeGraaf"
+  },
+  {
+    "name": "Craig (DeGraaf)",
+    "season": "S1",
+    "link": "/wiki/Craig"
+  },
+  {
+    "name": "Carlos Davila",
+    "season": "S1",
+    "link": "/wiki/Carlos_Davila_(TV)"
+  },
+  {
+    "name": "Elise Holden",
+    "season": "S1",
+    "link": "/wiki/Elise_Holden"
+  },
+  {
+    "name": "Father Tom",
+    "season": "S1",
+    "link": "/wiki/Tom_(TV)"
+  },
+  {
+    "name": "Sorrento-Gillis",
+    "season": "S2",
+    "link": "/wiki/Esteban_Sorrento-Gillis_(TV)"
+  },
+  {
+    "name": "Nico",
+    "season": "S2",
+    "link": "/wiki/Nico"
+  },
+  {
+    "name": "Shirtless Man Peter",
+    "season": "S2",
+    "link": "/wiki/William_Yong"
+  },
+  {
+    "name": "Pyotr Korshunov",
+    "season": "S2",
+    "link": "/wiki/Pyotr_Korshunov"
+  },
+  {
+    "name": "J. Peñano",
+    "season": "S2",
+    "link": "/wiki/J._Pe%C3%B1ano"
+  },
+  {
+    "name": "Deputy Minister M. Cruz",
+    "season": "S2",
+    "link": "/wiki/M._Cruz"
+  },
+  {
+    "name": "Jefferson Errinwright",
+    "season": "S2",
+    "link": "/wiki/Jefferson_Errinwright"
+  },
+  {
+    "name": "U.N. Naval Attaché Kosove",
+    "season": "S3",
+    "link": "/wiki/Kosove"
+  },
+  {
+    "name": "U.N. Admiral Murrin",
+    "season": "S3",
+    "link": "/wiki/Murrin"
+  },
+  {
+    "name": "Rev. Dr. Anna Volovodov",
+    "season": "S3",
+    "link": "/wiki/Anna_Volovodov_(TV)"
+  },
+  {
+    "name": "Captain Espinoza",
+    "season": "S3",
+    "link": "/wiki/Espinoza"
+  },
+  {
+    "name": "Lieutenant Lipson",
+    "season": "S3",
+    "link": "/wiki/Lipson"
+  },
+  {
+    "name": "Nancy Gao",
+    "season": "S4",
+    "link": "/wiki/Nancy_Gao_(TV)"
+  },
+  {
+    "name": "McCourt",
+    "season": "S4",
+    "link": "/wiki/McCourt"
+  },
+  {
+    "name": "Arjun Rao-Avasarala",
+    "season": "S1",
+    "link": "/wiki/Arjun_Rao"
+  },
+  {
+    "name": "Heikki Sabong/Sobong",
+    "season": "S1",
+    "link": "/wiki/Heikki_Sabong"
+  },
+  {
+    "name": "Captain Yvgeny",
+    "season": "S2",
+    "link": "/wiki/Yvgeny_(TV)"
+  },
+  {
+    "name": "Pilot Abraham",
+    "season": "S2",
+    "link": "/wiki/Abraham"
+  },
+  {
+    "name": "Colonel Janus",
+    "season": "S2",
+    "link": "/wiki/Janus_(TV)"
+  },
+  {
+    "name": "Doctor Michael Iturbi",
+    "season": "S2",
+    "link": "/wiki/Michael_Iturbi"
+  },
+  {
+    "name": "(Admiral) Souther",
+    "season": "S1",
+    "link": "/wiki/Souther_(TV)"
+  },
+  {
+    "name": "(Admiral) Nguyễn",
+    "season": "S2",
+    "link": "/wiki/Nguyen_(TV)"
+  },
+  {
+    "name": "Cotyar Ghazi",
+    "season": "S2",
+    "link": "/wiki/Cotyar_Ghazi_(TV)"
+  },
+  {
+    "name": "Lt. Mancuso",
+    "season": "S3",
+    "link": "/wiki/Mancuso"
+  },
+  {
+    "name": "Lt. Shaffer",
+    "season": "S3",
+    "link": "/wiki/Shaffer"
+  },
+  {
+    "name": "Lt. Boyer",
+    "season": "S3",
+    "link": "/wiki/Boyer"
+  },
+  {
+    "name": "Ensign Larson",
+    "season": "S3",
+    "link": "/wiki/Larson_(TV)"
+  },
+  {
+    "name": "Ensign Fainga",
+    "season": "S3",
+    "link": "/wiki/Fainga"
+  },
+  {
+    "name": "Iafrate",
+    "season": "S3",
+    "link": "/wiki/Iafrate"
+  },
+  {
+    "name": "(Crazed) Lt. Gascon",
+    "season": "S3",
+    "link": "/wiki/Gascon"
+  },
+  {
+    "name": "(Fleet M.P.) Hansen",
+    "season": "S3",
+    "link": "/wiki/Hansen"
+  },
+  {
+    "name": "Kolvoord",
+    "season": "S3",
+    "link": "/wiki/Kolvoord"
+  },
+  {
+    "name": "Melba",
+    "season": "S3",
+    "link": "/wiki/Melba_Koh_(TV)"
+  },
+  {
+    "name": "Stannislaw Kulp",
+    "season": "S3",
+    "link": "/wiki/Stannislaw_Kulp_(TV)"
+  },
+  {
+    "name": "Tilly Fagan",
+    "season": "S3",
+    "link": "/wiki/Tilly_Fagan_(TV)"
+  },
+  {
+    "name": "Hector Cortez",
+    "season": "S3",
+    "link": "/wiki/Hector_Cortez_(TV)"
+  },
+  {
+    "name": "Soledad",
+    "season": "S3",
+    "link": "/wiki/Soledad_(TV)"
+  },
+  {
+    "name": "(Lieutenant) Howard",
+    "season": "S3",
+    "link": "/wiki/Howard"
+  },
+  {
+    "name": "Jordaan Nemeroff",
+    "season": "S3",
+    "link": "/wiki/Jordaan_Nemeroff"
+  },
+  {
+    "name": "(Mess Hall Medic) Butler",
+    "season": "S3",
+    "link": "/wiki/Butler"
+  },
+  {
+    "name": "Dr. Gaskin",
+    "season": "S3",
+    "link": "/wiki/Gaskin"
+  },
+  {
+    "name": "(Senior Officer) Sison",
+    "season": "S3",
+    "link": "/wiki/Sison"
+  },
+  {
+    "name": "(Commander) Kunis",
+    "season": "S3",
+    "link": "/wiki/Kunis"
+  },
+  {
+    "name": "Ren Hazuki",
+    "season": "S3",
+    "link": "/wiki/Ren_Hazuki_(TV)"
+  },
+  {
+    "name": "Talissa Kamal",
+    "season": "S3",
+    "link": "/wiki/Talissa_Kamal_(TV)"
+  },
+  {
+    "name": "Melas Kamal",
+    "season": "S3",
+    "link": "/wiki/Melas_Kamal"
+  },
+  {
+    "name": "Isai Martin",
+    "season": "S4",
+    "link": "/wiki/Esai_Martin"
+  },
+  {
+    "name": "Leelee",
+    "season": "S4",
+    "link": "/wiki/Leelee_(TV)"
+  },
+  {
+    "name": "Thomas",
+    "season": "S4",
+    "link": "/wiki/Thomas"
+  },
+  {
+    "name": "David Draper",
+    "season": "S4",
+    "link": "/wiki/David_Draper_(TV)"
+  },
+  {
+    "name": "Fermín Beltran",
+    "season": "S4",
+    "link": "/wiki/Ferm%C3%ADn_Beltran_(TV)"
+  },
+  {
+    "name": "Captain Yao",
+    "season": "S1",
+    "link": "/wiki/Theresa_Yao_(TV)"
+  },
+  {
+    "name": "Shed Garvey",
+    "season": "S1",
+    "link": "/wiki/Shed_Garvey_(TV)"
+  },
+  {
+    "name": "Sergeant Grimes",
+    "season": "S1",
+    "link": "/wiki/Grimes_(TV)"
+  },
+  {
+    "name": "Corporal Dookie",
+    "season": "S1",
+    "link": "/wiki/Dookie_(TV)"
+  },
+  {
+    "name": "Corporal Mole",
+    "season": "S1",
+    "link": "/wiki/Mole_(TV)"
+  },
+  {
+    "name": "Lieutenant Lopez",
+    "season": "S1",
+    "link": "/wiki/K._Lopez_(TV)"
+  },
+  {
+    "name": "Lieutenant Sutton",
+    "season": "S2",
+    "link": "/wiki/Sutton"
+  },
+  {
+    "name": "Commander Thorsen",
+    "season": "S2",
+    "link": "/wiki/Thorsen"
+  },
+  {
+    "name": "Captain Martens",
+    "season": "S2",
+    "link": "/wiki/Martens_(TV)"
+  },
+  {
+    "name": "Gunnery Sgt Draper",
+    "season": "S2",
+    "link": "/wiki/Bobbie_Draper_(TV)"
+  },
+  {
+    "name": "Private Travis",
+    "season": "S2",
+    "link": "/wiki/Travis_(TV)"
+  },
+  {
+    "name": "Private Hillman",
+    "season": "S2",
+    "link": "/wiki/Hillman_(TV)"
+  },
+  {
+    "name": "Corporal Sa'id",
+    "season": "S2",
+    "link": "/wiki/Sa%27id_(TV)"
+  },
+  {
+    "name": "(Ensign) Sinopoli",
+    "season": "S3",
+    "link": "/wiki/Sinopoli"
+  },
+  {
+    "name": "(Ensign) Loftis",
+    "season": "S3",
+    "link": "/wiki/Loftis"
+  },
+  {
+    "name": "(Ensign) Ranhofer",
+    "season": "S3",
+    "link": "/wiki/Ranhofer"
+  },
+  {
+    "name": "McLeod",
+    "season": "S3",
+    "link": "/wiki/McLeod"
+  },
+  {
+    "name": "(Capt.) Sandrine Kirino",
+    "season": "S3",
+    "link": "/wiki/Sandrine_Kirino"
+  },
+  {
+    "name": "(Lieutenant) Durant",
+    "season": "S3",
+    "link": "/wiki/Durant"
+  },
+  {
+    "name": "(Chief) Joslin",
+    "season": "S3",
+    "link": "/wiki/Joslin"
+  },
+  {
+    "name": "(Capt.) Chandra Lucas",
+    "season": "S3",
+    "link": "/wiki/Chandra_Lucas"
+  },
+  {
+    "name": "Elio \"Cohen\" Casti",
+    "season": "S3",
+    "link": "/wiki/Elio_Casti_(TV)"
+  },
+  {
+    "name": "Detective Havelock",
+    "season": "S1",
+    "link": "/wiki/Dmitri_Havelock_(TV)"
+  },
+  {
+    "name": "Detective Tavi Muss",
+    "season": "S1",
+    "link": "/wiki/Octavia_Muss_(TV)"
+  },
+  {
+    "name": "Captain Shaddid",
+    "season": "S1",
+    "link": "/wiki/Shaddid_(TV)"
+  },
+  {
+    "name": "Detective Cobb",
+    "season": "S1",
+    "link": "/wiki/Cobb_(TV)"
+  },
+  {
+    "name": "Anderson Dawes",
+    "season": "S1",
+    "link": "/wiki/Anderson_Dawes_(TV)"
+  },
+  {
+    "name": "Gia",
+    "season": "S1",
+    "link": "/wiki/Gia"
+  },
+  {
+    "name": "Neville Bosch",
+    "season": "S1",
+    "link": "/wiki/Neville_Bosch_(TV)"
+  },
+  {
+    "name": "Tech Noir Clerk",
+    "season": "S1",
+    "link": "/wiki/Clerk_(Tech_Noir)"
+  },
+  {
+    "name": "Bouillotte Dealer Javi",
+    "season": "S1",
+    "link": "/wiki/Javi"
+  },
+  {
+    "name": "Vargas",
+    "season": "S1",
+    "link": "/wiki/Vargas"
+  },
+  {
+    "name": "Thierry",
+    "season": "S1",
+    "link": "/wiki/Thierry"
+  },
+  {
+    "name": "the Gaunt Belter",
+    "season": "S1",
+    "link": "/wiki/Gaunt_Belter"
+  },
+  {
+    "name": "Joon",
+    "season": "S1",
+    "link": "/wiki/Joon"
+  },
+  {
+    "name": "Lida",
+    "season": "S1",
+    "link": "/wiki/Lida_and_Kaipo"
+  },
+  {
+    "name": "Kaipo",
+    "season": "S1",
+    "link": "/wiki/Lida_and_Kaipo"
+  },
+  {
+    "name": "Elder Murray",
+    "season": "S1",
+    "link": "/wiki/Murray_(TV)"
+  },
+  {
+    "name": "Angry Dockworker",
+    "season": "S1",
+    "link": "/wiki/Angry_Dockworker"
+  },
+  {
+    "name": "Young Dockworker #1",
+    "season": "S1",
+    "link": "/wiki/Young_Dockworker_%EF%BC%831"
+  },
+  {
+    "name": "Muscle Dockworker",
+    "season": "S1",
+    "link": "/wiki/Muscle_Dockworker"
+  },
+  {
+    "name": "Brothel Madam",
+    "season": "S1",
+    "link": "/wiki/Brothel_Madam_(Ceres)"
+  },
+  {
+    "name": "Longbone",
+    "season": "S1",
+    "link": "/wiki/Longbone"
+  },
+  {
+    "name": "Wasted Girl",
+    "season": "S1",
+    "link": "/wiki/Wasted_Girl"
+  },
+  {
+    "name": "Evita",
+    "season": "S3",
+    "link": "/wiki/Evita_Jung_(TV)"
+  },
+  {
+    "name": "Fred Johnson",
+    "season": "S1",
+    "link": "/wiki/Fred_Johnson_(TV)"
+  },
+  {
+    "name": "Sam Rosenberg",
+    "season": "S1",
+    "link": "/wiki/Samara_Rosenberg_(TV)"
+  },
+  {
+    "name": "Hustler Daniel",
+    "season": "S1",
+    "link": "/wiki/Daniel"
+  },
+  {
+    "name": "Drummer",
+    "season": "S2",
+    "link": "/wiki/Drummer_(TV)"
+  },
+  {
+    "name": "K. Nikil",
+    "season": "S2",
+    "link": "/wiki/K._Nikil"
+  },
+  {
+    "name": "Elder McCann",
+    "season": "S2",
+    "link": "/wiki/McCann_(TV)"
+  },
+  {
+    "name": "Staz",
+    "season": "S2",
+    "link": "/wiki/Staz_(TV)"
+  },
+  {
+    "name": "Edin",
+    "season": "S2",
+    "link": "/wiki/Edin_(TV)"
+  },
+  {
+    "name": "Darren",
+    "season": "S1",
+    "link": "/wiki/Darren_(TV)"
+  },
+  {
+    "name": "Wan",
+    "season": "S1",
+    "link": "/wiki/Wan_(TV)"
+  },
+  {
+    "name": "Mateo",
+    "season": "S1",
+    "link": "/wiki/Mateo_(TV)"
+  },
+  {
+    "name": "Julie Mao",
+    "season": "S1",
+    "link": "/wiki/Julie_Mao_(TV)"
+  },
+  {
+    "name": "Mikey Ko",
+    "season": "S1",
+    "link": "/wiki/Mikey_Ko_(TV)"
+  },
+  {
+    "name": "Onudo",
+    "season": "S1",
+    "link": "/wiki/Onudo"
+  },
+  {
+    "name": "Rutger",
+    "season": "S1",
+    "link": "/wiki/Rutger"
+  },
+  {
+    "name": "Filat Kothari",
+    "season": "S1",
+    "link": "/wiki/Filat_Kothari"
+  },
+  {
+    "name": "Kenzo",
+    "season": "S1",
+    "link": "/wiki/Kenzo_(TV)"
+  },
+  {
+    "name": "Nalida",
+    "season": "S1",
+    "link": "/wiki/Nalida"
+  },
+  {
+    "name": "(Little Eros Girl) Shukri",
+    "season": "S1",
+    "link": "/wiki/Shukri"
+  },
+  {
+    "name": "Detective Miller",
+    "season": "S1",
+    "link": "/wiki/Josephus_Miller_(TV)"
+  },
+  {
+    "name": "Scruffy Guy",
+    "season": "S1",
+    "link": "/wiki/Scruffy_guy"
+  },
+  {
+    "name": "Menacing Belter #1 (CPM #7)",
+    "season": "S1",
+    "link": "/wiki/Menacing_Belter_%EF%BC%831"
+  },
+  {
+    "name": "Dr. Prax Meng",
+    "season": "S2",
+    "link": "/wiki/Praxideke_Meng_(TV)"
+  },
+  {
+    "name": "Basia Merton",
+    "season": "S2",
+    "link": "/wiki/Basia_Merton_(TV)"
+  },
+  {
+    "name": "Umea",
+    "season": "S2",
+    "link": "/wiki/Umea_(TV)"
+  },
+  {
+    "name": "Roma",
+    "season": "S2",
+    "link": "/wiki/Roma_(TV)"
+  },
+  {
+    "name": "Champa",
+    "season": "S2",
+    "link": "/wiki/Champa"
+  },
+  {
+    "name": "Silje",
+    "season": "S2",
+    "link": "/wiki/Silje"
+  },
+  {
+    "name": "Geir",
+    "season": "S2",
+    "link": "/wiki/Geir"
+  },
+  {
+    "name": "Mei Meng",
+    "season": "S2",
+    "link": "/wiki/Mei_Meng_(TV)"
+  },
+  {
+    "name": "Dr. Lawrence Strickland",
+    "season": "S2",
+    "link": "/wiki/Lawrence_Strickland"
+  },
+  {
+    "name": "Katoa Merton",
+    "season": "S3",
+    "link": "/wiki/Katoa_Merton_(TV)"
+  },
+  {
+    "name": "Surly Belter Crewman",
+    "season": "S2",
+    "link": "/wiki/Tim_Post"
+  },
+  {
+    "name": "Doris Bourne",
+    "season": "S2",
+    "link": "/wiki/Doris_Bourne_(TV)"
+  },
+  {
+    "name": "Melissa Suputayaporn",
+    "season": "S2",
+    "link": "/wiki/Melissa_Suputayaporn"
+  },
+  {
+    "name": "Santichai Suputayaporn",
+    "season": "S2",
+    "link": "/wiki/Santichai_Suputayaporn"
+  },
+  {
+    "name": "Arum Lee",
+    "season": "S4",
+    "link": "/wiki/Arum_Lee"
+  },
+  {
+    "name": "Marco Inaros",
+    "season": "S4",
+    "link": "/wiki/Marco_Inaros_(TV)"
+  },
+  {
+    "name": "Filip Inaros",
+    "season": "S4",
+    "link": "/wiki/Filip_Inaros_(TV)"
+  },
+  {
+    "name": "Klaes Ashford",
+    "season": "S3",
+    "link": "/wiki/Klaes_Ashford_(TV)"
+  },
+  {
+    "name": "Victor Sohiro",
+    "season": "S4",
+    "link": "/wiki/Victor_Sohiro"
+  },
+  {
+    "name": "Jim Holden",
+    "season": "S1",
+    "link": "/wiki/Jim_Holden_(TV)"
+  },
+  {
+    "name": "Naomi Nagata",
+    "season": "S1",
+    "link": "/wiki/Naomi_Nagata_(TV)"
+  },
+  {
+    "name": "Amos Burton",
+    "season": "S1",
+    "link": "/wiki/Amos_Burton_(TV)"
+  },
+  {
+    "name": "Alex Kamal",
+    "season": "S1",
+    "link": "/wiki/Alex_Kamal_(TV)"
+  },
+  {
+    "name": "Sematimba",
+    "season": "S1",
+    "link": "/wiki/Sematimba_(TV)"
+  },
+  {
+    "name": "Monica Stuart",
+    "season": "S3",
+    "link": "/wiki/Monica_Stuart_(TV)"
+  },
+  {
+    "name": "Doctor Mesplede",
+    "season": "S1",
+    "link": "/wiki/Mesplede"
+  },
+  {
+    "name": "Manéo Jung-Espinoza",
+    "season": "S3",
+    "link": "/wiki/Man%C3%A9o_Jung-Espinoza_(TV)"
+  },
+  {
+    "name": "Grigori",
+    "season": "S3",
+    "link": "/wiki/Grigori"
+  },
+  {
+    "name": "(Private) Riko Oshi",
+    "season": "S3",
+    "link": "/wiki/Riko_Oshi"
+  },
+  {
+    "name": "(Private) Jed Trepp",
+    "season": "S3",
+    "link": "/wiki/Jed_Trepp"
+  },
+  {
+    "name": "Egan",
+    "season": "S3",
+    "link": "/wiki/Egan"
+  },
+  {
+    "name": "Diogo",
+    "season": "S3",
+    "link": "/wiki/Diogo_Harari_(TV)"
+  },
+  {
+    "name": "Lt. Paolo Mayer, (MMC)",
+    "season": "S3",
+    "link": "/wiki/Paolo_Mayer"
+  },
+  {
+    "name": "Adolphus Murtry",
+    "season": "S4",
+    "link": "/wiki/Adolphus_Murtry_(TV)"
+  },
+  {
+    "name": "Elvi Okoye",
+    "season": "S4",
+    "link": "/wiki/Elvi_Okoye_(TV)"
+  },
+  {
+    "name": "Lucia Mazur",
+    "season": "S4",
+    "link": "/wiki/Lucia_Mazur"
+  },
+  {
+    "name": "Carol Chiwewe",
+    "season": "S4",
+    "link": "/wiki/Carol_Chiwewe_(TV)"
+  },
+  {
+    "name": "Coop",
+    "season": "S4",
+    "link": "/wiki/Coop_(TV)"
+  },
+  {
+    "name": "Chandra Wei",
+    "season": "S4",
+    "link": "/wiki/Chandra_Wei_(TV)"
+  },
+  {
+    "name": "Jabob Mazur",
+    "season": null,
+    "link": "/wiki/Jakob_Mazur"
+  },
+  {
+    "name": "Felica Mazur",
+    "season": "S4",
+    "link": "/wiki/Felcia_Mazur"
+  },
+  {
+    "name": "Scotty",
+    "season": "S4",
+    "link": "/wiki/Scotty"
+  },
+  {
+    "name": "Chike",
+    "season": "S4",
+    "link": "/wiki/Chike"
+  },
+  {
+    "name": "Fayez Sarkis",
+    "season": "S4",
+    "link": "/wiki/Fayez_Sarkis_(TV)"
+  }
+]
