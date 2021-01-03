@@ -50,3 +50,4 @@ pub fn format_url<T: std::fmt::Display>(label: &str, uuid: &Option<T>) -> Option
         None => None,
     }
 }
+

@@ -1,5 +1,6 @@
 mod messages;
 
+pub mod auth;
 pub mod db;
 pub mod episodes;
 pub mod people;
