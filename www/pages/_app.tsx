@@ -1,11 +1,18 @@
 import Head from 'next/head';
 import { RecoilRoot } from 'recoil';
+import Amplify from 'aws-amplify'
+import config from '../src/aws-exports'
 import 'tailwindcss/tailwind.css';
 
 import { DebugObserver } from '../src/debug';
 import { getInitializeState, Header } from '../src/shared';
 
 import type { AppProps /*, AppContext */ } from 'next/app';
+
+Amplify.configure({
+  ...config,
+  ssr: true
+});
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>

@@ -1,33 +1,23 @@
-import { atom, selector, selectorFamily } from 'recoil';
+import { atom, atomFamily, selector } from 'recoil';
+import { map, pluckUUID } from '../shared';
 import { SpacecraftClass } from './types';
 
-type SpacecraftClassMap = Map<string, SpacecraftClass>;
-
-export const spacecraftClassState = atom<SpacecraftClassMap>({
+export const spacecraftClassState = atomFamily<SpacecraftClass | null, string>({
   key: '@class/entities',
-  default: new Map(),
+  default: null,
 });
 
-export const spacecraftClassSelector = selector<SpacecraftClassMap>({
+export const spacecraftClassIDs = atom<string[]>({
+  key: '@class/ids',
+  default: [],
+})
+
+export const spacecraftClassListSelector = selector<SpacecraftClass[]>({
   key: '@class/selector',
-  get: ({ get }) => get(spacecraftClassState),
-  set: ({ get, set }, value: SpacecraftClassMap) => {
-    set(
-      spacecraftClassState,
-      new Map([...get(spacecraftClassState), ...value])
-    );
-  },
-});
-
-export const spacecraftClassDetailState = selectorFamily<SpacecraftClass, string>({
-  key: '@class/detail',
-  get: (uuid: string) => ({ get }) => {
-    return get(spacecraftClassState).get(uuid) || null;
-  },
-  set: (uuid: string) => ({ get, set }, value: SpacecraftClass) => {
-    set(
-      spacecraftClassState,
-      new Map([...get(spacecraftClassState), ...new Map([[uuid, value]])])
-    );
+  get: ({ get }) => map((uuid) => get(spacecraftClassState(uuid)), get(spacecraftClassIDs)),
+  set: ({ get, set }, data: SpacecraftClass[]) => {
+    const updateClass = (spacecraft: SpacecraftClass) => set(spacecraftClassState(spacecraft.uuid), spacecraft);
+    set(spacecraftClassIDs, [get(spacecraftClassIDs), ...map(pluckUUID, data)]); 
+    map(updateClass, data);
   },
 });

@@ -1,12 +1,12 @@
 import { useRecoilValue } from 'recoil';
-import { spacecraftClassDetailState } from '../atoms';
+import { spacecraftClassState } from '../atoms';
 
 type Props = {
   uuid: string;
 };
 
 export const SpacecraftClassInfo = ({ uuid }: Props) => {
-  const spacecraftClass = useRecoilValue(spacecraftClassDetailState(uuid));
+  const spacecraftClass = useRecoilValue(spacecraftClassState(uuid));
   if (!spacecraftClass) {
     return null;
   }

@@ -2,7 +2,7 @@ import { selector, selectorFamily } from 'recoil';
 
 import { map, pluckKey } from '../../shared';
 import { crewUUIDsState, personEntities } from '../../people';
-import { spacecraftClassDetailState } from '../../classes';
+import { spacecraftClassState } from '../../classes';
 
 import { spacecraftState } from '../atoms';
 import type { Spacecraft, SpacecraftResponse } from '../types';
@@ -49,7 +49,7 @@ export const spacecraftDetailSelector = selectorFamily<SpacecraftResponse, strin
       errors: [],
       loaded: get(spacecraftLoadingSelector(uuid)),
       included: {
-        class: get(spacecraftClassDetailState(spacecraft.class)),
+        class: get(spacecraftClassState(spacecraft.class)),
         crew: get(crewUUIDsState(spacecraft.crew)),
       },
     };
@@ -63,7 +63,7 @@ export const spacecraftDetailSelector = selectorFamily<SpacecraftResponse, strin
 
     set(spacecraftSelector(uuid), data); 
     if (included) {
-      set(spacecraftClassDetailState(data.class), included.class);
+      set(spacecraftClassState(data.class), included.class);
       set(personEntities, included.crew);
     }
   },

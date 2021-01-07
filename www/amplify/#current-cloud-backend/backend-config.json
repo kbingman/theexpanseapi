@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"theexpanseapid2e9c79a": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil';
-import { spacecraftClassDetailState } from '../../classes';
+import { spacecraftClassState } from '../../classes';
 import { Label, TextButton } from '../../shared';
 
 /**
@@ -26,7 +26,7 @@ export const ClassDisplay = ({ name }) => (
 );
 
 export const ClassData = ({ uuid }) => {
-  const spacecraftClass = useRecoilValue(spacecraftClassDetailState(uuid));
+  const spacecraftClass = useRecoilValue(spacecraftClassState(uuid));
   const name = spacecraftClass?.name; 
 
   return <ClassDisplay {...{ name }} />;

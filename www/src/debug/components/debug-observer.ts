@@ -1,7 +1,7 @@
 import { useRecoilTransactionObserver_UNSTABLE } from 'recoil';
 
-import { spacecraftClassState } from '../../classes';
-import { episodesState } from '../../episodes';
+// import { spacecraftClassState } from '../../classes';
+// import { episodesListSelector } from '../../episodes';
 import { personState } from '../../people';
 import { spacecraftState } from '../../spacecraft';
 import { logger } from '../../shared/';
@@ -19,8 +19,8 @@ export const DebugObserver = () => {
   useRecoilTransactionObserver_UNSTABLE(({ snapshot }) => {
     const nodes = getModifiedNodes(snapshot);
     const debug = {
-      classes: snapshot.getLoadable(spacecraftClassState).contents,
-      episodes: snapshot.getLoadable(episodesState).contents,
+      // classes: snapshot.getLoadable(spacecraftClassState).contents,
+      // episodes: snapshot.getLoadable(episodesListSelector).contents,
       people: snapshot.getLoadable(personState).contents,
       spacecraft: snapshot.getLoadable(spacecraftState).contents,
     };

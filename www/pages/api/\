@@ -1,0 +1,36 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+import AWS from 'aws-sdk';
+
+import config from '../../src/aws-exports';
+import {map} from '../../src/fp/util/reduce';
+import {UsersListType, UserType} from 'aws-sdk/clients/cognitoidentityserviceprovider';
+
+AWS.config.update({
+  region: process.env.USER_POOL_REGION,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+});
+
+const params = {
+  UserPoolId: config.aws_user_pools_id,
+};
+const cognitoISP = new AWS.CognitoIdentityServiceProvider();
+
+const formatUsers = (arr: UsersType[]) => {
+  return arr.map(value => value.Attributes);
+}
+
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  console.log(req.headers);
+  console.log(req.cookies);
+  try {
+    const response = await cognitoISP.listUsers(params).promise();
+    const users = map(formatUsers, response.Users);
+    console.log(users);
+    res.json({ message: 'Hello World', users });
+  } catch (err) {
+    res.json({ message: err.message });
+  }
+};
+
+export default handler;

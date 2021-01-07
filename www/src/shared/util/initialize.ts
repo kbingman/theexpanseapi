@@ -2,10 +2,9 @@ import { createMapFromArray } from './entities';
 import { logger } from './logger';
 
 import { SpacecraftClass, spacecraftClassState } from '../../classes';
-import { episodesState, Episode } from '../../episodes';
+import { episodesListSelector, Episode } from '../../episodes';
 import { personState, Person } from '../../people';
-import { spacecraftState } from '../../spacecraft';
-import { Spacecraft } from '../../spacecraft/types';
+import { spacecraftState, Spacecraft } from '../../spacecraft';
 
 type InitialProps = {
   classes?: SpacecraftClass[];
@@ -50,6 +49,6 @@ export const getInitializeState = ({
   // Initializes the Episodes state
   if (episodes) {
     logger('initialize episodes', Date.now());
-    set(episodesState, createMapFromArray(episodes));
+    set(episodesListSelector, episodes);
   }
 };

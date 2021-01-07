@@ -69,3 +69,5 @@ export const createMapFromArray = <T extends { uuid: string }>(
   iter: Iterable<T>
 ): Map<string, T> => new Map(map(getUUIDValuePairs, iter));
 
+export const pluckUUID = <T extends { uuid: string }>({ uuid }: T) => uuid;
+

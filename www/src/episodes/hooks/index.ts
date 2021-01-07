@@ -1,5 +1,6 @@
-import {useServerSideModel} from '../../shared/hooks';
-import { episodesState } from '../atoms';
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import { episodesListSelector } from '../atoms';
 import { Episode } from '../types';
 
 /**
@@ -11,5 +12,12 @@ import { Episode } from '../types';
  * 
  * @param {episodes}
  */
-export const useServerSideEpisodes = (episodes: Episode[]) =>
-  useServerSideModel<Episode>(episodesState, episodes);
+export const useServerSideEpisodes = (episodes: Episode[]) => {
+  const [entities, setEntities] = useRecoilState(episodesListSelector);
+
+  useEffect(() => {
+    if (entities.length < episodes.length) {
+      setEntities(episodes);
+    }
+  }, []);
+};
